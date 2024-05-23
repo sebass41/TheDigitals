@@ -1,0 +1,238 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    color: #fff;
+}
+
+.header{
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url("../../iaelugar.png");
+    display: flex;
+    background-size: cover;
+}
+
+h1{
+    margin: 0;
+    font-size: 50px;
+    text-wrap: balance;
+}
+h2{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 22px;
+    padding: 10px;
+    color: #000000;
+
+}
+.legend-info{
+    color: #000;
+}
+.header__overlay{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    position: absolute;
+    z-index: 1;
+}
+.header__item-container{
+    position: relative;
+    z-index: 10; 
+    margin: auto;
+    text-align: center;
+    max-width: 700px;
+
+}
+
+.parrafo{
+    text-wrap: pretty;
+}
+.header-img {
+    min-height: 250px;
+    max-height: 350px;
+    min-width: 200px;
+    max-width: 60%;
+    border-radius: 50%;
+
+    margin: 20px;
+    filter: drop-shadow(0 0 90px #ffffff);
+}
+
+/*SECCION DE NAVEGACION*/
+
+.nav{
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 6px 20px;
+    position: sticky;
+    top: 0;
+    margin-bottom: 10px;
+    box-shadow: 0 0 36px #0009;
+}
+
+.nav__ul{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+.nav__item{
+   list-style: none;
+}
+
+.nav__logo-container{
+    flex-grow: 4;
+    
+}
+.nav__ul-container, .nav__logo-container{
+    flex-grow: 1;
+    text-align: center;
+}
+.nav__link{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 0;
+    transition: background-color 0.24s,
+    border-radius 0.2s,
+    outline 0.2s, outline-offset 0.3s;
+    margin: 1px;
+}
+.nav__link:hover{
+    background-color: rgba(177, 177, 177, 0.2);
+    border-radius: 20px;
+    outline: 2px solid rgba(177, 177, 177, 0.2);
+    outline-offset: -7px;
+}
+.link--login{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border-radius: 20px;
+    padding: 6px 24px;
+    margin-left: 20px;
+}
+.link--login:hover{
+    background-color: rgb(121, 121, 121);
+    outline: none;
+}
+.nav__logo{
+    width: 30px;
+}
+
+
+      /*FORMULARIO*/
+
+    form{
+        background-color: #ffffff;
+        padding: 20px 0;
+        max-width: 500px;
+        margin: auto;
+        box-shadow: 0 0 55px #fff2;
+        margin-top: 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        box-shadow: 0 0 30px black;
+      
+        
+    }
+    .form_input{
+        padding: 6px 20px;
+       
+    }
+    input, textarea { 
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 12px;
+        border: none;
+        border: 1px solid #000000;
+        box-shadow: 0 0 15px #0003;
+        background-color: transparent;
+        border-radius: 4px;
+        color: #000000;
+        margin-top: 4px;
+        
+    }
+    select{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 12px;
+        border: none;
+        border: 1px solid #666;
+        box-shadow: 0 0 15px #0003;
+        background-color: transparent;
+        border-radius: 4px;
+        color: #000000;
+        margin-top: 4px;
+
+    }
+    legend{
+        background-color: #b61;
+        border-radius: 20px;
+    }
+    option{
+        background-color: #222; 
+    }
+    
+    textarea{
+        min-width: 100%;
+        resize: none;
+        max-height: 200px;
+        font-family: sans-serif;
+        
+    }
+    
+    label{
+        font-size: 0.88em;
+        line-height: 2;
+        color: #000;
+        
+    }
+    .checkbox{
+        width: auto;
+        height: 10px;
+    }
+    
+    dialog{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+        
+    }
+    
+    .modal__content{
+        background-color: #000000;
+        padding: 10px 20px;
+        width: 80%;
+        margin: auto;
+        margin-top: 50px;
+        position: relative;
+    }
+    
+    .modal__title{
+        margin-top: 10px;
+    }
+    .modal__close-button{
+        background-color: rgb(0, 0, 0);
+        color: #020101;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 4px 12px;
+    }
+    .modal__text{
+        text-align: center;
+    }
+    fieldset{
+        margin-top: 10px;
+    }
