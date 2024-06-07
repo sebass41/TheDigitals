@@ -76,7 +76,7 @@ main {
 }
 
 .img-sec {
-    max-width: 20%;
+    max-width: 30%;
     height: auto;
 }
 
@@ -95,3 +95,4 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
