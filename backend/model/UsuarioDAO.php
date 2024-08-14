@@ -1,6 +1,7 @@
 <?php
 
 require_once "../conexion/Conexion.php";
+require_once "res/Respuesta.php";
 
 class Usuario{
 
