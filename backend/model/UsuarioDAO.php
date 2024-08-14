@@ -2,21 +2,35 @@
 
 require_once "../conexion/Conexion.php";
 
-class Persona{
+class Usuario{
 
     function obtener(){
-        $connection = conection();
-        $sql = "SELECT * FROM usuario;";
-        $respuesta = $connection->query($sql);
-        $personas = $respuesta->fetch_all(MYSQLI_ASSOC);
-        return $personas;
+        try{
+            $connection = conection();
+            $sql = "SELECT * FROM usuario;";
+            $respuesta = $connection->query($sql);
+            $personas = $respuesta->fetch_all(MYSQLI_ASSOC);
+            
+            $msj = "Usuarios obtenidos correctamente";
+            return new Respuesta(true, $msj, $personas);
+        }catch(Exception $e){
+            $msj = $e->getMessage();
+            return new Respuesta(false, $msj, []);
+        }
     }
 
     function insertar($nombre, $apellido, $tel, $apodo, $calle, $numero, $pass, $mail, $admin){
-        $connection = conection();
-        $sql = "INSERT FROM usuario VALUES (0, $nombre, $apellido, $tel, $apodo, $calle, $numero, $pass, $mail, $admin)";
-        $respuesta = $connection->query($sql);
-        return $respuesta;
+        try{
+            $connection = conection();
+            $sql = "INSERT FROM usuario VALUES (0, $nombre, $apellido, $tel, $apodo, $calle, $numero, $pass, $mail, $admin)";
+            $respuesta = $connection->query($sql);
+
+            $msj = "Se ingresó correctamente el Usuario";
+            return new Respuesta(true, $msj, $respuesta);
+        }catch(Exception $e){
+            $msj = "Error al ingresar el Usuario:". $e->getMessage();
+            return new Respuesta(false, $msj, []);
+        }
     }
 
     function modificar($id, $nombre, $apellido, $tel, $apodo, $calle, $numero, $pass, $mail){
@@ -27,12 +41,19 @@ class Persona{
     }
 
     function eliminar($id){
-        $connection = conection();
-        $sql = "DELETE FROM usuario WHERE id_Usuario  = $id";
-        $respuesta = $connection->query($sql);
-        return $respuesta;
+        try{
+            $connection = conection();
+            $sql = "DELETE FROM usuario WHERE id_Usuario  = $id";
+            $respuesta = $connection->query($sql);
+            
+            $msj = "Usuario eliminado correctamente";
+            return new Respuesta(true, $msj, $respuesta);
+    
+        }catch(Exception $e){
+            $msj = "Error al eliminar el Usuario:". $e->getMessage();
+            return new Respuesta(false, $msj, []);
+        }
     }
-
     
 
 }
