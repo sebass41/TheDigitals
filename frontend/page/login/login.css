@@ -21,9 +21,10 @@ div {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
     width: 300px;
     text-align: center;
+    border: 1px solid black;
 }
 
 div img {
@@ -49,6 +50,7 @@ div input {
     border-radius: 5px;
     margin-bottom: 10px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 div input[type="submit"] {
@@ -73,11 +75,15 @@ div p {
 }
 
 div p a {
-    color: #333;
+    color: #097fbb;
     text-decoration: none;
     font-weight: bold;
 }
 
 div p a:hover {
     text-decoration: underline;
+}
+
+div h2{
+font-size: 40px;
 }
