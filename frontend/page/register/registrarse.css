@@ -79,6 +79,7 @@ form input[type="submit"]:hover {
     border: 2px solid black;
     margin: 60px;
     zoom: 90%;
+    }
 } 
 @media(max-width: 600px){
     form {
