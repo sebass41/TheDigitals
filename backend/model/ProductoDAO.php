@@ -9,7 +9,15 @@ class Producto{
         $sql = "SELECT * FROM producto";
         $respuesta = $connection->query($sql);
         $productos = $respuesta->fetch_all(MYSQLI_ASSOC);
-        return $productos;
+
+        if ($respuesta) {
+            $msj = "Datos obtenidos correctamente";
+            return new Respuesta(true, $msj, $productos);
+        }else {
+            $msj = "No se pudieron obtener los datos";
+            return new Respuesta(false, $msj, []);
+        }
+        
     }
 
     function insertar($id_producto, $tipo, $nombre, $descripcion, $categoria, $extencion, $precio, $id_pedido){
