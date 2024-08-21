@@ -33,6 +33,20 @@ Class Contiene{
         }
     }
 
+    function actualizar($id, $idProducto, $idPedido, $detalle, $costo, $cantidad){
+        $connection = conection();
+        $sql = "UPDATE contiene SET id_producto = $idProducto, id_pedido = $idPedido, detalle = '$detalle', costo = $costo, cantidad = $cantidad WHERE id = $id";
+        $respuesta = $connection->query($sql);
+
+        if ($respuesta) {
+            $msj = "Datos insertados correctamente";
+            return new Respuesta(true, $msj, $respuesta);
+        }else {
+            $msj = "No se pudieron insertar los datos";
+            return new Respuesta(false, $msj, []);
+        }
+    }
+
     function eliminar($idPedido){
         $connection = conection();
         $sql = "DELETE FROM compra WHERE id_compra = $idPedido";
