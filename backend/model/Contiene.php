@@ -1,6 +1,13 @@
 <?php
 
 require_once "../conexion/Conexion.php";
+require_once "res/Respuesta.php";
+
+ini_set('display_errors', '0');
+ini_set('display_startup_errors', '0');
+
+ini_set('log_errors', 1);
+ini_set('error_log', '../log/php_errors.log');
 
 Class Contiene{
 
@@ -19,9 +26,9 @@ Class Contiene{
         }
     }
 
-    function insertar($idProducto, $idPedido, $detalle, $costo, $cantidad){
+    function insertar($id, $idProducto, $idPedido, $detalle, $costo, $cantidad){
         $connection = conection();
-        $sql = "INSERT INTO contiene VALUES ($idProducto, $idPedido, $detalle, $costo, $cantidad)";
+        $sql = "INSERT INTO contiene VALUES ($id, $idProducto, $idPedido, $detalle, $costo, $cantidad)";
         $respuesta = $connection->query($sql);
 
         if ($respuesta) {
