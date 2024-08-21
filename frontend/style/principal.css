@@ -60,14 +60,17 @@ main {
     justify-content: center;
     padding: 20px;
     text-align: center;
+    width: 80vw;
 }
 
 .image-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
     margin-bottom: 20px;
+    width: 100%;
+    user-select: none;
 }
 
 .main-image {
@@ -76,41 +79,28 @@ main {
 }
 
 .img-n1 {
-    max-width: 34%;
-    height: auto;
+    height: 500px;
+    width: auto;
     animation: rotar 20s linear infinite;
-    position: relative;
-    left: 650px;
-
+    position: absolute;
+    z-index: 1;
+   user-select: none;
 }
 
 .img-ham1 {
-    max-width: 30%;
-    height: auto;
-    position: relative;
-    right: 45px;
-    bottom: 35px;
-
+    width: auto;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    user-select: none;
 }
 
-.img-n2 {
-    max-width: 34%;
-    height: auto;
-    animation: rotar 20s linear infinite;
+.ham1 {
     position: relative;
-    right: 650px;
-
+    display: flex;
+    align-items:center ;
+    justify-content: center;
 }
-
-.img-ham2 {
-    max-width: 30%;
-    height: auto;
-    position: relative;
-    left: 45px;
-    bottom: 35px;
-
-}
-
 
 main p {
     max-width: 80%;
