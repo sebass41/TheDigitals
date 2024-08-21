@@ -19,7 +19,7 @@ class Compra{
         return $respuesta;
     }
 
-    function modificar($id_compra, $costo, $cantidad, $fecha, $fecha_envio, $id_cliente, $id_producto, $id_envio){
+    function actualizar($id_compra, $costo, $cantidad, $fecha, $fecha_envio, $id_cliente, $id_producto, $id_envio){
         $connection = conection();
         $sql = "UPDATE compra SET costo = $costo, 
                                 cantidad = $cantidad, 
@@ -37,7 +37,14 @@ class Compra{
         $connection = conection();
         $sql = "DELETE FROM compra WHERE id_compra = $id_compra";
         $respuesta = $connection->query($sql);
-        return $respuesta;
+        
+        if ($respuesta) {
+            $msj = "Datos eliminados correctamente";
+            return new Respuesta(true, $msj, $respuesta);
+        }else {
+            $msj = "No se pudieron eliminar los datos";
+            return new Respuesta(false, $msj, []);
+        }
     }
 
 }

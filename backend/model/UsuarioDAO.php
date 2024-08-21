@@ -34,7 +34,7 @@ class Usuario{
         }
     }
 
-    function modificar($id, $nombre, $apellido, $tel, $apodo, $calle, $numero, $pass, $mail){
+    function actualizar($id, $nombre, $apellido, $tel, $apodo, $calle, $numero, $pass, $mail){
         $connection = conection();
         $sql = "UPDATE usuario SET nombre = $nombre, apellido = $apellido, tel = $tel, apodo = $apodo, calle = $calle, numero = $numero, mail = $mail =  WHERE id_Usuario = $id";
         $respuesta = $connection->query($sql);

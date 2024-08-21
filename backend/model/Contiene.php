@@ -2,11 +2,11 @@
 
 require_once "../conexion/Conexion.php";
 
-Class Pedido{
+Class Contiene{
 
     function obtener(){
         $connection = conection();
-        $sql = "SELECT * FROM pedido";
+        $sql = "SELECT * FROM contiene";
         $respuesta = $connection->query($sql);
         $pedidos = $respuesta->fetch_all(MYSQLI_ASSOC);
         
@@ -19,9 +19,9 @@ Class Pedido{
         }
     }
 
-    function insertar($calle, $num, $estado, $fecha, $fechaEnvio, $lugarRetiro, $idUsuario){
+    function insertar($idProducto, $idPedido, $detalle, $costo, $cantidad){
         $connection = conection();
-        $sql = "INSERT INTO pedido VALUES (0, '$calle', '$num', '$estado', '$fecha', '$fechaEnvio', '$lugarRetiro', '$idUsuario')";
+        $sql = "INSERT INTO contiene VALUES ($idProducto, $idPedido, $detalle, $costo, $cantidad)";
         $respuesta = $connection->query($sql);
 
         if ($respuesta) {
