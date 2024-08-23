@@ -75,7 +75,7 @@ body {
     padding: 0px;
     background-image: url(../../asset/Diseño\ sin\ título.png);
 }
-
+/*
 header {
     width: 100%;
     background-color: #333;
@@ -118,7 +118,7 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #575757;
 }
-
+*/
 .img-1 {
     width: 350px;
     margin-bottom: 75px;
