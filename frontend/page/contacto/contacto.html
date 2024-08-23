@@ -26,38 +26,43 @@
         </nav>
     </header>
     <main>
-        <div class="contacto">
-            <h2>Contactanos</h2>
-            <div class="caja">
-                <div class="form">
-                    <h3>Contactanos</h3>
-                    <form id="form" action="">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido" name="apellido">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email">
-                        <label for="telefono">Teléfono</label>
-                        <input type="tel" id="telefono" name="telefono">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
-                        <input type="submit" value="Enviar">
-                    </form>
-                </div>
-                <div class="num"></div>
-                <h3>Mapa</h3>
-                <div class="mapa">
-                    <iframe
+        <div class="container">
+            <form class="form">
+                <h2>Contactanos</h2>
+                <p>
+                    Deja tu reseña para que podamos seguir mejorando!
+                </p>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" class="box">
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" class="box">
+                <label for="mensaje">Mensaje </label>
+                <textarea class="box" id="mensaje" cols="30" rows="10"></textarea>
+                <input type="submit" value="Enviar" class="submit">
+            </form>
+
+            <div class="info">
+                <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d822.3786379105743!2d-57.83854654892419!3d-34.46446884839706!3m2!1i1024!2i768!4f13.
                     1!3m3!1m2!1s0x95a312649fc814c1%3A0x8164504f70b57927!2sJos%C3%A9%20Pedro%20Varela%20504%2C%2070000%20Col.
                     %20del%20Sacramento%2C%20Departamento%20de%20Colonia!5e0!3m2!1ses!2suy!4v1723777407679!5m2!1ses!2suy"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="480" height="450" style="border:2px solid black;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="location">
+                    <div class="icons">
+                        <img src="../../asset/gps.svg" alt="">
+                        <p>José Pedro Varela Con Esquina Mengarelli 502</p>
+                    </div>
+                    <div class="icons">
+                        <img src="../../asset/number.svg" alt="">
+                        <p>+598 92 130 245</p>
+                    </div>
+                    <div class="icons">
+                        <img src="../../asset/instagram.svg" alt="">
+                        <p>@feroz_uy</p>
+                    </div>
                 </div>
-                <p>José Pedro Varela Con Esquina Mengarelli 502</p>
             </div>
-        </div>
     </main>
 </body>
 
