@@ -1,6 +1,7 @@
 .logo>img{
     box-sizing: border-box;
-    height: 75px;
+    height: 45px;
+    margin-left:30px ;
     width: auto;
 }
 
@@ -9,8 +10,7 @@ nav{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #00BAF0;
-    background: linear-gradient(to left, #f46b45, #eea849);
+    background-color: #000000;
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #FFF;
     height: 50px;
@@ -23,8 +23,18 @@ nav{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
 }
 
+nav a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  
+ }
+ a:hover{
+  color: #ffffffa2;
+ }
 .menu > li {
     margin: 0 1rem;
     overflow: hidden;
@@ -81,6 +91,7 @@ nav{
   }
   
   @media (max-width: 700px) {
+  
     .menu-button-container {
       display: flex;
     }

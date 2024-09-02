@@ -22,6 +22,7 @@ main{
     box-shadow: 0 0 20px ☐ rgba(0, 0, 0, 0.4);
     border-radius: 25px;
     border: solid black 1px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .form {
@@ -29,6 +30,7 @@ main{
     width: 50%;
     display: flex;
     flex-direction: column;
+
 }
 
 .form h2 {

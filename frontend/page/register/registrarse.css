@@ -73,33 +73,3 @@ form input[type="submit"]:hover {
     background-color: #575757;
 }
 
-@media(max-width: 800px){
-   form {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid black;
-    margin: 60px;
-    zoom: 90%;
-    }
-} 
-@media(max-width: 600px){
-    form {
-     background-color: white;
-     padding: 30px;
-     border-radius: 10px;
-     box-shadow: 0 0 10px rgb(0, 0, 0);
-     width: 300px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     border: 2px solid black;
-     margin: 60px;
-     zoom: 70%;
- } 
-}

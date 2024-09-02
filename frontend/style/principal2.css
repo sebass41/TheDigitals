@@ -29,7 +29,7 @@ main {
     text-align: center;
     width: 100vw;
     overflow: hidden;
-    padding-top: 100px;
+    padding: 150px 200px;
 }
 .image-container {
     display: flex;
@@ -70,3 +70,24 @@ main {
     align-items:center ;
     justify-content: center;
 }
+@keyframes rotar {
+  from{
+    transform: rotate(180deg);
+  }
+  to{
+    transform: rotate(-180deg);
+  }
+}
+@media (max-width: 700px) {
+  .ham1{
+    display: none;
+  }
+  .image-container{
+    align-items: center;
+    justify-content: center;
+    zoom: 70%;
+  }
+  p{
+        
+  }
+    }
