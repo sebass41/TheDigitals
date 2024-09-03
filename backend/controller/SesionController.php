@@ -14,7 +14,8 @@ switch ($funcion){
 }
 
 function iniciarSesion(){
-
+    $usuario = $_POST['usuario'];
+    $pass = $_POST['pass'];
 }
 
 function cerrarSesion(){

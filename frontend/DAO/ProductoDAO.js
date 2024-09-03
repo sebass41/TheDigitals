@@ -1,18 +1,52 @@
 export default class ProductoDAO{
 
-     obtener(){
-       
+    async obtener(){
+        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/ProductoController.php?fun=obtener";
+        let response = await fetch(url);
     }
     
-     insertar(){
- 
+    async insertar(tipo, nombre, descripcion, categoria, img, precio){
+        let formdata = new FormData();
+        formdata.append('tipo', tipo);
+        formdata.append('nombre', nombre);
+        formdata.append('descripcion', descripcion);
+        formdata.append('categoria', categoria);
+        formdata.append('img', img);
+        formdata.append('precio', precio);
+        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/ProductoController.php?fun=insertar";
+        let config ={
+            method: 'POST',
+            body: formdata
+        }
+        let response = await fetch(url, config);
+
     }
     
-     actualizar(){
-  
+    async actualizar(id, tipo, nombre, descripcion, categoria, img, precio){
+        let formdata = new FormData();
+        formdata.append('id', id);
+        formdata.append('tipo', tipo);
+        formdata.append('nombre', nombre);
+        formdata.append('descripcion', descripcion);
+        formdata.append('categoria', categoria);
+        formdata.append('img', img);
+        formdata.append('precio', precio);
+        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/ProductoController.php?fun=actualizar";
+        let config ={
+            method: 'POST',
+            body: formdata
+        }
+        let response = await fetch(url, config);
     }
     
-     eliminar(){
-      
+     async eliminar(id){
+        let formdata = new FormData();
+        formdata.append('id', id);
+        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/ProductoController.php?fun=eliminar";
+        let config ={
+            method: 'POST',
+            body: formdata
+        }
+        let response = await fetch(url, config);
     }
 }

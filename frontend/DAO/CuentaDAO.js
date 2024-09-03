@@ -1,15 +1,15 @@
 export default class CuentaDAO{
 
     
-    crear(){
+    async crear(nombre, apellido, tel, apodo, calle, numero, pass, email){
 
     }
     
-    eliminar(){
+    async eliminar(id){
     
     }
     
-    recuperar(){
+    async recuperar(email){
     
     }
 
