@@ -1,6 +1,6 @@
 <?php
 
-require_once "../model/ProductoDAO.php"
+require_once "../model/SesionDAO.php";
 
 $funcion = $_GET['fun'];
 
