@@ -1,4 +1,18 @@
-export default class ProductoDao{
+export default class ProductoDAO{
 
+     obtener(){
+       
+    }
     
+     insertar(){
+ 
+    }
+    
+     actualizar(){
+  
+    }
+    
+     eliminar(){
+      
+    }
 }
