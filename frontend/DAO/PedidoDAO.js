@@ -21,8 +21,14 @@ export default class PedidoDAO{
         let response = await fetch(url, config);
     }
     
-    async modEstado(){
+    async modEstado(estado){
+        let formdata = new FormData();
+        formdata.append('estado', estado);
         let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/PedidoController.php?fun=modEstado";
+        let config ={
+            method: 'POST',
+            body: formdata
+        }
         let response = await fetch(url, config);
     }
     
