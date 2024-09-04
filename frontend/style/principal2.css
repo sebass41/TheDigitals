@@ -30,6 +30,7 @@ main {
     width: 100vw;
     overflow: hidden;
     padding: 150px 200px;
+    
 }
 .image-container {
     display: flex;
@@ -40,7 +41,15 @@ main {
     width: 100%;
     user-select: none;
 }
-
+.eslogan{
+  box-sizing:content-box ;
+  position: relative;
+  bottom: 400px;
+  justify-content: center;
+  align-items: center;
+  left: 45px;
+  height: 100px;
+}
 .main-image {
     max-width: 60%;
     height: auto;
@@ -81,6 +90,9 @@ main {
 @media (max-width: 700px) {
   .ham1{
     display: none;
+  }
+  .eslogan{
+    zoom: 3%;
   }
   .image-container{
     align-items: center;
