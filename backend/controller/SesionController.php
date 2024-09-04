@@ -1,5 +1,4 @@
 <?php
-
 require_once "../model/SesionDAO.php";
 
 $funcion = $_GET['fun'];
@@ -21,7 +20,5 @@ function iniciarSesion(){
 function cerrarSesion(){
 
 }
-
-
 
 ?>

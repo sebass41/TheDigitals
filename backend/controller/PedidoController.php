@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require_once "../model/PedidoDAO.php";
 
@@ -23,7 +24,7 @@ switch ($funcion){
 }
 
 function obtener(){
-
+    
 }
 
 function realizar(){

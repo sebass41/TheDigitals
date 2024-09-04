@@ -1,6 +1,7 @@
 <?php
+session_start();
 
-require_once "../model/ProductoDAO.php";
+require_once "../model/UsuarioDAO.php";
 
 $funcion = $_GET['fun'];
 
