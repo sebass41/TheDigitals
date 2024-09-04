@@ -22,7 +22,8 @@ export default class PedidoDAO{
     }
     
     async modEstado(){
-    
+        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/PedidoController.php?fun=modEstado";
+        let response = await fetch(url, config);
     }
     
     async obtenerA(){
