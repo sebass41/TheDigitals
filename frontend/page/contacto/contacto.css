@@ -77,50 +77,13 @@ body {
     padding: 0px;
     background-image: url(../../asset/Diseño\ sin\ título.png);
 }
-/*
-header {
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+
+#mapa{
+    width:480px;
+    height:450px;
+
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-nav img {
-    height: 50px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: #575757;
-}
-*/
 .img-1 {
     width: 350px;
     margin-bottom: 75px;
@@ -140,3 +103,17 @@ nav ul li a:hover {
 .info{
     margin: 20px;
 }
+
+@media (max-width: 1005px) {
+    main{
+        height: 90vh;
+    }
+
+    #mapa{
+    }
+    .container{
+        height: 100%;
+    }
+
+}
+
