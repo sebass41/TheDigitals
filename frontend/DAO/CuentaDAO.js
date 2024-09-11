@@ -1,14 +1,14 @@
 export default class CuentaDAO{
 
     
-    async crear(nombre, apellido, tel, apodo, calle, numero, pass, email){
+    async crear(nombre, apellido, tel, calle, numero, piso, pass, email){
         let formdata = new FormData();
         formdata.append('nombre', nombre);
         formdata.append('apellido', apellido);
         formdata.append('tel', tel);
-        formdata.append('apodo', apodo);
         formdata.append('calle', calle);
         formdata.append('numero', numero);
+        formdata.append('piso', piso);
         formdata.append('pass', pass);
         formdata.append('email', email);
         let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/CuentaController.php?fun=crear";
