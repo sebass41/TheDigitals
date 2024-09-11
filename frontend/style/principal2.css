@@ -1,114 +1,93 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* General Styles */
 body {
-    font-family: "Poppins", sans-serif;
-    --color1: #FFF ;
-    --color2: #181818 ;
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/*  --->HEADER<---  */
-
-
-
-/*  --->MAIN<---  */
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 99vw;
-    height: 95vh;
-    overflow: hidden;
-    padding: 150px 200px;
-    box-sizing: border-box;
-    
-}
+/* Main Content Styles */
 .image-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    user-select: none;
-    margin-top: 10%;
-}
-.eslogan{
-  box-sizing:content-box ;
-  position: relative;
-  bottom: 400px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25%;
-  max-width: 1280px;
-  max-height: 50px;
-  user-select: none;
-}
-.main-image {
-    max-width: 60%;
-    height: auto;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
-.img-n1 {
-    height: 500px;
-    width: auto;
-    animation: rotar 20s linear infinite;
-    position: absolute;
-    z-index: 1;
-   user-select: none;
+.image-container .ham1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.image-container > .ham1 > img{
+  height: 400px;
+  width: auto;
+}
+
+/* Rotate effect */
+.rotate {
+  width: 250px;
+  position: absolute;
+  animation: rotateAnimation 5s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotateAnimation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+/* Styles for hamburger images */
 .img-ham1 {
-    width: auto;
-    height: 400px;
-    position: absolute;
-    z-index: 2;
-    user-select: none;
-    animation: arriba 5s backwards;
+  z-index: 2;
 }
 
-.ham1 {
-    position: relative;
-    display: flex;
-    align-items:center ;
-    justify-content: center;
+/* Slogan styles */
+.eslogan img {
+  display: block;
+  margin: 20px auto;
+  max-width: 400px;
 }
-@keyframes rotar {
-  from{
-    transform: rotate(180deg);
-  }
-  to{
-    transform: rotate(-180deg);
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .image-container .ham1:first-child,
+  .image-container .ham1:last-child {
+      display: none;
   }
 }
-@media (max-width: 700px) {
-  .ham1{
-    display: none;
+
+@media (max-width: 480px) {
+  /* Hide the side images on small screens */
+  .image-container .ham1:first-child,
+  .image-container .ham1:last-child {
+      display: none;
   }
-  .eslogan{
-    zoom: 30%;
-    top: 845px;
+
+  .image-container {
+      justify-content: center;
+      gap: 0;
   }
-  .image-container{
-    align-items: center;
-    justify-content: center;
-    zoom: 70%;
+
+  .eslogan img {
+      max-width: 80%;
   }
-  p{
-        
-  }
-  main{
-    box-sizing: border-box;
-    width: 20px;
-  }
-    }
+}
