@@ -26,25 +26,32 @@ class Usuario{
         }
     }
 
-    function insertar($nombre, $apellido, $tel, $apodo, $calle, $numero, $pass, $mail, $admin){
+    function insertar($nombre, $apellido, $tel, $apodo, $calle, $num, $piso, $pass, $mail){
         try{
             $connection = conection();
-            $sql = "INSERT FROM usuario VALUES (0, $nombre, $apellido, $tel, $apodo, $calle, $numero, $pass, $mail, $admin)";
-            $respuesta = $connection->query($sql);
+            $sql = "INSERT INTO usuario (Nombre, Apellido, Tel, Calle, Num, Piso, Contraseña, Mail) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("ssisiss", $nombre, $apellido, $tel, $apodo, $calle, $num, $piso, $pass, $mail);
+            $stmt->execute();
 
             $msj = "Se ingresó correctamente el Usuario";
-            return new Respuesta(true, $msj, $respuesta);
+            return new Respuesta(true, $msj, $stmt);
         }catch(Exception $e){
             $msj = "Error al ingresar el Usuario:". $e->getMessage();
             return new Respuesta(false, $msj, []);
         }
     }
 
-    function actualizar($id, $nombre, $apellido, $tel, $apodo, $calle, $numero, $pass, $mail){
-        $connection = conection();
-        $sql = "UPDATE usuario SET nombre = $nombre, apellido = $apellido, tel = $tel, apodo = $apodo, calle = $calle, numero = $numero, mail = $mail =  WHERE id_Usuario = $id";
-        $respuesta = $connection->query($sql);
-        return $respuesta;
+    function actualizar($id, $nombre, $apellido, $tel, $apodo, $calle, $num, $piso, $pass, $mai){
+        try{
+            $connection = conection();
+            $sql = "UPDATE usuario SET Nombre = ?, ";
+            $respuesta = $connection->query($sql);
+            return $respuesta;
+        }catch (Exception $e){
+            $msj = "Error: " . $e;
+            return new Respuesta(false, $msj, []);
+        }
     }
 
     function eliminar($id){

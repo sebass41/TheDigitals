@@ -12,19 +12,18 @@ ini_set('error_log', '../log/php_errors.log');
 class Producto{
 
     function obtener(){
-        $connection = conection();
-        $sql = "SELECT * FROM producto";
-        $respuesta = $connection->query($sql);
-        $productos = $respuesta->fetch_all(MYSQLI_ASSOC);
+        try{
+            $connection = conection();
+            $sql = "SELECT * FROM producto";
+            $respuesta = $connection->query($sql);
+            $productos = $respuesta->fetch_all(MYSQLI_ASSOC);
 
-        if ($respuesta) {
-            $msj = "Datos obtenidos correctamente";
+            $msj = "Se obtuvieron los productos correctamente";
             return new Respuesta(true, $msj, $productos);
-        }else {
+        }catch (Exception $e){
             $msj = "No se pudieron obtener los datos";
             return new Respuesta(false, $msj, []);
         }
-        
     }
 
     function insertar($idProducto, $tipo, $nombre, $descripcion, $categoria, $img, $precio, $idPedido){
