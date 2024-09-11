@@ -5,16 +5,17 @@
     width: auto;
 }
 
-nav{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #000000;
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: #FFF;
-    height: 50px;
-    padding: 1em;
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000000;
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+  width: 100%; /* Establece el ancho en 100% */
+  box-sizing: border-box; /* Agrega esto para incluir el padding en el ancho */
 }
 
 .menu {

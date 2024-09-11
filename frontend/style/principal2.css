@@ -21,15 +21,16 @@ body {
 /*  --->MAIN<---  */
 
 main {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100vw;
+    width: 99vw;
+    height: 95vh;
     overflow: hidden;
     padding: 150px 200px;
+    box-sizing: border-box;
     
 }
 .image-container {
@@ -40,6 +41,7 @@ main {
     margin-bottom: 20px;
     width: 100%;
     user-select: none;
+    margin-top: 10%;
 }
 .eslogan{
   box-sizing:content-box ;
@@ -47,8 +49,10 @@ main {
   bottom: 400px;
   justify-content: center;
   align-items: center;
-  left: 45px;
-  height: 100px;
+  margin-top: 25%;
+  max-width: 1280px;
+  max-height: 50px;
+  user-select: none;
 }
 .main-image {
     max-width: 60%;
@@ -92,7 +96,8 @@ main {
     display: none;
   }
   .eslogan{
-    zoom: 3%;
+    zoom: 30%;
+    top: 845px;
   }
   .image-container{
     align-items: center;
@@ -101,5 +106,9 @@ main {
   }
   p{
         
+  }
+  main{
+    box-sizing: border-box;
+    width: 20px;
   }
     }
