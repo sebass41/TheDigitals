@@ -26,7 +26,7 @@ class Usuario{
         }
     }
 
-    function insertar($nombre, $apellido, $tel, $apodo, $calle, $num, $piso, $pass, $mail){
+    function registrar($nombre, $apellido, $tel, $calle, $num, $piso, $pass, $mail){
         try{
             $connection = conection();
             $sql = "INSERT INTO usuario (Nombre, Apellido, Tel, Calle, Num, Piso, Contraseña, Mail) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";

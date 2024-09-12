@@ -26,18 +26,16 @@ Class Pedido{
         }
     }
 
-    function insertar($calle, $num, $estado, $fecha, $fechaEnvio, $lugarRetiro, $idUsuario){
-        $connection = conection();
-        $sql = "INSERT INTO pedido VALUES (0, '$calle', '$num', '$estado', '$fecha', '$fechaEnvio', '$lugarRetiro', '$idUsuario')";
-        $respuesta = $connection->query($sql);
+    function hacerPedido($calle, $num, $estado, $fecha, $fechaEnvio, $lugarRetiro, $idUsuario){
+        try{
+            $connection = conection();
+            $sql = "INSERT INTO pedido () VALUES ()";
+            $respuesta = $connection->query($sql);
 
-        if ($respuesta) {
-            $msj = "Datos insertados correctamente";
-            return new Respuesta(true, $msj, $respuesta);
-        }else {
-            $msj = "No se pudieron insertar los datos";
-            return new Respuesta(false, $msj, []);
-        }
+            }catch (Exception $e){
+                $msj = "Error: " . $e;
+                return new Respuesta(false, $msj, []);
+            }
     }
 
     function eliminar($idPedido){

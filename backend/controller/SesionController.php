@@ -13,8 +13,14 @@ switch ($funcion){
 }
 
 function iniciarSesion(){
-    $usuario = $_POST['usuario'];
+    $email = $_POST['email'];
     $pass = $_POST['pass'];
+
+    $result = (new Sesion())->iniciarSesion($email, $pass);
+    if($result->sucess){
+        $_SESSION['email'] = $email;
+    }
+    echo json_encode($result);
 }
 
 function cerrarSesion(){
