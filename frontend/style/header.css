@@ -36,7 +36,7 @@ nav a{
   cursor: pointer;
   
  }
- a:hover{
+ nav a:hover{
   color: #ffffffa2;
  }
 .menu > li {
