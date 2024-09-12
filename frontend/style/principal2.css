@@ -10,11 +10,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 70px;
   padding: 20px;
   flex-wrap: wrap;
-}
+  margin-top: 70px;
 
+}
 .image-container .ham1 {
   position: relative;
   display: flex;
@@ -31,10 +32,13 @@ body {
 .rotate {
   width: 250px;
   position: absolute;
-  animation: rotateAnimation 5s linear infinite;
+  animation: rotateAnimation 15s linear infinite;
   z-index: 1;
 }
-
+#rotar{
+  width: 450px;
+  height: 450px;
+}
 @keyframes rotateAnimation {
   0% {
       transform: rotate(0deg);
@@ -53,7 +57,7 @@ body {
 .eslogan img {
   display: block;
   margin: 20px auto;
-  max-width: 400px;
+  max-width: 800px;
 }
 
 /* Footer */
@@ -85,9 +89,10 @@ footer {
   .image-container {
       justify-content: center;
       gap: 0;
+  
   }
 
   .eslogan img {
-      max-width: 80%;
+      max-width: 90%;
   }
 }
