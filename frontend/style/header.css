@@ -1,7 +1,10 @@
+body{
+  margin: 0;
+}
 .logo>img{
     box-sizing: border-box;
     height: 45px;
-    margin:0 ;
+    margin-left:30px ;
     width: auto;
 }
 
@@ -14,7 +17,7 @@ nav {
   color: #FFF;
   height: 50px;
   padding: 1em;
-  width: 100vw; /* Establece el ancho en 100% */
+  width: 100%; /* Establece el ancho en 100% */
   box-sizing: border-box; /* Agrega esto para incluir el padding en el ancho */
 }
 
@@ -26,6 +29,7 @@ nav {
     padding: 0;
     
 }
+
 nav a{
   text-decoration: none;
   color: white;
@@ -89,7 +93,7 @@ nav a{
     margin-top: 0px;
     transform: rotate(-405deg);
   }
-
+  
   @media (max-width: 700px) {
   
     .menu-button-container {
