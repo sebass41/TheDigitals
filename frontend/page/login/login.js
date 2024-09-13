@@ -14,6 +14,10 @@ async function login(){
 
         let result = await SesionDAO.iniciarSesion(email, pass);
         let jsonResult = await result.json();
+
+        if(jsonResult.sucess){
+            
+        }
         console.log(jsonResult);
     }
 }

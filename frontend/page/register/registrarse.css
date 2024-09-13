@@ -73,3 +73,17 @@ form input[type="submit"]:hover {
     background-color: #575757;
 }
 
+/* Estilos para los mensajes de error */
+.error-container {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.error-message {
+    margin: 5px 0;
+}

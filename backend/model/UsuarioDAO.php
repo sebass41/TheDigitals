@@ -33,7 +33,7 @@ class Usuario{
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("ssisssss", $nombre, $apellido, $tel, $calle, $num, $piso, $pass, $mail);
             $stmt->execute();
-    
+            
             $msj = "Se ingresó correctamente el Usuario";
             return new Respuesta(true, $msj, $stmt);
         } catch (mysqli_sql_exception $e) {
