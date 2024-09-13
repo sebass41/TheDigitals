@@ -82,6 +82,7 @@ main {
     gap: 20px;
     padding-bottom: 30px;
     border-bottom: 1px solid #e4e4e4;
+    
 }
 
 
@@ -97,24 +98,32 @@ main {
     line-height: 0;
     border-radius: 30px;
     text-align:center;
+    position: relative;
+    bottom: 30px;
 }
 
 
 .btn-add-to-cart {
     border: none;
-    background-color: #252525;
+    background-color: #000000;
     padding: 10px;
     color: #f7f7f7;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
     font-weight: 700;
     cursor: pointer;
-    border-radius:0px ;
     border-radius: 30px;
+    position: absolute;
+    left: 80%;
+    top: 40%;
+    
+    
 }
-
+.cantidad{
+    color: #000000;
+    font-size: 20px;
+    }
 .btn-add-to-cart:hover  {
         color: #000000;
         background-color: white;
@@ -237,6 +246,7 @@ main {
     main {
         flex-direction: column;
         gap: 20px;
+        width: 100vw;
     }
     .container-info-product {
         max-width: 100%;
