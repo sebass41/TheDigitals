@@ -26,21 +26,22 @@ class Usuario{
         }
     }
 
-    function registrar($nombre, $apellido, $tel, $calle, $num, $piso, $pass, $mail){
-        try{
+    function registrar($nombre, $apellido, $tel, $calle, $num, $piso, $pass, $mail) {
+        try {
             $connection = conection();
-            $sql = "INSERT INTO usuario (Nombre, Apellido, Tel, Calle, Num, Piso, Contraseña, Mail) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO usuario (Nombre, Apellido, Tel, Calle, Numero, Piso, Contraseña, Mail) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $connection->prepare($sql);
-            $stmt->bind_param("ssisiss", $nombre, $apellido, $tel, $apodo, $calle, $num, $piso, $pass, $mail);
+            $stmt->bind_param("ssisssss", $nombre, $apellido, $tel, $calle, $num, $piso, $pass, $mail);
             $stmt->execute();
-
+    
             $msj = "Se ingresó correctamente el Usuario";
             return new Respuesta(true, $msj, $stmt);
-        }catch(Exception $e){
-            $msj = "Error al ingresar el Usuario:". $e->getMessage();
+        } catch (mysqli_sql_exception $e) {
+            $msj = "Error al ingresar el Usuario: " . $e->getMessage();
             return new Respuesta(false, $msj, []);
         }
     }
+    
 
     function actualizar($id, $nombre, $apellido, $tel, $apodo, $calle, $num, $piso, $pass, $mai){
         try{

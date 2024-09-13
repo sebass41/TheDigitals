@@ -4,7 +4,7 @@ require_once "../model/SesionDAO.php";
 $funcion = $_GET['fun'];
 
 switch ($funcion){
-    case 'iniciarSesion':
+    case 'is':
         iniciarSesion();
         break;
     case 'cerrarSesion':

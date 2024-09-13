@@ -32,9 +32,9 @@ Class Pedido{
             $sql = "INSERT INTO pedido () VALUES ()";
             $respuesta = $connection->query($sql);
 
-            }catch (Exception $e){
-                $msj = "Error: " . $e;
-                return new Respuesta(false, $msj, []);
+        }catch (Exception $e){
+            $msj = "Error: " . $e;
+            return new Respuesta(false, $msj, []);
             }
     }
 

@@ -1,0 +1,26 @@
+[13-Sep-2024 04:56:42 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\UsuarioDAO.php:34
+Stack trace:
+#0 C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\UsuarioDAO.php(34): mysqli_stmt->bind_param('ssisiss', 'fdsafdas', 'fas', '543', NULL, 'asd', '3', 'fa', '123', 'gas')
+#1 C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\CuentaController.php(30): Usuario->registrar('fdsafdas', 'fas', '543', 'asd', '3', 'fa', '123', 'gas')
+#2 C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\CuentaController.php(10): crear()
+#3 {main}
+  thrown in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\UsuarioDAO.php on line 34
+[13-Sep-2024 05:00:15 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of elements in the type definition string must match the number of bind variables in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\UsuarioDAO.php:34
+Stack trace:
+#0 C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\UsuarioDAO.php(34): mysqli_stmt->bind_param('ssisiss', 'fdsafdas', 'fas', '543', 'asd', '3', 'fa', '123', 'gas')
+#1 C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\CuentaController.php(30): Usuario->registrar('fdsafdas', 'fas', '543', 'asd', '3', 'fa', '123', 'gas')
+#2 C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\CuentaController.php(10): crear()
+#3 {main}
+  thrown in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\UsuarioDAO.php on line 34
+[13-Sep-2024 05:32:11 Europe/Berlin] PHP Warning:  Undefined array key "apell" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\CuentaController.php on line 22
+[13-Sep-2024 05:32:11 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\CuentaController.php on line 25
+[13-Sep-2024 05:35:48 Europe/Berlin] PHP Warning:  Undefined array key "apell" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\CuentaController.php on line 22
+[13-Sep-2024 05:35:48 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\CuentaController.php on line 25
+[13-Sep-2024 06:05:31 Europe/Berlin] PHP Warning:  Undefined array key "email" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\SesionController.php on line 16
+[13-Sep-2024 06:05:31 Europe/Berlin] PHP Warning:  Undefined array key "pass" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\controller\SesionController.php on line 17
+[13-Sep-2024 06:42:31 Europe/Berlin] PHP Warning:  Undefined array key "Password" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\SesionDAO.php on line 24
+[13-Sep-2024 06:42:32 Europe/Berlin] PHP Warning:  Undefined array key "Password" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\SesionDAO.php on line 24
+[13-Sep-2024 06:42:45 Europe/Berlin] PHP Warning:  Undefined array key "Password" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\SesionDAO.php on line 24
+[13-Sep-2024 06:45:59 Europe/Berlin] PHP Warning:  Undefined array key "Contraseña" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\SesionDAO.php on line 24
+[13-Sep-2024 06:46:08 Europe/Berlin] PHP Warning:  Undefined array key "Contraseña" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\SesionDAO.php on line 24
+[13-Sep-2024 07:07:08 Europe/Berlin] PHP Warning:  Undefined array key "Contraseña" in C:\xampp\htdocs\Obligatorio\TheDigitals\backend\model\SesionDAO.php on line 23

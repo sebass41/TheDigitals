@@ -45,13 +45,13 @@ class Producto{
         }
     }
 
-    function insertar($idProducto, $tipo, $nombre, $descripcion, $categoria, $img, $precio, $idPedido){
+    function insertar($tipo, $nombre, $descripcion, $categoria, $img, $precio, $idPedido){
         $connection = conection();
 
         $nomImg = $img['name'];
         $extencion = pathinfo($nomImg, PATHINFO_EXTENSION);
         
-        $sql = "INSERT INTO producto VALUES ($idProducto, $tipo, $nombre, $descripcion, $categoria, $extencion, $precio, $idPedido)";
+        $sql = "INSERT INTO producto VALUES ()";
         $respuesta = $connection->query($sql);
         
         $id = $connection->insert_id;

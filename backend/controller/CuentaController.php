@@ -27,6 +27,8 @@ function crear(){
     $pass = $_POST['pass'];
     $email = $_POST['email'];
 
+    $pass = password_hash($pass, PASSWORD_DEFAULT);
+
     $result = (new Usuario())->registrar($nombre, $apell, $tel, $calle, $num, $piso, $pass, $email);
     echo json_encode($result);
 }
