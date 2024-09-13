@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hamburger Menu</title>
+        <link rel="stylesheet" href="producto.css">
+        <link rel="stylesheet" href="../../style/header.css">
+    </head> 
+	<body>
+		<header>
+            <nav>
+                <div class="logo"><img src="../../asset/logotipo/feroz-texto-blanco.png" alt="Logo-Feroz"></div>
+                <input id="menu-toggle" type="checkbox" />
+                <label class='menu-button-container' for="menu-toggle">
+                    <div class='menu-button'></div>
+                </label>
+                <ul class="menu">
+                    <li><a href="https://feroz.alacarta.online/" target="_blank">Carta</a></li>
+                    <li><a href="../contacto/contacto.html">Contacto</a></li>
+                    <li><a href="../login/login.html">Iniciar Sesion</a></li>
+                    
+                </ul>
+            </nav>
+            </header>
+		<main>
+           <div class="flecha">
+            <a href="../catalogo/catalogo.html"><img src="../../asset/icons/izquierda.png" alt=""></a>
+           </div>
+			<div class="img">
+				<img src="../../asset/HamburguesasProductos/ChilliConCarneBurger(tuco ahumado).jpeg" />
+			</div>
+			<div class="container-info-product">
+				 <div class="h1-container">
+                <h1 class="h1animado">SMASH</h1>
+                </div><div class="precio">
+					<p class="preciotxt">$95.00</p>
+				</div>
+
+				<div class="cantidad">
+					<div class="form-group">
+						<label for="carnes">Carnes</label>
+						<select name="carnes" id="carnes">
+							<option disabled selected value="">
+								Escoge una opción
+							</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+                            <option value="4">4</option>
+						</select>
+					</div>
+
+				<div class="container-add-cart">
+					<div class="container-quantity">
+						<input
+							type="number"
+							placeholder="1"
+							value="1"
+							min="1"
+							class="input-quantity"
+						/>
+						<div class="btn-increment-decrement">
+							<i class="fa-solid fa-chevron-up" id="increment"></i>
+							<i class="fa-solid fa-chevron-down" id="decrement"></i>
+						</div>
+					</div>
+					<button class="btn-add-to-cart">
+						<i class="fa-solid fa-plus"></i>
+						Añadir al carrito
+					</button>
+				</div>
+
+				<div class="container-description">
+					<div class="title-description">
+						<h4>Descripción</h4>
+						<i class="fa-solid fa-chevron-down"></i>
+					</div>
+					<div class="text-description">
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing
+							elit. Laboriosam iure provident atque voluptatibus
+							reiciendis quae rerum, maxime placeat enim cupiditate
+							voluptatum, temporibus quis iusto. Enim eum qui delectus
+							deleniti similique? Lorem, ipsum dolor sit amet
+							consectetur adipisicing elit. Sint autem magni earum est
+							dolorem saepe perferendis repellat ipsam laudantium cum
+							assumenda quidem quam, vero similique? Iusto officiis
+							quod blanditiis iste?
+						</p>
+					</div>
+				</div>
+            </div>
+
+	</body>
 </html>

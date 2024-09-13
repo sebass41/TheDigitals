@@ -13,7 +13,7 @@ body {
   gap: 70px;
   padding: 20px;
   flex-wrap: wrap;
-  margin-top: 70px;
+  margin-top: 70px;                             
 
 }
 .image-container .ham1 {
@@ -89,10 +89,14 @@ footer {
   .image-container {
       justify-content: center;
       gap: 0;
+      
   
   }
 
   .eslogan img {
-      max-width: 90%;
+      max-width: 100%;
+  }
+  .feroz{
+    width: 100%;
   }
 }
