@@ -5,6 +5,10 @@ body {
   padding: 0;
 }
 
+main{
+  overflow: hidden;
+}
+
 /* Main Content Styles */
 .image-container {
   display: flex;
@@ -13,7 +17,7 @@ body {
   gap: 70px;
   padding: 20px;
   flex-wrap: wrap;
-  margin-top: 70px;                             
+  margin-top: 70px;                         
 
 }
 .image-container .ham1 {
