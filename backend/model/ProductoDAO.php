@@ -45,24 +45,26 @@ class Producto{
         }
     }
 
-    function insertar($tipo, $nombre, $descripcion, $categoria, $img, $precio, $idPedido){
-        $connection = conection();
+    function insertar($tipo, $nombre, $descripcion, $img, $precio){
+        try{
+            $connection = conection();
 
-        $nomImg = $img['name'];
-        $extencion = pathinfo($nomImg, PATHINFO_EXTENSION);
-        
-        $sql = "INSERT INTO producto VALUES ()";
-        $respuesta = $connection->query($sql);
-        
-        $id = $connection->insert_id;
-        $rutaTemp = $img['tmp_name'];
-        move_uploaded_file($rutaTemp, "../img/$id.$extencion");
+            $nomImg = $img['name'];
+            $extencion = pathinfo($nomImg, PATHINFO_EXTENSION);
+            
+            $sql = "INSERT INTO producto(tipo, Nombre, Descripcion, extencion, precio) VALUES (?, ?, ?, ?, ?)";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("ssssi", $tipo, $nombre, $descripcion, $extencion, $precio);
+            $stmt->execute();
+            
+            $id = $connection->insert_id;
+            $rutaTemp = $img['tmp_name'];
+            move_uploaded_file($rutaTemp, "../img/$id.$extencion");
 
-        if ($respuesta) {
-            $msj = "Datos insertados correctamente";
-            return new Respuesta(true, $msj, $respuesta);
-        }else {
-            $msj = "No se pudieron insertar los datos";
+            $msj = "Se insertó correctamente";
+            return new Respuesta(true, $msj, $stmt);
+        }catch(Exception $e){
+            $msj = "Error: " . $e->getMessage();
             return new Respuesta(false, $msj, []);
         }
     }

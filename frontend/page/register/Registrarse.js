@@ -1,3 +1,4 @@
+import CuentaDAO from "../../DAO/CuentaDAO.js";
 window.onload = () => {
     crearCuenta();
 }
@@ -18,9 +19,10 @@ async function crearCuenta() {
             let pass = formData.get('pass');
             let passRepeat = formElement.querySelector('#passRepeat').value;
 
+            let cuenta = new CuentaDAO(nombre, apellido, tel, calle, num, piso, pass, email);
             try {
                 if(validarDatos(nombre, apellido, tel, email, pass, passRepeat, calle, num)) {
-                    let result = await CuentaDAO.crear(nombre, apellido, tel, calle, num, piso, pass, email);
+                    let result = await cuenta.crear();
                     let jsonResult = await result.json();
 
                     if (jsonResult.success) {

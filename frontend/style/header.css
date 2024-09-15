@@ -8,6 +8,10 @@ body{
     width: auto;
 }
 
+header{
+  width: 100vw;
+}
+
 nav {
   display: flex;
   flex-direction: row;

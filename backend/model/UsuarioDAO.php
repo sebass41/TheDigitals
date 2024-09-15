@@ -37,7 +37,7 @@ class Usuario{
             $msj = "Se ingresó correctamente el Usuario";
             return new Respuesta(true, $msj, $stmt);
         } catch (mysqli_sql_exception $e) {
-            $msj = "Error al ingresar el Usuario: " . $e->getMessage();
+            $msj = "Error: " . $e->getMessage();
             return new Respuesta(false, $msj, []);
         }
     }

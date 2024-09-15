@@ -33,16 +33,13 @@ function obtenerProducto(){
 }
 
 function insertar(){
-    $id = $_POST['id'];
     $tipo = $_POST['tipo'];
-    $nombre = $_POST['name'];
-    $descripcion = $_POST['desc'];
-    $categoria = $_POST['cate'];
+    $nombre = $_POST['nombre'];
+    $descripcion = $_POST['descripcion'];
     $img = $_FILES['img'];
     $precio = $_POST['precio'];
-    $idPedido = $_POST['idPedido'];
 
-    $insertar = (new Producto())->insertar($id, $tipo, $nombre, $descripcion, $categoria, $img, $precio, $idPedido);
+    $insertar = (new Producto())->insertar($tipo, $nombre, $descripcion, $img, $precio);
     echo json_encode($insertar);
 }
 

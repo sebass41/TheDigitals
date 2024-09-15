@@ -1,29 +1,47 @@
-export default class CuentaDAO{
-
+export default class CuentaDAO {
     
-    static async crear(nombre, apellido, tel, calle, numero, piso, pass, email){
+    constructor(nombre, apellido, tel, calle, numero, piso, pass, email){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.tel = tel;
+        this.calle = calle;
+        this.numero = numero;
+        this.piso = piso;
+        this.pass = pass;
+        this.email = email;
+    }
+
+    async crear() {
         let formdata = new FormData();
-        formdata.append('nombre', nombre);
-        formdata.append('apell', apellido);
-        formdata.append('tel', tel);
-        formdata.append('calle', calle);
-        formdata.append('num', numero);
-        formdata.append('piso', piso);
-        formdata.append('pass', pass);
-        formdata.append('email', email);
-        let url = "http://localhost/obligatorio/TheDigitals/backend/controller/CuentaController.php?fun=crear";
-        let config ={
+        formdata.append('nombre', this.nombre);
+        formdata.append('apell', this.apellido);
+        formdata.append('tel', this.tel);
+        formdata.append('calle', this.calle);
+        formdata.append('num', this.num);
+        formdata.append('piso', this.piso);
+        formdata.append('pass', this.pass);
+        formdata.append('email', this.email);
+    
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=crear";
+        let config = {
             method: 'POST',
             body: formdata
+        };
+    
+        try {
+            let response = await fetch(url, config);
+            return response;
+        } catch (error) {
+            console.error("Error al crear la cuenta:", error);
+            throw error; // Lanza el error para que sea manejado por el código que llama a este método
         }
-        let response = await fetch(url, config);
-        return response;
     }
     
-    static async eliminar(id){
+    
+    async eliminar(id){
         let formdata = new FormData();
         formdata.append('id', id);
-        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/CuentaController.php?fun=eliminar";
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=eliminar";
         let config ={
             method: 'POST',
             body: formdata
@@ -31,7 +49,7 @@ export default class CuentaDAO{
         let response = await fetch(url, config);
     }
     
-    static async recuperar(email){
+    async recuperar(email){
         let formdata = new FormData();
         formdata.append('email', email);
         let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/CuentaController.php?fun=recuperar";

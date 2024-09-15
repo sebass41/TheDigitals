@@ -4,7 +4,7 @@ export default class SesionDAO{
         let formdata = new FormData();
         formdata.append('email', email);
         formdata.append('pass', pass);
-        let url = "http://localhost/obligatorio/TheDigitals/backend/controller/SesionController.php?fun=is";
+        let url = "http://localhost/TheDigitals/backend/controller/SesionController.php?fun=is";
         let config ={
             method: 'POST',
             body: formdata

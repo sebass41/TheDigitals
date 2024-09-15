@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../asset/feroz-cara.png" type="image/x-icon">
     <link rel="stylesheet" href="insertar.css">
     <link rel="stylesheet" href="../../style/header.css">
+    <script type="module" src="insertar.js"></script>
 </head>
 <body>
   <header>
@@ -25,18 +26,18 @@
     </nav>
     </header>
   <main>
-    <form>
+    <form id="formProducto">
       <h2>Agregar producto</h2>
       
       <label for="nombre">Nombre</label>
       <input type="text" name="nombre">
 
-      <label for="categoria">Categoria</label>
-      <select name="categoria" id="categoria">
-      <option value="">Hamburguesa</option>
-      <option value="">Pancho</option>
-      <option value="">Papas</option>
-      <option value="">Bebidas</option></select>
+      <label for="tipo">Categoria</label>
+      <select name="tipo" id="tipo">
+      <option value="hamburguesa">Hamburguesa</option>
+      <option value="pancho">Pancho</option>
+      <option value="papas">Papas</option>
+      <option value="bebida">Bebidas</option></select>
 
       <label for="precio">Precio</label>
       <input type="text" name="precio">
