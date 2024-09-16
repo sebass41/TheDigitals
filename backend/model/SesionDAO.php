@@ -11,7 +11,7 @@ class Sesion {
 
     function iniciarSesion($email, $pass) {
         try {
-            $connection = conection(); // Asegúrate de que el método de conexión esté correctamente definido
+            $connection = conection();
             $sql = "SELECT * FROM usuario WHERE mail = ?";
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("s", $email);

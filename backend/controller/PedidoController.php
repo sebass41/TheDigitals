@@ -28,7 +28,14 @@ function obtener(){
 }
 
 function realizar(){
-
+    if (isset($_SESSION['id'])){
+        $calle = $_GET['calle'];
+        $num = $_GET['num'];
+        $piso = $_GET['piso'];
+        $fecha = $_GET['fecha'];
+        $lugarRetiro = $_GET['lugarRetiro'];
+        $idUsuario = $_SESSION['id'];
+    }
 }
 
 function modEstado(){

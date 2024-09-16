@@ -69,41 +69,46 @@ class Producto{
         }
     }
 
-    function actualizar($idProducto, $tipo, $nombre, $descripcion, $categoria, $img, $precio, $idPedido){
-        $connection = conection();
+    function actualizar($idProducto, $tipo, $nombre, $descripcion, $img, $precio){
+        try{
+            $connection = conection();
 
-        $nomImg = $img['name'];
-        $extencion = pathinfo($nomImg, PATHINFO_EXTENSION);
+            $nomImg = $img['name'];
+            $extencion = pathinfo($nomImg, PATHINFO_EXTENSION);
 
-        $sql = "UPDATE TABLE producto
-        SET Tipo = '$tipo', Nombre = '$nombre', Descripcion = '$descripcion', Categoria = '$categoria', Extencion = '$extencion, Precio = $precio, id_Pedido = $idPedido WHERE id_Prod = $idProducto";
-        $respuesta = $connection->query($sql);
+            $sql = "UPDATE producto SET tipo = ?, Nombre = ?, Descripcion = ?, precio = ? WHERE Id_prod = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("sssii", $tipo, $nombre, $descripcion, $precio, $idProducto);
+            $stmt->execute();
 
-        $id = $connection->insert_id;
-        $rutaTemp = $img['tmp_name'];
-        move_uploaded_file($rutaTemp, "../img/$id.$extencion");
+            $id = $connection->insert_id;
+            $rutaTemp = $img['tmp_name'];
+            move_uploaded_file($rutaTemp, "../img/$id.$extencion");
 
-        if ($respuesta) {
-            $msj = "Datos actualizados correctamente";
-            return new Respuesta(true, $msj, $respuesta);
-        }else {
-            $msj = "No se pudieron actualizar los datos";
+            $msj = "Se actualizaron los datos correctamente";
+            return new Respuesta(true, $msj, $stmt);
+        }catch (Exception $e) {
+            $msj = "Error: ".$e->getMessage();
             return new Respuesta(false, $msj, []);
         }
+            
     }
 
     function eliminar($idProducto){
-        $connection = conection();
-        $sql = "DELETE FROM compra WHERE id_compra = $idProducto";
-        $respuesta = $connection->query($sql);
-        
-        if ($respuesta) {
-            $msj = "Datos eliminados correctamente";
-            return new Respuesta(true, $msj, $respuesta);
-        }else {
-            $msj = "No se pudieron eliminar los datos";
+        try{
+            $connection = conection();
+            $sql = "DELETE FROM `producto` WHERE Id_prod = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param('i', $idProducto);
+            $stmt->execute();
+
+            $msj = "Se eliminó el producto correctamente";
+            return new Respuesta(true, $msj, $stmt);
+        }catch (Exception $e) {
+            $msj = "Error:".$e->getMessage();
             return new Respuesta(false, $msj, []);
         }
+            
     }
 }
 

@@ -26,3 +26,15 @@ function ocultar() {
     menuOpciones.classList.remove("activado");
     menuOpciones.classList.add("desactivado");
 }
+
+function cargarDato(productos) {
+    let panchos = productos.filter(producto => producto.tipo === 'pancho');
+    mostrarDatos(panchos, "listaPancho")
+
+}
+
+function mostrarDatos(productos,idElemento) {
+    let elemento = document.getElementById(idElemento);
+    
+    
+}

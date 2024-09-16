@@ -18,6 +18,8 @@ function iniciarSesion(){
 
     $result = (new Sesion())->iniciarSesion($email, $pass);
     if($result->sucess){
+        $usr=[];
+        $_SESSION['id'] = $usr['id_usuario'];
         $_SESSION['email'] = $email;
     }
     echo json_encode($result);

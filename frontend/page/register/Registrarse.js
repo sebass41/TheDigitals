@@ -5,7 +5,7 @@ window.onload = () => {
 
 async function crearCuenta() {
     let formElement = document.querySelector("#formRegister");
-    if (formElement) {
+
         formElement.onsubmit = async (e) => {
             e.preventDefault();
             let formData = new FormData(formElement);
@@ -18,25 +18,16 @@ async function crearCuenta() {
             let email = formData.get('email');
             let pass = formData.get('pass');
             let passRepeat = formElement.querySelector('#passRepeat').value;
+            if(validarDatos(nombre, apellido, tel, email, pass, passRepeat, calle, num)) {
+                let result = await new CuentaDAO().crear(nombre, apellido, tel, calle, num, piso, pass, email);
 
-            let cuenta = new CuentaDAO(nombre, apellido, tel, calle, num, piso, pass, email);
-            try {
-                if(validarDatos(nombre, apellido, tel, email, pass, passRepeat, calle, num)) {
-                    let result = await cuenta.crear();
-                    let jsonResult = await result.json();
-
-                    if (jsonResult.success) {
-                        window.location.href = "../login/login.html";
-                    }
-                    console.log(jsonResult);
+                if (result.success) {
+                    window.location.href = "../login/login.html";
                 }
-            } catch (error) {
-                console.error("Error al crear la cuenta:", error);
+                console.log(result.msj);
             }
         }
-    } else {
-        console.error("Formulario no encontrado");
-    }
+
 }
 
 function validarDatos(nombre, apellido, tel, email, pass, passRepeat, calle, num) {

@@ -26,11 +26,12 @@ Class Pedido{
         }
     }
 
-    function hacerPedido($calle, $num, $estado, $fecha, $fechaEnvio, $lugarRetiro, $idUsuario){
+    function hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $idUsuario){
         try{
             $connection = conection();
-            $sql = "INSERT INTO pedido () VALUES ()";
-            $respuesta = $connection->query($sql);
+            $sql = "INSERT INTO pedido(Calle, Num_casa, Estado, Fecha, Lugar_retiro, Id_Usuario) VALUES (?, ?, ?, ?, ?, ?)";
+            
+
 
         }catch (Exception $e){
             $msj = "Error: " . $e;
