@@ -1,11 +1,11 @@
 export default class ProductoDAO{
 
-    static async obtener(){
+    async obtener(){
         let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/ProductoController.php?fun=obtener";
         let response = await fetch(url);
     }
     
-    static async insertar(tipo, nombre, descripcion, img, precio){
+    async insertar(tipo, nombre, descripcion, img, precio){
         let formdata = new FormData();
         formdata.append('tipo', tipo);
         formdata.append('nombre', nombre);

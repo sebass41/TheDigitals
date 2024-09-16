@@ -4,8 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="modificarProducto.css">
+    <link rel="stylesheet" href="../../style/header.css">
+    <script src="modificarProducto.js"></script>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../principal/index.html"><div class="logo"><img src="../../asset/logotipo/feroz-texto-blanco.png" alt="Logo-Feroz"></div></a>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li><a href="../contacto/contacto.html">Contacto</a></li>
+                <li><a href="" target="_blank">Perfil</a></li>
+                <li><a href="">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tipo</th>
+                        <th>Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Hamburguesa</td>
+                        <td>Producto 1</td>
+                        <td>Descripción del producto 1</td>
+                        <td>$10.00</td>
+                        <td><button>Modificar</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Papa</td>
+                        <td>Producto 2</td>
+                        <td>Descripción del producto 2</td>
+                        <td>$20.00</td>
+                        <td><button>Modificar</button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Bebida</td>
+                        <td>Producto 3</td>
+                        <td>Descripción del producto 3</td>
+                        <td>$30.00</td>
+                        <td><button>Modificar</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Pancho</td>
+                        <td>Producto 4</td>
+                        <td>Descripción del producto 4</td>
+                        <td>$40.00</td>
+                        <td><button>Modificar</button></td>
+                    </tr>
+                </tbody>
+            </table> 
+            <h2>Modificar</h2>  
+            <form id="formModificar">
+                <label for="id">ID</label>
+                <input type="text" id="id">
+                
+                <label for="tipo">Tipo</label>
+                <select id="tipo">
+                    <option value="Hamburguesa">Hamburguesa</option>
+                    <option value="Papa">Papa</option>
+                    <option value="Bebida">Bebida</option>
+                    <option value="Pancho">Pancho</option>
+                </select>
+                
+                <label for="producto">Producto</label>
+                <input type="text" id="producto">
+                
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion"></textarea>
+                <div class="file">
+                <label for="imagen">Cambiar imagen</label>
+                <input type="file" id="imagen">
+                </div>
+                
+                <label for="precio">Precio</label>
+                <input type="text" id="precio">
+                
+                <input type="submit" value="Modificar">
+              </form> 
+    </main>
 </body>
 </html>
