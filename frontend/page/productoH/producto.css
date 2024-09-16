@@ -1,15 +1,17 @@
-/* Original styles */
 
 body {
-    font-family: 'Ubuntu';
     width: 100vw;
     margin: 0 auto;
 }
 
-.img > img {
+#img > img {
     width: 500px;
     border-radius:30px;
     box-shadow: 1px 1px 10px  black;
+    
+}
+#img{
+    z-index: 1;
 }
 .flecha img{
     width: 50px;
@@ -31,17 +33,17 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    max-width: 30%;
 }
 
-.precio{
+#precio{
     border-bottom: 1px solid #e4e4e4;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.precio span {
+#precio span {
     font-size: 24px;
     font-weight: 300;
 }
@@ -55,12 +57,14 @@ main {
     align-items: center;
     gap: 20px;
     margin-bottom: 15px;
+
 }
 
 .form-group label {
     width: 100px;
     color: #222;
     font-weight: 700;
+    
 }
 
 .form-group select {
@@ -70,11 +74,12 @@ main {
     background-color: #000000;
     outline: none;
     color: #ffffff;
+    border-radius: 30px;
 }
 .form-group select:hover{
     color: #000000;
     background-color: white;
-    border: 1px solid black;
+    box-shadow: inset 0 0 0 1px black;
 }
 
 .container-add-cart {
@@ -109,34 +114,39 @@ main {
     padding: 10px;
     color: #f7f7f7;
     display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: 700;
     cursor: pointer;
     border-radius: 30px;
-    position: absolute;
-    left: 80%;
-    top: 40%;
+    display: flex;
+    max-width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 30%;
+    margin-top: 2%;
     
-    
-}
+    }
 .cantidad{
     color: #000000;
     font-size: 20px;
+    padding: 10px 0px 0px 5px;
     }
+
 .btn-add-to-cart:hover  {
         color: #000000;
         background-color: white;
-        border: 1px solid black;
+        box-shadow: inset 0 0 0 1px black;
     }
 
 
 
 .container-description {
+    border-top: 1px solid #e4e4e4;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #e4e4e4;
-    padding: 10px 0;
+    
 }
 
 .title-description{
@@ -150,18 +160,19 @@ main {
     font-weight: 300;
     color: #666;
     font-size: 14px;
+    border-bottom: 1px solid #e4e4e4;
 }
 
-.text-description{
+#text-description{
     font-size: 13px;
     color: #252525;
     line-height: 22px;
-    margin-top: 25px;
 }
 .h1-container{
     position: relative;
 }
-.h1animado{
+#nombre{
+    z-index: -1;
     opacity: 0;
     transform: translateY(-150px); /* Inicialmente fuera de la vista, arriba */
     animation: titulo 2s forwards; /* Aplicar la animación */
@@ -170,11 +181,11 @@ main {
  @keyframes titulo {
  from {
    opacity: 0;
-   transform: translateY(-150px); /* Empezar desde arriba */
+   transform: translateX(-150px); /* Empezar desde arriba */
  }
  to {
    opacity: 1;
-   transform: translateY(0); /* Mover hacia abajo hasta su posición original */
+   transform: translateX(0); /* Mover hacia abajo hasta su posición original */
  }
 }
 
@@ -185,8 +196,14 @@ main {
     body {
         font-size: 16px;
     }
-    .precio span {
+    main{
+        margin-top: 60px;
+    }
+    #precio span {
         font-size: 18px;
+    }
+    .preciotxt{
+        margin-left: 10px;
     }
     .form-group label {
         width: 80px;
@@ -201,6 +218,7 @@ main {
         padding: 8px;
         width: 80%;
        margin-left: 10%;
+       justify-content: center;
     }
     .title-description {
         font-size: 15px;
@@ -210,25 +228,30 @@ main {
         display: flex;
         position: relative;
     }
-    .text-description {
+    #text-description {
         font-size: 11px;
         font-size: 15px;
         text-align: center;
-        position: relative;
+        justify-content: center;
+        text-align: center;
         bottom: 50px;
+        max-width: 80vw;
     }
-    
+    .flecha{
+        display: none;
+    }
+  
 
     
-    .img > img{
+    #img > img{
         width: 90%;
     }
-    .img {
+    #img {
         display: flex;
         align-items: center;
         justify-content:center;
     }
-    .h1animado{
+    #nombre{
         text-align: center;
     }
     .precio-txt{
@@ -257,5 +280,16 @@ main {
     }
     .container-description {
         padding: 5px 0;
+        gap: 20px;
     }
+    @keyframes titulo {
+        from {
+          opacity: 0;
+          transform: translateY(-150px); /* Empezar desde arriba */
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0); /* Mover hacia abajo hasta su posición original */
+        }
+}
 }

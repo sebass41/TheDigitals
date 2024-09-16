@@ -1,0 +1,7 @@
+@font-face{
+    font-family:'Heebo';
+    src: url("../asset/fonts/Heebo-VariableFont_wght.ttf");
+}
+*{
+    font-family: Heebo;
+}
