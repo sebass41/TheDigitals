@@ -1,5 +1,9 @@
-window.onload = () => {
+import ProductoDAO from "../../DAO/ProductoDAO.js";
+
+window.onload = async () => {
     eventoMenu();
+    productos = await new ProductoDAO().obtener();
+
 }
 
 function eventoMenu() {
@@ -28,13 +32,22 @@ function ocultar() {
 }
 
 function cargarDato(productos) {
-    let panchos = productos.filter(producto => producto.tipo === 'pancho');
-    mostrarDatos(panchos, "listaPancho")
+    let panchos = productos.filter(producto => producto.tipo === 'panchos');
+    let hamburguesas = productos.filter(producto => producto.tipo === 'hamburguesas');
+    let bebidas = productos.filter(producto => producto.tipo === 'bebidas');
+    let papas = productos.filter(producto => producto.tipo === 'papas');
 
+    mostrarDatos(panchos, "sPanchos");
+    mostrarDatos(hamburguesas, "sHamburguesas");
+    mostrarDatos(bebidas, "sBebidas");
+    mostrarDatos(papas, "sPapas");
 }
 
 function mostrarDatos(productos,idElemento) {
     let elemento = document.getElementById(idElemento);
-    
-    
+    elemento.innerHTML = "";
+
+    productos.forEach(producto => {
+        let card = document.createElement("div");
+})
 }

@@ -6,6 +6,7 @@
     <title>Catalogo</title>
     <link rel="stylesheet" href="catalogo.css">
     <link rel="stylesheet" href="../../style/header.css">
+    <link rel="stylesheet" href="../../style/estiloGenetales.css">
     <script src="catalogo.js"></script>
 </head>
 <body>
@@ -26,13 +27,16 @@
     <main>
       <img src="../../asset/icons/Flecha.png" alt="flecha" id="flecha">
         <div id="catalogo">
-            <a href="" class="categoria">Burgers</a>
-            <a href="" class="categoria">Papas</a>
-            <a href="" class="categoria">Bebidas</a>
-            <a href="" class="categoria">Que Pancho</a>
+            <a href="#sHamburguesas" class="categoria">Burgers</a>
+            <a href="#sPapas" class="categoria">Papas</a>
+            <a href="#sBebidas" class="categoria">Bebidas</a>
+            <a href="#sPanchos" class="categoria">Que Pancho</a>
             <img src="../../asset/icons/FlechaCatalogo.png" alt="flechaCatalogo" id="flechaCatalogo" onclick="ocultar();">
-        </div>  
-        <div><h2 class="linea"><span>Burgers</span></h2></div>
+        </div>
+
+        <div id="sHamburguesas">
+            <h2 class="linea"><span>Burgers</span></h2>
+        
         <div class="fila">
             <div class="producto">
                 <img src="../../asset/HamburguesasProductos/ChilliConCarneBurger(tuco ahumado).jpeg" alt="Hamburguesa" class="img-ham">
@@ -54,12 +58,20 @@
                 <h2>Hamburguesa Smash</h2>
                 <p>$270</p>
             </div>
+            
         </div>
-        <div><h2 class="linea"><span>Papas</span></h2></div>
+        </div>
+        <div id="sPapas">
+            <h2 class="linea"><span>Papas</span></h2>
+        </div>
 
-        <div><h2 class="linea"><span>Bebidas</span></h2></div>
+        <div id="sBebidas">
+            <h2 class="linea"><span>Bebidas</span></h2>
+        </div>
         
-        <div><h2 class="linea"><span>Que Pancho</span></h2></div>
+        <div id="sPanchos">
+            <h2 class="linea"><span>Que Pancho</span></h2>
+        </div>
     </main>
 </body>
 </html> 
