@@ -9,9 +9,6 @@ switch ($funcion){
     case 'obtener':
         obtener();
         break;
-    case 'op':
-        obtenerProducto();
-        break;
     case 'insertar':
         insertar();
         break;
@@ -26,10 +23,6 @@ switch ($funcion){
 function obtener(){
     $productos = (new Producto())->obtener();
     echo json_encode($productos);
-}
-
-function obtenerProducto(){
-    
 }
 
 function insertar(){

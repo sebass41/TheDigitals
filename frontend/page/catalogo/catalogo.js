@@ -82,7 +82,7 @@ function mostrarDatos(productos,idElemento) {
 function selecProd(producto) {
     localStorage.setItem('productoSelec', JSON.stringify(producto));
     if (producto.tipo === "hamburguesa"){
-        window.location.href = "../productoH/producto.html";
+        window.location.href = "../productoH/producto.html"; 
     }else {
         console.log("otro")
     }

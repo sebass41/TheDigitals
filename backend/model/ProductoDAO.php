@@ -26,25 +26,6 @@ class Producto{
         }
     }
 
-    function obtenerProducto($id){
-        try{
-            $connection = conection();
-            $sql = "SELECT * FROM producto WHERE id_Prod = ?";
-            $stmt = $connection->prepare($sql);
-            $stmt->bind_param('i', $id);
-            $stmt->execute();
-
-            $respuesta = $stmt->get_result();
-            $producto = $respuesta->fetch_all(MYSQLI_ASSOC);
-
-            $msj = "Producto obtenido correctamente";
-            return new Respuesta(true, $msj, $producto);
-        }catch (Exception $e){
-            $msj = "Error: " . $e;
-            return new Respuesta(false, $msj, []);
-        }
-    }
-
     function insertar($tipo, $nombre, $descripcion, $img, $precio){
         try{
             $connection = conection();
