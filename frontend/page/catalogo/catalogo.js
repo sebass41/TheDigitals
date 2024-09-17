@@ -67,11 +67,23 @@ function mostrarDatos(productos,idElemento) {
 
         let card = document.createElement("div");
         card.classList.add("producto");
+        card.id = producto.Id_prod;
         card.innerHTML = `
             <img src="../../asset/icons/noImagen.jpg" alt="${producto.Nombre}">
             <h2>${producto.Nombre}</h2>
             <p>$${producto.precio}</p>
             `
+
+            card.onclick = () => selecProd(producto);
             fila.appendChild(card);
 })
+}
+
+function selecProd(producto) {
+    localStorage.setItem('productoSelec', JSON.stringify(producto));
+    if (producto.tipo === "hamburguesa"){
+        window.location.href = "../productoH/producto.html";
+    }else {
+        console.log("otro")
+    }
 }
