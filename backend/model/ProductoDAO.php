@@ -40,7 +40,7 @@ class Producto{
             
             $id = $connection->insert_id;
             $rutaTemp = $img['tmp_name'];
-            move_uploaded_file($rutaTemp, "../img/$id.$extencion");
+            move_uploaded_file($rutaTemp, "../img/producto/$id.$extencion");
 
             $msj = "Se insertó correctamente";
             return new Respuesta(true, $msj, $stmt);
