@@ -12,45 +12,58 @@ ini_set('error_log', '../log/php_errors.log');
 Class Pedido{
 
     function obtener(){
-        $connection = conection();
-        $sql = "SELECT * FROM pedido";
-        $respuesta = $connection->query($sql);
-        $pedidos = $respuesta->fetch_all(MYSQLI_ASSOC);
         
-        if ($respuesta) {
-            $msj = "Datos obtenidos correctamente";
-            return new Respuesta(true, $msj, $pedidos);
-        }else {
-            $msj = "No se pudieron obtener los datos";
-            return new Respuesta(false, $msj, []);
-        }
     }
 
-    function hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $idUsuario){
+    function hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $idUsuario, $productos){
         try{
             $connection = conection();
-            $sql = "INSERT INTO pedido(Calle, Num_casa, Estado, Fecha, Lugar_retiro, Id_Usuario) VALUES (?, ?, ?, ?, ?, ?)";
-            
 
+            $sqlPedido = "INSERT INTO pedido(Calle, Num_casa, Piso, Estado, Fecha, Lugar_retiro, Id_Usuario) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $stmt = $connection->prepare($sqlPedido);
+            $stmt->bind_param("ssssssi", $calle, $num, $piso, $estado, $fecha, $lugarRetiro, $idUsuario);
 
+            if (!$stmt->execute()) {
+                throw new Exception("Error al insertar el pedido: " . $stmt->error);
+            }    
+
+            $idPedido = $connection->insert_id;
+
+            $sqlContiene = "INSERT INTO contiene(Id_producto, Id_pedido, Detalle, Costo, Cantidad) VALUES (?, ?, ?, ?, ?)";
+            $stmtContiene = $connection->prepare($sqlContiene);
+
+            foreach ($productos as $producto) {
+                $idProducto = $producto['id_producto'];
+                $detalle = $producto['detalle'];
+                $costo = $producto['costo'];
+                $cantidad = $producto['cantidad'];
+    
+                $stmtContiene->bind_param("iisii", $idProducto, $idPedido, $detalle, $costo, $cantidad);
+    
+                if (!$stmtContiene->execute()) {
+                    throw new Exception("Error al insertar el producto con ID $idProducto: " . $stmtContiene->error);
+                }
+            }
+    
+            $msj = "Pedido realizado con éxito.";
+            return new Respuesta(true, $msj, []);
         }catch (Exception $e){
             $msj = "Error: " . $e;
             return new Respuesta(false, $msj, []);
-            }
+        }
     }
 
-    function eliminar($idPedido){
+    function cancelar($idPedido){
+       try{
         $connection = conection();
-        $sql = "DELETE FROM compra WHERE id_compra = $idPedido";
-        $respuesta = $connection->query($sql);
-        
-        if ($respuesta) {
-            $msj = "Datos eliminados correctamente";
-            return new Respuesta(true, $msj, $respuesta);
-        }else {
-            $msj = "No se pudieron eliminar los datos";
-            return new Respuesta(false, $msj, []);
-        }
+
+        $sql = "DELETE FROM pedido WHERE Id_Pedido = ?";
+        $stmt = $connection->prepare($sql);
+        $stmt->bind_param("i", $idPedido);
+       }catch (Exception $e){
+        $msj = "Error: ". $e;
+        return new Respuesta(false, $msj, []);
+    }
     }
 }
 

@@ -75,23 +75,23 @@ class Producto{
 
             $nomImg = $img['name'];
             $extencion = pathinfo($nomImg, PATHINFO_EXTENSION);
+            $rutaTemp = $img['tmp_name'];
 
             $sql = "UPDATE producto SET tipo = ?, Nombre = ?, Descripcion = ?, precio = ? WHERE Id_prod = ?";
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("sssii", $tipo, $nombre, $descripcion, $precio, $idProducto);
-            $stmt->execute();
-
-            $id = $connection->insert_id;
-            $rutaTemp = $img['tmp_name'];
-            move_uploaded_file($rutaTemp, "../img/$id.$extencion");
+            
+            if ($stmt->execute()) {
+                $nombreImg = $idProducto . '.' . $extencion;
+                move_uploaded_file($rutaTemp, "../img/productos" . $nombreImg);
+            }
 
             $msj = "Se actualizaron los datos correctamente";
             return new Respuesta(true, $msj, $stmt);
         }catch (Exception $e) {
             $msj = "Error: ".$e->getMessage();
             return new Respuesta(false, $msj, []);
-        }
-            
+        }    
     }
 
     function eliminar($idProducto){

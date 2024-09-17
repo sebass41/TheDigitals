@@ -16,10 +16,10 @@ switch ($funcion){
         modEstado();
         break;
     case 'obtenerA':
-        obtenerA();
+        obtener();
         break;
     case 'eliminarP':
-        eliminarP();
+        cancelar();
         break;
 }
 
@@ -29,12 +29,19 @@ function obtener(){
 
 function realizar(){
     if (isset($_SESSION['id'])){
-        $calle = $_GET['calle'];
-        $num = $_GET['num'];
-        $piso = $_GET['piso'];
-        $fecha = $_GET['fecha'];
-        $lugarRetiro = $_GET['lugarRetiro'];
-        $idUsuario = $_SESSION['id'];
+        $calle = $_POST['calle'];
+        $num = $_POST['num'];
+        $piso = $_POST['piso'];
+        $lugarRetiro = $_POST['lugarRetiro'];
+        $productos = $_POST['productos'];
+
+        date_default_timezone_set('America/Montevideo');
+        $fecha = date('Y-m-d H:i:s');
+        $estado = 'en espera';
+        $id = $_SESSION['id'];
+
+        $result = (new Pedido())->hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $id, $productos);
+        echo json_encode($result);
     }
 }
 
@@ -42,11 +49,7 @@ function modEstado(){
 
 }
 
-function obtenerA(){
-
-}
-
-function eliminarP(){
+function cancelar(){
 
 }
 
