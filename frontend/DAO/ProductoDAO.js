@@ -1,7 +1,7 @@
 export default class ProductoDAO{
 
     async obtener(){
-        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/ProductoController.php?fun=obtener";
+        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=obtener";
         let response = await fetch(url);
         return await response.json();
     }
@@ -14,7 +14,7 @@ export default class ProductoDAO{
         formdata.append('img', img);
         formdata.append('precio', precio);
         let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=insertar";
-        let config ={
+        let config = {
             method: 'POST',
             body: formdata
         }

@@ -2,7 +2,7 @@ import ProductoDAO from "../../DAO/ProductoDAO.js";
 
 window.onload = async () => {
     eventoMenu();
-    productos = await new ProductoDAO().obtener();
+    productos = await (new ProductoDAO()).obtener();
 
 }
 
