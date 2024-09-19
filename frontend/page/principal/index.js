@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const interval = 1500; // Intervalo de tiempo entre cambios de imagen (en milisegundos)
     const images = [

@@ -80,7 +80,7 @@ function mostrarDatos(productos,idElemento) {
 }
 
 function selecProd(producto) {
-    if (localStorage.getItem("sessionId") !== null){
+    if (localStorage.getItem("idSesion") !== null){
         localStorage.setItem('productoSelec', JSON.stringify(producto));
         if (producto.tipo === "hamburguesa"){
             window.location.href = "../productoH/producto.html"; 
