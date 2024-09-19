@@ -16,8 +16,16 @@ async function login(){
         let jsonResult = await result.json();
 
         if(jsonResult.sucess){
-            
+            guardarSesion(jsonResult.data.Id_usuario);
+            alert("Se inició sesión correctamente");
+            window.location.href = "http://localhost/TheDigitals/frontend/page/principal/index.html";
+        }else{
+            alert(jsonResult.msj);
         }
         console.log(jsonResult);
     }
+}
+
+function guardarSesion(id){
+    localStorage.setItem("idSesion", id);
 }

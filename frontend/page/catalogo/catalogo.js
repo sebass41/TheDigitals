@@ -80,10 +80,26 @@ function mostrarDatos(productos,idElemento) {
 }
 
 function selecProd(producto) {
-    localStorage.setItem('productoSelec', JSON.stringify(producto));
-    if (producto.tipo === "hamburguesa"){
-        window.location.href = "../productoH/producto.html"; 
-    }else {
-        console.log("otro")
+    if (localStorage.getItem("sessionId") !== null){
+        localStorage.setItem('productoSelec', JSON.stringify(producto));
+        if (producto.tipo === "hamburguesa"){
+            window.location.href = "../productoH/producto.html"; 
+        }else {
+            console.log("otro");
+        }
+    }else{
+        alert("Debes iniciar sesión para ver el producto");
     }
+}
+
+function cerrarSesion(){
+    let btnCerrarSesoin = document.querySelector("#logout");
+    console.log("funciona");
+    btnCerrarSesoin.addEventListener('click', ()=>{
+        localStorage.removeItem("usuario");
+
+        console.log("Se cerró la sesion");
+    });
+
+    console.log("si funciona");
 }
