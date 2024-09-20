@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let firstIndex = Math.floor(Math.random() * images.length);
         let secondIndex = Math.floor(Math.random() * images.length);
 
-        // Asegúrate de que los dos índices sean diferentes
         while (secondIndex === firstIndex) {
             secondIndex = Math.floor(Math.random() * images.length);
         }

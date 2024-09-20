@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Compra</title>
+    <link rel="stylesheet" href="compra.css">
+    <link rel="stylesheet" href="../../style/header.css">
+    <link rel="stylesheet" href="../../style/estiloGenetales.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../principal/index.html">
+                <div class="logo"><img src="../../asset/logotipo/feroz-texto-blanco.png" alt="Logo-Feroz"></div>
+            </a>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li><a href="https://feroz.alacarta.online/" target="_blank">Carta</a></li>
+                <li><a href="../contacto/contacto.html">Contacto</a></li>
+                <li><a href="../login/login.html">Iniciar Sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Confirmación de Compra</h1>
+
+            <h2>Productos Comprados</h2>
+            <div class="productos-y-cantidad">
+                <div class="productos">
+                    <ul>
+                        <li>smash - $10.00</li>
+                        <li>papas - $15.00</li>
+                        <li>pepsi - $20.00</li>
+                    </ul>
+                </div>
+                <div class="cantidad">
+                    <ul>
+                        <li>x5</li>
+                        <li>x1</li>
+                        <li>x2</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="datos">
+            <h2>Datos De Entrega</h2>
+            <p>Nombre: Juan Pérez</p>
+            
+            <label class="direccion" for="direccion">Direccion:</label>
+            <div class="direccion">
+						<select name="direccion" id="direccion">
+							<option disabled selected value="">
+								Escoge una opción
+							</option>
+							<option value="1">Retirar en el Local</option>
+							<option value="2">Calle:jose bone</option>
+						</select>
+                    </div>
+            </div>
+            
+            <div class="Total">
+            <h2>Total</h2>
+            <p>$45.00</p>
+            </div>
+
+            <button>confirmar compra</button>
+        </div>
+    </main>
+</body>
+
+</html>
