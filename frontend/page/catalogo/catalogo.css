@@ -62,14 +62,14 @@ body {
 
 
 .producto {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #1f1f1f;
     border-radius: 5px;
     margin: 16px;
     padding: 16px;
     text-align: center;
     height: 480px;
     width: 400px;
+    color: #ddd;
 }
 
 .producto img {

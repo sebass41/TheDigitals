@@ -1,11 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito</title>
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="stylesheet" href="../../style/header.css">
+    <script src="carrito.js"></script>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../principal/index.html"><div class="logo"><img src="../../asset/logotipo/feroz-texto-blanco.png" alt="Logo-Feroz"></div></a>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li><a href="../contacto/contacto.html">Contacto</a></li>
+                <li><a href="" target="_blank">Perfil</a></li>
+                <li><a href="../catalogo/catalogo.html">Catalogo</a></li>
+                <li><button id="cerrarSesion" onclick="cerrarSesion()">cerrar Sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="productos">
+                <h2>Productos</h2>
+                <div class="producto">
+                    <img src="../../asset/HamburguesasProductos/Feroz.jpeg" alt="Producto">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea ducimus aut nemo ad eius pariatur minus cumque tempora odit! Distinctio qui sequi modi voluptate ducimus soluta quisquam dolore eveniet illum.</p>
+                    <input type="number" id="cantidad" value="0" min="0">
+                    <p class="precio">$<span id="total">0.00</span></p>
+                </div>
+                
+                <div class="producto">
+                    <img src="../../asset/Bebidas/PepsiLata.jpg" alt="Producto">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea ducimus aut nemo ad eius pariatur minus cumque tempora odit! Distinctio qui sequi modi voluptate ducimus soluta quisquam dolore eveniet illum.</p>
+                    <input type="number" id="cantidad" value="0" min="0">
+                    <p class="precio">$<span id="total">0.00</span></p>
+                </div>
+            </div>
+            <div class="comprar">
+                <h2>Comprar</h2>
+                <p>Productos: XX</p>
+                <p>Total: $000</p>
+                <button>Confirmar Compra</button>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

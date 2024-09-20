@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.productos {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 5px;
+    width: 65%;
+}
+
+.comprar {
+    align-self: flex-start;
+    width: 30%;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 5px; 
+}
+
+.producto {
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    background-color: #2f2f2f;
+    border-radius: 5px;
+}
+
+.producto img {
+    width: 15%;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.producto p {
+    text-align: left;
+}
+
+button {
+    background-color: #ff5722;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+input {
+    width: 10%;
+    background-color: #e64a19;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.precio{
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .productos, .comprar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .producto {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .producto img {
+        width: 60%; 
+        margin-right: 0; 
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    input {
+        width: 40%;
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+}
