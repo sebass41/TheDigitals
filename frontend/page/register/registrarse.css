@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image:url(../../asset/feroz\ fondo\ opaco.jpg) ;
+    background-image:url(../../asset/Diseño\ sin\ título.png) ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,8 +24,9 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 20px;
+    margin-top: 50px;
 }
 
 img {

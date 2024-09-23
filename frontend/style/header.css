@@ -84,6 +84,7 @@ nav a{
     margin-top: 8px;
   }
   
+
   #menu-toggle:checked + .menu-button-container .menu-button::before {
     margin-top: 0px;
     transform: rotate(405deg);
