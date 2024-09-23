@@ -1,4 +1,5 @@
 import ProductoDAO from "../../DAO/ProductoDAO.js";
+import SesionDAO from "../../DAO/SesionDao.js";
 
 window.onload = async () => {
     eventoMenu();
@@ -9,7 +10,6 @@ window.onload = async () => {
 
     let productos = await (new ProductoDAO()).obtener();
     cargarDato(productos.data);
-
 }
 
 function eventoMenu() {
@@ -65,11 +65,18 @@ function mostrarDatos(productos,idElemento) {
             elemento.appendChild(fila);
         }
 
+        let tipoImg = producto.extencion;
+        let rutaImg;
+        if (tipoImg !== "png") {
+            rutaImg = "../../asset/burga/noImg.jpg";
+        }else{
+            rutaImg = `../../../backend/img/producto/${producto.Id_prod}.png`
+        }
         let card = document.createElement("div");
         card.classList.add("producto");
         card.id = producto.Id_prod;
         card.innerHTML = `
-            <img src="../../asset/icons/noImagen.jpg" alt="${producto.Nombre}">
+            <img src="${rutaImg}" alt="${producto.Nombre}">
             <h2>${producto.Nombre}</h2>
             <p>$${producto.precio}</p>
             `
@@ -83,7 +90,7 @@ function selecProd(producto) {
     if (localStorage.getItem("idSesion") !== null){
         localStorage.setItem('productoSelec', JSON.stringify(producto));
         if (producto.tipo === "hamburguesa"){
-            window.location.href = "../productoH/producto.html"; 
+            window.location.href = "../productoH/producto.html";
         }else {
             console.log("otro");
         }
@@ -93,12 +100,13 @@ function selecProd(producto) {
 }
 
 function cerrarSesion(){
-    let btnCerrarSesoin = document.querySelector("#logout");
+    let btnCerrarSesoin = document.querySelector("#cerrarSesion");
     console.log("funciona");
     btnCerrarSesoin.addEventListener('click', ()=>{
-        localStorage.removeItem("usuario");
-
-        console.log("Se cerró la sesion");
+        localStorage.removeItem("idSesion");
+        let cS = (new SesionDAO()).cerrarSesion();
+        
+        console.log(cS);
     });
 
     console.log("si funciona");

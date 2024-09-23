@@ -18,10 +18,10 @@ async function insertar(){
         let jsonResult = await result.json();
 
         if(jsonResult.sucess){
-            alert("Se agregó correctamente");
+            alert(jsonResult.msj);
         }
         else{
-            alert("Hubo un error al agregar el producto");
+            alert(jsonResult.msj);
         }
         console.log(jsonResult);
     }

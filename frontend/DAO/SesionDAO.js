@@ -14,7 +14,7 @@ export default class SesionDAO{
     }
     
     static async cerrarSesion(){
-        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/SesionController.php?fun=cerrarSesion";
+        let url = "http://localhost/TheDigitals/backend/controller/SesionController.php?fun=cerrarSesion";
         let response = await fetch(url);
     }
     

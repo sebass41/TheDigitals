@@ -26,14 +26,18 @@ function obtener(){
 }
 
 function insertar(){
-    $tipo = $_POST['tipo'];
-    $nombre = $_POST['nombre'];
-    $descripcion = $_POST['descripcion'];
-    $img = $_FILES['img'];
-    $precio = $_POST['precio'];
+    if (isset($_SESSION['id']) && $_SESSION['admin']){
+        $tipo = $_POST['tipo'];
+        $nombre = $_POST['nombre'];
+        $descripcion = $_POST['descripcion'];
+        $img = $_FILES['img'];
+        $precio = $_POST['precio'];
 
-    $insertar = (new Producto())->insertar($tipo, $nombre, $descripcion, $img, $precio);
-    echo json_encode($insertar);
+        $insertar = (new Producto())->insertar($tipo, $nombre, $descripcion, $img, $precio);
+        echo json_encode($insertar);
+    }else{
+        echo json_encode(new Respuesta(false, "Debes iniciar sesión como administrador", []));
+    }
 }
 
 function actualizar(){

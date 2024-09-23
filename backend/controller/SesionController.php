@@ -18,7 +18,9 @@ function iniciarSesion(){
 
     $result = (new Sesion())->iniciarSesion($email, $pass);
     if($result->sucess){
+        session_start();
         $_SESSION['id'] = $result->data['Id_usuario'];
+        $_SESSION['admin'] = $result->data['Admin'];
         $_SESSION['email'] = $email;
     }
     echo json_encode($result);

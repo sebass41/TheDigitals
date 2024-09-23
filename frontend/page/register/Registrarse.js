@@ -21,7 +21,7 @@ async function crearCuenta() {
             if(validarDatos(nombre, apellido, tel, email, pass, passRepeat, calle, num)) {
                 let result = await new CuentaDAO().crear(nombre, apellido, tel, calle, num, piso, pass, email);
 
-                if (result.success) {
+                if (result.sucess) {
                     window.location.href = "../login/login.html";
                 }
                 console.log(result.msj);

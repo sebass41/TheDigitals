@@ -30,3 +30,26 @@ Stack trace:
 [17-Sep-2024 03:16:53 Europe/Berlin] PHP Warning:  Undefined variable $id in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 24
 [17-Sep-2024 03:17:59 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 21
 [17-Sep-2024 03:18:16 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 21
+[23-Sep-2024 18:08:14 Europe/Berlin] PHP Warning:  Undefined array key "img" in C:\xampp\htdocs\TheDigitals\backend\controller\ProductoController.php on line 32
+[23-Sep-2024 18:08:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TheDigitals\backend\model\ProductoDAO.php on line 33
+[23-Sep-2024 18:08:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TheDigitals\backend\model\ProductoDAO.php on line 42
+[23-Sep-2024 18:11:09 Europe/Berlin] PHP Warning:  Undefined array key "img" in C:\xampp\htdocs\TheDigitals\backend\controller\ProductoController.php on line 32
+[23-Sep-2024 18:11:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TheDigitals\backend\model\ProductoDAO.php on line 33
+[23-Sep-2024 18:11:09 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TheDigitals\backend\model\ProductoDAO.php on line 42
+[23-Sep-2024 19:01:58 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 30
+[23-Sep-2024 19:17:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
+[23-Sep-2024 19:17:00 Europe/Berlin] PHP Warning:  Attempt to read property "" on null in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
+[23-Sep-2024 19:17:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class Respuesta could not be converted to string in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(8): iniciarSesion()
+#1 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
+[23-Sep-2024 19:18:07 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
+[23-Sep-2024 19:18:07 Europe/Berlin] PHP Warning:  Attempt to read property "" on null in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
+[23-Sep-2024 19:18:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: Object of class Respuesta could not be converted to string in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(8): iniciarSesion()
+#1 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
+[23-Sep-2024 19:43:43 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[23-Sep-2024 19:45:58 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
