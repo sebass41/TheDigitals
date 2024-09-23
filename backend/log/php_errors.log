@@ -53,3 +53,21 @@ Stack trace:
   thrown in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
 [23-Sep-2024 19:43:43 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [23-Sep-2024 19:45:58 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[23-Sep-2024 19:59:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\TheDigitals\backend\model\ProductoDAO.php:18
+Stack trace:
+#0 C:\xamppp\htdocs\TheDigitals\backend\controller\ProductoController.php(24): Producto->obtener()
+#1 C:\xamppp\htdocs\TheDigitals\backend\controller\ProductoController.php(10): obtener()
+#2 {main}
+  thrown in C:\xamppp\htdocs\TheDigitals\backend\model\ProductoDAO.php on line 18
+[23-Sep-2024 19:59:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\TheDigitals\backend\model\ProductoDAO.php:18
+Stack trace:
+#0 C:\xamppp\htdocs\TheDigitals\backend\controller\ProductoController.php(24): Producto->obtener()
+#1 C:\xamppp\htdocs\TheDigitals\backend\controller\ProductoController.php(10): obtener()
+#2 {main}
+  thrown in C:\xamppp\htdocs\TheDigitals\backend\model\ProductoDAO.php on line 18
+[23-Sep-2024 19:59:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\TheDigitals\backend\model\ProductoDAO.php:18
+Stack trace:
+#0 C:\xamppp\htdocs\TheDigitals\backend\controller\ProductoController.php(24): Producto->obtener()
+#1 C:\xamppp\htdocs\TheDigitals\backend\controller\ProductoController.php(10): obtener()
+#2 {main}
+  thrown in C:\xamppp\htdocs\TheDigitals\backend\model\ProductoDAO.php on line 18

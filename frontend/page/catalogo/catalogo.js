@@ -92,7 +92,7 @@ function selecProd(producto) {
         if (producto.tipo === "hamburguesa"){
             window.location.href = "../productoH/producto.html";
         }else {
-            console.log("otro");
+            window.location.href = "../productoG/producto.html";
         }
     }else{
         alert("Debes iniciar sesión para ver el producto");

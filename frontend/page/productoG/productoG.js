@@ -11,16 +11,3 @@ window.onload = () => {
         console.log('No se seleccionó ningún producto');
     }
 };
-
-function selecProd(producto) {
-    if (localStorage.getItem("idSesion") !== null){
-        localStorage.setItem('productoSelec', JSON.stringify(producto));
-        if (producto.tipo === "hamburguesa"){
-            window.location.href = "../productoH/producto.html";
-        }else {
-            console.log("otro");
-        }
-    }else{
-        alert("Debes iniciar sesión para ver el producto");
-    }
-}
