@@ -1,6 +1,6 @@
 export default class SesionDAO{
 
-    static async iniciarSesion(email, pass){
+    async iniciarSesion(email, pass){
         let formdata = new FormData();
         formdata.append('email', email);
         formdata.append('pass', pass);
@@ -13,7 +13,7 @@ export default class SesionDAO{
         return response;
     }
     
-    static async cerrarSesion(){
+    async cerrarSesion(){
         let url = "http://localhost/TheDigitals/backend/controller/SesionController.php?fun=cerrarSesion";
         let response = await fetch(url);
     }

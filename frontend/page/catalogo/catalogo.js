@@ -1,5 +1,5 @@
 import ProductoDAO from "../../DAO/ProductoDAO.js";
-import SesionDAO from "../../DAO/SesionDao.js";
+import SesionDAO from "../../DAO/SesionDAO.js";
 
 window.onload = async () => {
     eventoMenu();
@@ -25,6 +25,14 @@ function eventoMenu() {
             menuOpciones.classList.add("activado");
         }
     }
+    
+    let btnSesion = document.querySelector("#cerrarSesion");
+    btnSesion.addEventListener('click', async () => {
+        localStorage.removeItem("idSesion");
+        let result = await SesionDAO.cerrarSesion(); //
+        let jsonResult = await result.json();
+        console.log("sesion Cerrada");
+    });
 }
 
 function ocultar() {
@@ -97,17 +105,4 @@ function selecProd(producto) {
     }else{
         alert("Debes iniciar sesión para ver el producto");
     }
-}
-
-function cerrarSesion(){
-    let btnCerrarSesoin = document.querySelector("#cerrarSesion");
-    console.log("funciona");
-    btnCerrarSesoin.addEventListener('click', ()=>{
-        localStorage.removeItem("idSesion");
-        let cS = (new SesionDAO()).cerrarSesion();
-        
-        console.log(cS);
-    });
-
-    console.log("si funciona");
 }
