@@ -6,7 +6,7 @@ window.onload = () => {
         document.getElementById('nombre').textContent = producto.Nombre;
         document.querySelector('.preciotxt').textContent = `$${producto.precio}`;
         document.querySelector('#img img').src = "../../asset/burga/feroz_3.png";
-        document.querySelector('.text-description p').innerHTML = producto.Descripcion; // Actualiza la descripción
+        document.querySelector('#text-description p').innerHTML = producto.Descripcion;
     } else {
         console.log('No se seleccionó ningún producto');
     }
