@@ -15,8 +15,9 @@ main{
 }
 
 .container {
+    margin-top: 50px;
     display: flex;
-    background-color: #fff;
+    background-color: #1f1f1f;
     height: 750px;
     width: 1000px;
     box-shadow: 0 0 20px ☐ rgba(0, 0, 0, 0.4);
@@ -35,18 +36,18 @@ main{
 
 .form h2 {
     font-size: 45px;
-    color: #000000de;
+    color: #f2f2f5;
 }
 
 .form p {
     font-size: 16px;
-    color: #727781cb;
+    color: #ffffffcb;
     margin-bottom: 25PX;
 }
 
 label {
     font-size: 15px;
-    color: #000000;
+    color: #f2f2f5;
     margin-bottom: 15px;
 }
 
@@ -61,10 +62,10 @@ label {
 }
 
 .submit {
-    background-color: ☐ #e5e5e7;
+    background-color: #ff5722;
     border: 0;
     padding: 15px;
-    color: #000000;
+    color: #ffffff;
     font-size: 16px;
     border-radius: 25px;
     width: 250px;
@@ -75,13 +76,13 @@ label {
 body {
     margin: 0px;
     padding: 0px;
-    background-image: url(../../asset/Diseño\ sin\ título.png);
+    background-color: #f4f4f4;
 }
 
 #mapa{
     width:480px;
     height:450px;
-    border:2px solid black;
+    border:2px solid rgb(255, 255, 255);
 }
 
 .img-1 {
@@ -102,6 +103,11 @@ body {
 
 .info{
     margin: 20px;
+    color: #f2f2f5;
+}
+
+a{
+    color: #8f8ff1;
 }
 
 @media (max-width: 1005px) {
