@@ -12,11 +12,13 @@ async function login(){
         let email = formData.get('email');
         let pass = formData.get('pass');
 
-        let result = await SesionDAO.iniciarSesion(email, pass);
+        let sesionDAO = new SesionDAO();
+
+        let result = await sesionDAO.iniciarSesion(email, pass);
         let jsonResult = await result.json();
 
         if(jsonResult.sucess){
-            guardarSesion(jsonResult.data.Id_usuario);
+            guardarSesion(jsonResult.data.Id_usuario, jsonResult.data.Admin);
             alert("Se inició sesión correctamente");
             window.location.href = "http://localhost/TheDigitals/frontend/page/principal/index.html";
         }else{
@@ -26,6 +28,7 @@ async function login(){
     }
 }
 
-function guardarSesion(id){
+function guardarSesion(id, admin){
     localStorage.setItem("idSesion", id);
+    localStorage.setItem("admin", admin);
 }
