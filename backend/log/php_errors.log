@@ -81,3 +81,4 @@ Stack trace:
 [24-Sep-2024 16:03:17 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [24-Sep-2024 16:07:14 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [24-Sep-2024 16:27:22 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[25-Sep-2024 01:30:36 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31

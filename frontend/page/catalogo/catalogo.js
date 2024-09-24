@@ -26,6 +26,22 @@ function eventoMenu() {
         }
     }
     
+    if (localStorage.getItem("idSesion") !== null) {
+        document.querySelector("#iniciarSesion").style.display = 'none';
+        document.querySelector("#cerrarSesion").style.display = 'inline';
+        let btnSesion = document.querySelector("#cerrarSesion");
+            btnSesion.addEventListener('click', async () => {
+                localStorage.removeItem("idSesion");
+                let sesionDAO = new SesionDAO();
+                let result = await sesionDAO.cerrarSesion();
+                console.log(result);
+                location.reload();
+            });
+    }else{
+        document.querySelector("#iniciarSesion").style.display = 'inline';
+        document.querySelector("#cerrarSesion").style.display = 'none';
+    }
+    
 }
 
 function ocultar() {
