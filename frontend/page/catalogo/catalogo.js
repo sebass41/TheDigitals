@@ -26,13 +26,6 @@ function eventoMenu() {
         }
     }
     
-    let btnSesion = document.querySelector("#cerrarSesion");
-    btnSesion.addEventListener('click', async () => {
-        localStorage.removeItem("idSesion");
-        let result = await SesionDAO.cerrarSesion(); //
-        let jsonResult = await result.json();
-        console.log("sesion Cerrada");
-    });
 }
 
 function ocultar() {
