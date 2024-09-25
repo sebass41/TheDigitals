@@ -1,112 +1,4 @@
-/*
- Estilos generales para el contenedor principal 
-css:main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
 
-body{
-    margin: 0px;
-    padding: 0px;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 600px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 30px;
-    margin: auto;
-    margin-top: 3%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra horizontalmente 
-    justify-content: center; /* Centra verticalmente 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border: 1px solid black;
-    text-transform: uppercase;
-}
-
-/* Estilos para productos y cantidad 
-.productos-y-cantidad {
-    display: flex; 
-    justify-content: space-between; 
-    width: 100%;
-}
-
-.productos, .cantidad {
-    flex: 1; 
-    text-align: center; /* Centra el texto dentro de cada flex item 
-}
-
-/* Estilos de listas 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 5px 0;
-}
-
-/* Estilos para el campo de dirección 
-#direccion {
-    width: 300px;
-    border: none;
-    padding: 12px 15px;
-    background-color: #000;
-    outline: none;
-    color: #fff;
-    border-radius: 30px;
-}
-
-#direccion:hover {
-    color: #000;
-    background-color: #fff;
-    box-shadow: inset 0 0 0 1px black;
-    cursor: pointer;
-}
-
-.direccion {
-    margin-top: 3%;
-}
-
-/* Estilos para párrafos y botones 
-p {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-
-button {
-    border: none;
-    background-color: #000;
-    color: #f7f7f7;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 50%;
-    font-size: 20px;
-}
-
-button:hover {
-    color: #000;
-    background-color: #fff;
-    box-shadow: inset 0 0 0 1px black;
-}
-*/
-
-css:main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-}
 
 body{
     margin: 0px;
@@ -152,7 +44,12 @@ ul {
 li {
     padding: 5px 0;
 }
-
+.datos, form{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
 /* Estilos para el campo de dirección */
 #direccion {
     width: 300px;

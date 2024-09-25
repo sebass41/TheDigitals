@@ -92,3 +92,6 @@ Stack trace:
 [25-Sep-2024 00:00:40 America/Montevideo] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 35
 [25-Sep-2024 15:43:04 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [25-Sep-2024 16:22:11 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[25-Sep-2024 18:13:08 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[25-Sep-2024 18:14:26 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[25-Sep-2024 18:22:04 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31

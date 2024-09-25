@@ -18,7 +18,8 @@ async function login(){
         let jsonResult = await result.json();
 
         if(jsonResult.sucess){
-            guardarSesion(jsonResult.data.Id_usuario, jsonResult.data.Admin);
+            let datos = jsonResult.data;
+            guardarSesion(datos.Id_usuario, datos.Admin, datos.Nombre, datos.Apellido);
             alert("Se inició sesión correctamente");
             window.location.href = "http://localhost/TheDigitals/frontend/page/principal/index.html";
         }else{
@@ -28,7 +29,9 @@ async function login(){
     }
 }
 
-function guardarSesion(id, admin){
+function guardarSesion(id, admin, nombre, apellido){
     localStorage.setItem("idSesion", id);
     localStorage.setItem("admin", admin);
+    localStorage.setItem("nombre", nombre);
+    localStorage.setItem("apellido", apellido);
 }

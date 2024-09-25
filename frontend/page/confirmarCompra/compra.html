@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="compra.css">
     <link rel="stylesheet" href="../../style/header.css">
     <link rel="stylesheet" href="../../style/estiloGenetales.css">
+    <script src="compra.js" type="module"></script>
 </head>
 
 <body>
@@ -34,41 +35,38 @@
 
             <h2>Productos Comprados</h2>
             <div class="productos-y-cantidad">
-                <div class="productos">
-                    <ul>
-                        <li>smash - $10.00</li>
-                        <li>papas - $15.00</li>
-                        <li>pepsi - $20.00</li>
-                    </ul>
-                </div>
-                <div class="cantidad">
-                    <ul>
-                        <li>x5</li>
-                        <li>x1</li>
-                        <li>x2</li>
-                    </ul>
+                <div class="productos" id="detalleProducto">
+                    
                 </div>
             </div>
             
             <div class="datos">
-            <h2>Datos De Entrega</h2>
-            <p>Nombre: Juan Pérez</p>
-            
-            <label class="direccion" for="direccion">Direccion:</label>
-            <div class="direccion">
-						<select name="direccion" id="direccion">
-							<option disabled selected value="">
-								Escoge una opción
-							</option>
-							<option value="1">Retirar en el Local</option>
-							<option value="2">Calle:jose bone</option>
-						</select>
+                <h2>Datos De Entrega</h2>
+                <p id="clienteNombre">Nombre: </p>
+                <form method="post">
+                    <label class="direccion" for="direccion">Direccion:</label>
+                    <div class="direccion">
+                            <select name="lugarRetiro" id="direccion">
+                                <option disabled selected>Selecciona una opción </option>
+                                <option value="Local">Retirar en el Local</option>
+                                <option value="DomiciolioCliente">Mi domicilio</option>
+                                <option value="Otro">Otro</option>
+                            </select>
                     </div>
+
+                    <div id="otros">
+                        <label>Calle</label>
+                        <input type="text" name="calle" id="calle">
+
+                        <label>Número</label>
+                        <input type="text" name="numCasa">
+                    </div>
+                </form>
             </div>
             
             <div class="Total">
             <h2>Total</h2>
-            <p>$45.00</p>
+            <p id="total">$45.00</p>
             </div>
 
             <button>Confirmar compra</button>

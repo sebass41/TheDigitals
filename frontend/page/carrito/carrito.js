@@ -73,7 +73,7 @@ function obtenerDetalle(productos) {
         total += prod.precio * cantidadInput.value;
     });
     let detalleProd = [total, cantidad];
-    localStorage.setItem('detalle', detalleProd);
+    localStorage.setItem('detalle', JSON.stringify(detalleProd));
     return detalleProd;
 }
 

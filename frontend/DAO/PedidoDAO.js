@@ -5,20 +5,19 @@ export default class PedidoDAO{
         let response = await fetch(url);
     }
     
-    async realizar(calle, numCasa, estado, fecha, fechaEnvio, lugarRetiro){
+    async realizar(calle, numCasa, lugarRetiro, productos){
         let formdata = new FormData();
         formdata.append('calle', calle);
         formdata.append('numCasa', numCasa);
-        formdata.append('estado', estado);
-        formdata.append('fecha', fecha);
-        formdata.append('fechaEnvio', fechaEnvio);
         formdata.append('lugarRetiro', lugarRetiro);
+        formdata.append('productos', JSON.stringify(productos));
         let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/PedidoController.php?fun=realizar";
         let config ={
             method: 'POST',
             body: formdata
         }
         let response = await fetch(url, config);
+        return response.json();
     }
     
     async modEstado(estado){
