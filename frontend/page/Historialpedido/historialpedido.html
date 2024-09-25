@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estado de Pedidos</title>
-    <link rel="stylesheet" href="pedido.css">
+    <title>Historial de Compras</title>
+    <link rel="stylesheet" href="historialcliente.css">
     <link rel="stylesheet" href="../../style/header.css">
+    <script src="a.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -25,33 +26,28 @@
         </nav>
     </header>
 
-    <section class="order-list">
-        <button id="agregar-pedido">Añadir Pedido</button>
-        <table>
+    <section class="purchase-history">
+        <table id="purchase-table">
             <thead>
                 <tr>
-                    <th>Pedido</th>
-                    <th>Estado</th>
-                    <th>Cambiar Estado</th>
+                    <th>ID de Compra</th>
+                    <th>Nombre del Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Fecha de Compra</th>
+                    <th>Total</th>
                 </tr>
             </thead>
-            <tbody id="tabla-pedidos">
-                <!-- Filas de los pedidos se agregarán aquí dinámicamente -->
+            <tbody>
+                <!-- Aquí se llenarán los datos con JavaScript -->
             </tbody>
         </table>
     </section>
 
-    <section class="completed-orders">
-        <button id="mostrar-entregados">Pedidos ya entregados</button>
-        <ul id="lista-entregados" style="display: none;">
-            <!-- Lista de pedidos entregados se mostrará aquí -->
-        </ul>
-    </section>
-
     <footer>
-       
+      
     </footer>
 
-    <script src="pedido.js"></script>
+ 
 </body>
 </html>
