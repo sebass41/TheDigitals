@@ -19,7 +19,7 @@ body {
 
 .encabezado {
     height: 150px;
-    background-color: #ff5722;
+    background-color: #1f1f1f;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,9 +42,18 @@ body {
 
 h2{
     margin-top: 0;
-    background-color: #1f1f1f;
-    color: #fff;
+    background-color: #ff5722;
 }
 
+.boton{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    border: none;
+    cursor: pointer;
+}
 
+button{
+    cursor: pointer;
+}
 
