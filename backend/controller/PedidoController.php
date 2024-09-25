@@ -28,7 +28,6 @@ function obtener(){
 }
 
 function realizar(){
-    $_SESSION['id'] = 251;
     if (isset($_SESSION['id'])){
 
         $calle = $_POST['calle'];

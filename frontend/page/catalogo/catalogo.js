@@ -106,11 +106,7 @@ function mostrarDatos(productos,idElemento) {
 function selecProd(producto) {
     if (localStorage.getItem("idSesion") !== null){
         localStorage.setItem('productoSelec', JSON.stringify(producto));
-        if (producto.tipo === "hamburguesa"){
-            window.location.href = "../productoH/producto.html";
-        }else {
-            window.location.href = "../productoG/producto.html";
-        }
+        window.location.href = "../productoG/producto.html";
     }else{
         alert("Debes iniciar sesión para ver el producto");
     }
