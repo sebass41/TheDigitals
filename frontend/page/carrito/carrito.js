@@ -19,7 +19,7 @@ function mostrarProductos(productos) {
                     <img src='../../asset/burga/feroz_3.png' alt='Producto'>
                     <h3>${prod.Nombre}</h3>
                     <p>$${prod.precio}</p>
-                    <input type='number' id="${prod.Id_prod}" value='1' min='1' max='10'>
+                    <input type='number' id="${prod.Id_prod}" value='1' min='1' max='10' onchange='actualizarCantidad(${prod.Id_prod})'>
                     <button onclick='eliminarProducto(${prod.Id_prod})'>Eliminar</button>
                 </div>
             `;
@@ -28,6 +28,22 @@ function mostrarProductos(productos) {
     } else {
         containerProd.innerHTML = '<p>No hay productos en el carrito</p>';
     }
+}
+
+function actualizarCantidad(prodId) {
+    let productos = JSON.parse(localStorage.getItem('carrito'));
+    let cantidadInput = document.getElementById(prodId).value;
+
+    productos = productos.map(prod => {
+        if (prod.Id_prod === prodId) {
+            prod.cantidad = parseInt(cantidadInput);
+        }
+        return prod;
+    });
+
+    localStorage.setItem('carrito', JSON.stringify(productos));
+    let detalle = obtenerDetalle(productos);
+    mostrarDetalle(detalle);
 }
 
 function eliminarProducto(prod) {
@@ -42,19 +58,23 @@ function eliminarProducto(prod) {
 
     localStorage.setItem('carrito', JSON.stringify(productosFilter));
     mostrarProductos(productosFilter);
+    let detalle = obtenerDetalle(productosFilter);
+    mostrarDetalle(detalle);
 }
 
 function obtenerDetalle(productos) {
     let cantidad = 0;
     let total = 0;
     productos.forEach(prod => {
-        let idP = document.getElementById(prod.Id_prod);
+        let cantidadInput = document.getElementById(prod.Id_prod);
         console.log('Producto actual:', prod);
-        console.log('Cantidad actual:', idP.value);
-        cantidad += parseInt(idP.value);
-        total += prod.precio * idP.value;
+        console.log('Cantidad actual:', cantidadInput.value);
+        cantidad += parseInt(cantidadInput.value);
+        total += prod.precio * cantidadInput.value;
     });
-    return [total, cantidad]
+    let detalleProd = [total, cantidad];
+    localStorage.setItem('detalle', detalleProd);
+    return detalleProd;
 }
 
 function mostrarDetalle(detalle) {
@@ -63,6 +83,10 @@ function mostrarDetalle(detalle) {
         <h2>Confirmar Compra</h2>
         <p>Total: $${detalle[0]}</p>
         <p>Cantidad: ${detalle[1]}</p>
-        <button onclick='pagar()'>Pagar</button>
+        <button onclick='pagar()'>Comprar</button>
     `;  
+}
+
+function pagar() {
+    location.href = '../confirmarCompra/compra.html';
 }

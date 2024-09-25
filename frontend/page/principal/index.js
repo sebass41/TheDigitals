@@ -13,6 +13,7 @@ function mostrarMenu(menu) {
         menu.innerHTML = "";
         menu.innerHTML += `<li><a href="https://feroz.alacarta.online/" target="_blank">Carta</a></li>`;
         menu.innerHTML += `<li><a href="../catalogo/catalogo.html">Hacé tú pedido</a></li>`;
+        menu.innerHTML += `<li><a href="../carrito/carrito.html">Carrito</a></li>`;
         menu.innerHTML += `<li><a href="../contacto/contacto.html">Contacto</a></li>`;
     }else {
         menu.innerHTML = "";
