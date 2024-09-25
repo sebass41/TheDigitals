@@ -28,7 +28,9 @@ function obtener(){
 }
 
 function realizar(){
+    $_SESSION['id'] = 251;
     if (isset($_SESSION['id'])){
+
         $calle = $_POST['calle'];
         $num = $_POST['num'];
         $piso = $_POST['piso'];
@@ -39,9 +41,12 @@ function realizar(){
         $fecha = date('Y-m-d H:i:s');
         $estado = 'en espera';
         $id = $_SESSION['id'];
+        $total = $_POST['total'];
 
-        $result = (new Pedido())->hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $id, $productos);
+        $result = (new Pedido())->hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro,$total, $id, $productos);
         echo json_encode($result);
+    }else{
+        echo json_encode(array('error' => 'Debes iniciar sesión para realizar un pedido'));
     }
 }
 

@@ -15,13 +15,13 @@ Class Pedido{
         
     }
 
-    function hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $idUsuario, $productos){
+    function hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario, $productos){
         try{
             $connection = conection();
 
-            $sqlPedido = "INSERT INTO pedido(Calle, Num_casa, Piso, Estado, Fecha, Lugar_retiro, Id_Usuario) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $sqlPedido = "INSERT INTO pedido(Calle, Num_casa, Piso, Estado, Fecha, Lugar_retiro, Total, Id_Usuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $connection->prepare($sqlPedido);
-            $stmt->bind_param("ssssssi", $calle, $num, $piso, $estado, $fecha, $lugarRetiro, $idUsuario);
+            $stmt->bind_param("ssssssii", $calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario);
 
             if (!$stmt->execute()) {
                 throw new Exception("Error al insertar el pedido: " . $stmt->error);
