@@ -35,14 +35,15 @@ function realizar(){
         $piso = $_POST['piso'];
         $lugarRetiro = $_POST['lugarRetiro'];
         $productos = $_POST['productos'];
-
+        $total = $_POST['total'];
+        
         date_default_timezone_set('America/Montevideo');
         $fecha = date('Y-m-d H:i:s');
         $estado = 'en espera';
         $id = $_SESSION['id'];
-        $total = $_POST['total'];
+       
 
-        $result = (new Pedido())->hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro,$total, $id, $productos);
+        $result = (new Pedido())->hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $id, $productos);
         echo json_encode($result);
     }else{
         echo json_encode(array('error' => 'Debes iniciar sesión para realizar un pedido'));

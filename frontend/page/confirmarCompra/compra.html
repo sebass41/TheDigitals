@@ -43,7 +43,8 @@
             <div class="datos">
                 <h2>Datos De Entrega</h2>
                 <p id="clienteNombre">Nombre: </p>
-                <form method="post">
+
+                <form method="post" id="formPedido">
                     <label class="direccion" for="direccion">Direccion:</label>
                     <div class="direccion">
                             <select name="lugarRetiro" id="direccion">
@@ -65,11 +66,11 @@
             </div>
             
             <div class="Total">
-            <h2>Total</h2>
-            <p id="total">$45.00</p>
+                <h2>Total</h2>
+                <p id="total"></p>
             </div>
 
-            <button>Confirmar compra</button>
+            <button id="btnConfirmar">Confirmar compra</button>
         </div>
     </main>
 </body>

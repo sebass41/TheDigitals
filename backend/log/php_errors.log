@@ -95,3 +95,19 @@ Stack trace:
 [25-Sep-2024 18:13:08 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [25-Sep-2024 18:14:26 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [25-Sep-2024 18:22:04 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[25-Sep-2024 20:09:48 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[25-Sep-2024 20:09:58 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[25-Sep-2024 20:10:43 Europe/Berlin] PHP Warning:  Undefined array key "fun" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 6
+[25-Sep-2024 20:11:19 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[25-Sep-2024 20:11:19 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[25-Sep-2024 15:11:19 America/Montevideo] PHP Warning:  Undefined array key "total" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 43
+[26-Sep-2024 05:01:13 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[26-Sep-2024 05:01:13 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[26-Sep-2024 00:01:13 America/Montevideo] PHP Warning:  Undefined array key "total" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 43
+[26-Sep-2024 05:03:54 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[26-Sep-2024 05:03:54 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[26-Sep-2024 05:03:54 Europe/Berlin] PHP Warning:  Undefined array key "total" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 38
+[26-Sep-2024 05:04:07 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[26-Sep-2024 05:04:07 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[26-Sep-2024 00:04:07 America/Montevideo] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 35
+[26-Sep-2024 05:10:20 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31

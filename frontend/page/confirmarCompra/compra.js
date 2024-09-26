@@ -3,6 +3,7 @@ import PedidoDAO from "../../DAO/pedidoDAO.js";
 window.onload = async () => {
     let otrosCampos = document.getElementById('otros');
     otrosCampos.style.display = 'none';
+
     let productos = JSON.parse(localStorage.getItem('carrito'));
     let detalle = JSON.parse(localStorage.getItem('detalle'));
     let total = detalle[0];
@@ -15,6 +16,10 @@ window.onload = async () => {
             otrosCampos.style.display = 'none';
         }
     });
+
+    document.getElementById("btnConfirmar").onclick = () => {
+        confirmarPedido(productos, total);
+    };
 }
 
 function mostrarDetalle(productos, total) {
@@ -32,4 +37,23 @@ function mostrarDetalle(productos, total) {
     totalElement.innerHTML = `$${total}`;
 
     containerProd.appendChild(listaProducto);
+}
+
+async function confirmarPedido(productos, total) {
+    let formElement = document.getElementById("formPedido");
+
+    let formData = new FormData(formElement);
+    let lugarRetiro = formData.get('lugarRetiro');
+    let calle = formData.get('calle');
+    let numCasa = formData.get('numCasa');
+
+    let pedidoDAO = new PedidoDAO();
+    let result = await pedidoDAO.realizar(calle, numCasa, lugarRetiro, productos, total);
+    if (result.sucess) {
+        localStorage.removeItem('carrito');
+        localStorage.removeItem('detalle');
+        alert(result.msj);
+    }else{
+        alert(result.msj);
+    }
 }
