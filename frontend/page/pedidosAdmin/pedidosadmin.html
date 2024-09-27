@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Pedidos</title>
+    <link rel="stylesheet" href="pedidosadmin.css">
+    <link rel="stylesheet" href="../../style/estiloGenetales.css">
+    <link rel="stylesheet" href="../../style/header.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../principal/index.html">
+                <div class="logo"><img src="../../asset/logotipo/feroz-texto-blanco.png" alt="Logo-Feroz"></div>
+            </a>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li><a href="https://feroz.alacarta.online/" target="_blank">Carta</a></li>
+                <li><a href="../contacto/contacto.html">Contacto</a></li>
+                <li><a href="../login/login.html">Iniciar Sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+    <div class="container">
+        <h1>Pedidos Recibidos</h1>
+        
+        <table id="orders-table">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Lugar de retiro</th>
+                    <th>Calle</th>
+                    <th>Número</th>
+                    <th>Piso</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="orders-body">
+                <!-- Los pedidos se agregarán dinámicamente aquí -->
+            </tbody>
+        </table>
+        
+        <div class="actions">
+            <button onclick="loadOrders()">Cargar Pedidos</button>
+        </div>
+    </div>
+</main>
+
+    <script>
+        // Pedidos simulados (en una implementación real, estos datos vendrían de una base de datos o API)
+        const orders = [
+            {
+                cliente: 'Ana López',
+                lugarRetiro: 'Sucursal Centro',
+                calle: 'Avenida Siempre Viva',
+                numero: 742,
+                piso: '3B',
+                producto: 'Cafetera',
+                cantidad: 1,
+                estado: 'Pendiente'
+            },
+            {
+                cliente: 'Pedro Ruiz',
+                lugarRetiro: 'Sucursal Norte',
+                calle: 'Calle Falsa',
+                numero: 123,
+                piso: '1A',
+                producto: 'Taza de café',
+                cantidad: 3,
+                estado: 'Enviado'
+            },
+            {
+                cliente: 'María Díaz',
+                lugarRetiro: 'Sucursal Sur',
+                calle: 'Avenida Libertador',
+                numero: 456,
+                piso: 'PB',
+                producto: 'Paquete de café',
+                cantidad: 2,
+                estado: 'Entregado'
+            }
+        ];
+
+        // Función para cargar los pedidos en la tabla
+        function loadOrders() {
+            const tbody = document.getElementById('orders-body');
+            tbody.innerHTML = ''; // Limpiar cualquier fila existente
+
+            orders.forEach(order => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${order.cliente}</td>
+                    <td>${order.lugarRetiro}</td>
+                    <td>${order.calle}</td>
+                    <td>${order.numero}</td>
+                    <td>${order.piso}</td>
+                    <td>${order.producto}</td>
+                    <td>${order.cantidad}</td>
+                    <td>${order.estado}</td>
+                    <td><button onclick="updateOrder('${order.cliente}')">Actualizar</button></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Función simulada para actualizar el estado de un pedido
+        function updateOrder(cliente) {
+            alert('Actualizar pedido del cliente: ' + cliente);
+            // Aquí puedes implementar la lógica para actualizar el estado del pedido.
+        }
+    </script>
+
+</body>
+</html>

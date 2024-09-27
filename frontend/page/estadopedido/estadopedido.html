@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Pedido</title>
+    <link rel="stylesheet" href="estado pedido.css">
+    <link rel="stylesheet" href="../../style/estiloGenetales.css">
+    <link rel="stylesheet" href="../../style/header.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../principal/index.html"><div class="logo"><img src="../../asset/logotipo/feroz-texto-blanco.png" alt="Logo-Feroz"></div></a>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">
+                <li><a href="../contacto/contacto.html">Contacto</a></li>
+                <li><a href="" target="_blank">Perfil</a></li>
+                <li><a href="../carrito/carrito.html">Carrito</a></li>
+                <li><a href="../login/login.html" id="iniciarSesion">Iniciar Sesión</a></li>
+                <li><button id="cerrarSesion">Cerrar Sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="container">
+            <h1>Información del Pedido</h1>
+            
+            <div class="order-info">
+                <h2>Pedido N°: <span id="pedido">#001234</span></h2>
+                <p><strong>Cliente:</strong> <span id="nombre">Juan Pérez</span></p>
+                <p><strong>Productos:</strong></p>
+                <ul id="productos">
+                    <!-- Los productos se cargarán dinámicamente -->
+                </ul>
+                <p><strong>Fecha de Pedido:</strong> <span id="fecha">2024-09-26</span></p>
+                <p><strong>Estado del Pedido:</strong> <span id="estado">En proceso</span></p>
+            </div>
+        </div>
+    </main>
+
+ 
+</body>
+</html>
