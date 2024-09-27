@@ -27,9 +27,9 @@ function mostrarMenuAdmin(menu) {
     if (localStorage.getItem('idSesion') !== null){
         menu.innerHTML = "";
         menu.innerHTML += `<li><a href="https://feroz.alacarta.online/" target="_blank">Gestionar Clientes</a></li>`;
-        menu.innerHTML += `<li><a href="../catalogo/catalogo.html">Gestionar Productos</a></li>`;
-        menu.innerHTML += `<li><a href="../contacto/contacto.html">Gestionar Pedidos</a></li>`;
-        menu.innerHTML += `<li><a href="../contacto/contacto.html">Productos</a></li>`;
+        menu.innerHTML += `<li><a href="../productosI/insertar.html">Insertar Productos</a></li>`;
+        menu.innerHTML += `<li><a href="#">Gestionar Pedidos</a></li>`;
+        menu.innerHTML += `<li><a href="#">Productos</a></li>`;
     }
 }
 

@@ -74,6 +74,10 @@ div p {
     font-size: 14px;
 }
 
+form p {
+    margin: 0;
+}
+
 div p a {
     color: #097fbb;
     text-decoration: none;

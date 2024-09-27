@@ -19,6 +19,7 @@ async function insertar(){
 
         if(jsonResult.sucess){
             alert(jsonResult.msj);
+            formElement.reset();
         }
         else{
             alert(jsonResult.msj);

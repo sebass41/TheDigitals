@@ -25,11 +25,11 @@ class Sesion {
                     $msj = "Inicio de sesión exitoso";
                     return new Respuesta(true, $msj, $usr);
                 } else {
-                    $msj = "Contraseña incorrecta";
+                    $msj = "La contraseña ingresada es incorrecta. Por favor, inténtalo de nuevo.";
                     return new Respuesta(false, $msj, []);
                 }
             } else {
-                $msj = "Usuario no encontrado";
+                $msj = "El formato del email es incorrecto. Asegúrate de que esté bien escrito.";
                 return new Respuesta(false, $msj, []);
             }
 
