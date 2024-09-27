@@ -18,8 +18,9 @@ main {
 }
 
 div {
-    background-color: white;
+    background-color: #1f1f1f;
     padding: 30px;
+    color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     width: 300px;
@@ -54,15 +55,15 @@ div input {
 }
 
 div input[type="submit"] {
-    background-color: #333;
+    background-color: #ff5722;
     color: white;
     padding: 10px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 20px;
     width: 100%;
+    border: none;
 }
 
 div input[type="submit"]:hover {

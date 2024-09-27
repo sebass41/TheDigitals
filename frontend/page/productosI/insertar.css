@@ -31,12 +31,6 @@ form {
     padding: 20px;
 }
 
-img {
-    margin-top: 150px;
-    width: 100px;
-    height: auto;
-}
-
 form label {
     align-self: flex-start;
     margin: 10px 0 5px;
