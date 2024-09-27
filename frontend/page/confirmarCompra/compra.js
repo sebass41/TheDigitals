@@ -3,7 +3,7 @@ import PedidoDAO from "../../DAO/pedidoDAO.js";
 window.onload = async () => {
     let otrosCampos = document.getElementById('otros');
     otrosCampos.style.display = 'none';
-
+ 
     let productos = JSON.parse(localStorage.getItem('carrito'));
     let detalle = JSON.parse(localStorage.getItem('detalle'));
     let total = detalle[0];

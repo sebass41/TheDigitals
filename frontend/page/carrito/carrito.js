@@ -19,7 +19,8 @@ function mostrarProductos(productos) {
                     <img src='../../asset/burga/feroz_3.png' alt='Producto'>
                     <h3>${prod.Nombre}</h3>
                     <p>$${prod.precio}</p>
-                    <input type='number' id="${prod.Id_prod}" value='1' min='1' max='10' onchange='actualizarCantidad(${prod.Id_prod})'>
+                    <input type='number' id="cantidad-${prod.Id_prod}" value='1' min='1' max='10' onchange='actualizarCantidad(${prod.Id_prod})'>
+                    <input type='text' id="detalle-${prod.Id_prod}" placeholder='Ingrese detalle del producto' onchange='actualizarDetalle(${prod.Id_prod})'>
                     <button onclick='eliminarProducto(${prod.Id_prod})'>Eliminar</button>
                 </div>
             `;
@@ -32,11 +33,11 @@ function mostrarProductos(productos) {
 
 function actualizarCantidad(prodId) {
     let productos = JSON.parse(localStorage.getItem('carrito'));
-    let cantidadInput = document.getElementById(prodId).value;
+    let cantidadInput = document.getElementById(`cantidad-${prodId}`).value;
 
     productos = productos.map(prod => {
-        if (prod.Id_prod === prodId) {
-            prod.cantidad = parseInt(cantidadInput);
+        if (prod.Id_prod == prodId) {
+            prod.Cantidad = parseInt(cantidadInput);
         }
         return prod;
     });
@@ -46,15 +47,27 @@ function actualizarCantidad(prodId) {
     mostrarDetalle(detalle);
 }
 
+function actualizarDetalle(prodId) {
+    let productos = JSON.parse(localStorage.getItem('carrito'));
+    let detalleInput = document.getElementById(`detalle-${prodId}`).value;
+
+    productos = productos.map(prod => {
+        if (prod.Id_prod == prodId) {
+            prod.Detalle = detalleInput;
+            console.log('Detalle actualizado:', prod.Detalle);
+        }
+        return prod;
+    });
+
+    localStorage.setItem('carrito', JSON.stringify(productos));
+}
+
 function eliminarProducto(prod) {
     let productos = JSON.parse(localStorage.getItem('carrito'));
 
     let productosFilter = productos.filter(p => {
-        console.log('Producto actual:', p.Id_prod);
-        return p.Id_prod !== prod;
+        return p.Id_prod != prod;
     });
-
-    console.log('Productos después de filtrar:', productosFilter);
 
     localStorage.setItem('carrito', JSON.stringify(productosFilter));
     mostrarProductos(productosFilter);
@@ -66,7 +79,7 @@ function obtenerDetalle(productos) {
     let cantidad = 0;
     let total = 0;
     productos.forEach(prod => {
-        let cantidadInput = document.getElementById(prod.Id_prod);
+        let cantidadInput = document.getElementById(`cantidad-${prod.Id_prod}`);
         console.log('Producto actual:', prod);
         console.log('Cantidad actual:', cantidadInput.value);
         cantidad += parseInt(cantidadInput.value);

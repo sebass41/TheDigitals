@@ -105,8 +105,10 @@ function mostrarDatos(productos,idElemento) {
 
 function selecProd(producto) {
     if (localStorage.getItem("idSesion") !== null){
+        producto.Detalle = "sin detalle";
+        producto.Cantidad = 1;
         localStorage.setItem('productoSelec', JSON.stringify(producto));
-        window.location.href = "../productoG/producto.html";
+        window.location.href = "../detalleProducto/producto.html";
     }else{
         alert("Debes iniciar sesión para ver el producto");
     }

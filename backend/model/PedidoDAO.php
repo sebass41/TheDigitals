@@ -15,7 +15,7 @@ Class Pedido{
         
     }
 
-    function hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario, $productos){
+    function hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario, $productosJson){
         try{
             $connection = conection();
 
@@ -32,20 +32,30 @@ Class Pedido{
             $sqlContiene = "INSERT INTO contiene(Id_producto, Id_pedido, Detalle, Costo, Cantidad) VALUES (?, ?, ?, ?, ?)";
             $stmtContiene = $connection->prepare($sqlContiene);
 
+            $productos = json_decode($productosJson);
+            if (empty($productos)) {
+                throw new Exception("El array de productos está vacío.");
+            }
+            
             foreach ($productos as $producto) {
-                $idProducto = $producto['id_producto'];
-                $detalle = $producto['detalle'];
-                $costo = $producto['costo'];
-                $cantidad = $producto['cantidad'];
+                if (!isset($producto->Id_prod, $producto->Detalle, $producto->precio, $producto->Cantidad)) {
+                    throw new Exception("Faltan datos en uno de los productos: " . json_encode($producto));
+                }
+
+                $idProducto = $producto->Id_prod;
+                $detalle = $producto->Detalle;
+                $cantidad = $producto->Cantidad;
+                $costo = $producto->precio * $cantidad;
     
                 $stmtContiene->bind_param("iisii", $idProducto, $idPedido, $detalle, $costo, $cantidad);
     
                 if (!$stmtContiene->execute()) {
                     throw new Exception("Error al insertar el producto con ID $idProducto: " . $stmtContiene->error);
                 }
+                
             }
     
-            $msj = "Pedido realizado con éxito.";
+            $msj = "asdf";        
             return new Respuesta(true, $msj, []);
         }catch (Exception $e){
             $msj = "Error: " . $e;

@@ -118,3 +118,58 @@ Stack trace:
 [26-Sep-2024 17:42:03 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [26-Sep-2024 17:51:32 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [26-Sep-2024 17:54:08 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[27-Sep-2024 05:35:47 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 05:35:47 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 00:35:47 America/Montevideo] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 35
+[27-Sep-2024 05:39:03 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 05:39:03 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 00:39:03 America/Montevideo] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 35
+[27-Sep-2024 05:39:28 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[27-Sep-2024 05:40:20 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 05:40:20 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 00:40:20 America/Montevideo] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 35
+[27-Sep-2024 05:48:08 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 05:48:08 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 05:48:08 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 00:48:08 America/Montevideo] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 35
+[27-Sep-2024 00:48:08 America/Montevideo] PHP Warning:  Undefined variable $msj in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 50
+[27-Sep-2024 06:09:18 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 06:09:18 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 06:09:18 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 01:09:18 America/Montevideo] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 39
+[27-Sep-2024 01:09:18 America/Montevideo] PHP Warning:  Undefined variable $msj in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 58
+[27-Sep-2024 06:10:20 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 06:10:20 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 06:10:20 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 01:10:20 America/Montevideo] PHP Warning:  foreach() argument must be of type array|object, string given in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 39
+[27-Sep-2024 06:13:04 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 06:13:04 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 06:13:04 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 06:16:57 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 06:16:57 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 06:16:57 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 06:17:29 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 06:17:29 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 06:17:29 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 06:39:37 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 06:39:37 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 07:55:51 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 07:55:51 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 07:57:18 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 07:57:18 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 07:57:18 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 07:57:47 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 07:57:47 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 07:57:47 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 07:58:25 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 07:58:25 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 07:58:25 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 08:12:20 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 08:12:20 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 08:12:20 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 03:12:20 America/Montevideo] PHP Warning:  Undefined property: stdClass::$Id_producto in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 45
+[27-Sep-2024 08:12:57 Europe/Berlin] PHP Warning:  Undefined array key "calle" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 08:12:57 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 08:12:57 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
+[27-Sep-2024 08:15:29 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
+[27-Sep-2024 08:15:29 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
