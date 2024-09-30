@@ -21,7 +21,7 @@ Class Pedido{
 
             $sqlPedido = "INSERT INTO pedido(Calle, Num_casa, Piso, Estado, Fecha, Lugar_retiro, Total, Id_Usuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $connection->prepare($sqlPedido);
-            $stmt->bind_param("ssssssii", $calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario);
+            $stmt->bind_param("ssssssii",$calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario);
 
             if (!$stmt->execute()) {
                 throw new Exception("Error al insertar el pedido: " . $stmt->error);
@@ -55,7 +55,7 @@ Class Pedido{
                 
             }
     
-            $msj = "asdf";        
+            $msj = "Pedido realizado con éxito";        
             return new Respuesta(true, $msj, []);
         }catch (Exception $e){
             $msj = "Error: " . $e;
@@ -73,7 +73,34 @@ Class Pedido{
        }catch (Exception $e){
         $msj = "Error: ". $e;
         return new Respuesta(false, $msj, []);
+        }
     }
+
+    function obtenerPedidos(){
+        try{
+            $connection = conection();
+            $sql = "SELECT 
+                    CONCAT(u.Nombre, ' ', u.Apellido) AS Cliente,
+                    p.Lugar_retiro AS Lugar_Retiro,
+                    CONCAT(p.Calle, ' ', p.Num_casa) AS Direccion_Entrega,
+                    prod.Nombre AS Producto,
+                    c.Detalle,
+                    c.Cantidad,
+                    p.Estado AS Estado_Pedido
+                    FROM pedido p
+                    JOIN usuario u ON p.Id_Usuario = u.Id_usuario
+                    JOIN contiene c ON p.Id_pedido = c.Id_pedido
+                    JOIN producto prod ON c.Id_producto = prod.Id_prod;";
+                    
+            $result = $connection->query($sql);
+            $pedidos = $result->fetch_all(MYSQLI_ASSOC);
+            
+            $msj = "Pedidos obtenidos correctamente";
+            return new Respuesta(true, $msj, $pedidos);
+        }catch (Exception $e){
+            $msj = "Error: ". $e;
+            return new Respuesta(false, $msj, []);
+        }
     }
 }
 

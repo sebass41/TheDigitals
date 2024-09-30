@@ -1,12 +1,15 @@
 export default class PedidoDAO{
 
     async obtener(){
-        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/PedidoController.php?fun=obtener";
+        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=obtenerA";
         let response = await fetch(url);
+        
+        return response.json();
     }
     
-    async realizar(calle, numCasa, lugarRetiro, productos, total){
+    async realizar(piso, calle, numCasa, lugarRetiro, productos, total){
         let formdata = new FormData();
+        formdata.append('piso', piso);
         formdata.append('calle', calle);
         formdata.append('numCasa', numCasa);
         formdata.append('lugarRetiro', lugarRetiro);
@@ -33,8 +36,10 @@ export default class PedidoDAO{
     }
     
     async obtenerA(){
-        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/PedidoController.php?fun=obtenerA";
+        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=obtenerA";
         let response = await fetch(url);
+        
+        return response.json();
     }
     
     async eliminarP(id){

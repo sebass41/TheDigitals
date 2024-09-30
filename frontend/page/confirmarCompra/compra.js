@@ -1,4 +1,4 @@
-import PedidoDAO from "../../DAO/pedidoDAO.js";
+import PedidoDAO from "../../DAO/PedidoDAO.js";
 
 window.onload = async () => {
     let otrosCampos = document.getElementById('otros');
@@ -44,16 +44,25 @@ async function confirmarPedido(productos, total) {
 
     let formData = new FormData(formElement);
     let lugarRetiro = formData.get('lugarRetiro');
-    let calle = formData.get('calle');
-    let numCasa = formData.get('numCasa');
-
+    console.log(lugarRetiro);
+    let calle;
+    let numCasa;
+    let piso;
+    if (lugarRetiro == "Domicilio del Cliente"){
+        calle = localStorage.getItem('calle');
+        numCasa = localStorage.getItem('numCasa');
+        piso = localStorage.getItem('piso'); 
+    }else {
+        calle = formData.get('calle');
+        numCasa = formData.get('numCasa');
+    }
     let pedidoDAO = new PedidoDAO();
-    let result = await pedidoDAO.realizar(calle, numCasa, lugarRetiro, productos, total);
+    let result = await pedidoDAO.realizar(piso, calle, numCasa, lugarRetiro, productos, total);
     if (result.sucess) {
         localStorage.removeItem('carrito');
         localStorage.removeItem('detalle');
-        alert(result.msj);
+        window.location = "";
     }else{
-        alert(result.msj);
+        console.log(result.msj);
     }
 }

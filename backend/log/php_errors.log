@@ -173,3 +173,20 @@ Stack trace:
 [27-Sep-2024 08:12:57 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 36
 [27-Sep-2024 08:15:29 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 34
 [27-Sep-2024 08:15:29 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[27-Sep-2024 17:55:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 27
+[27-Sep-2024 20:08:55 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 37
+[27-Sep-2024 20:08:55 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 38
+[27-Sep-2024 20:11:58 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[27-Sep-2024 20:51:02 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[27-Sep-2024 20:58:32 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[27-Sep-2024 21:06:58 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 37
+[27-Sep-2024 21:08:05 Europe/Berlin] PHP Warning:  Undefined array key "num" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 37
+[27-Sep-2024 21:26:47 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[27-Sep-2024 21:29:09 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[27-Sep-2024 21:29:17 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[27-Sep-2024 22:42:00 Europe/Berlin] PHP Warning:  Undefined array key "numCasa" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 37
+[27-Sep-2024 22:48:31 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[27-Sep-2024 22:49:08 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[30-Sep-2024 17:47:33 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[30-Sep-2024 17:47:48 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[30-Sep-2024 17:49:55 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31

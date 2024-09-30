@@ -16,22 +16,25 @@ switch ($funcion){
         modEstado();
         break;
     case 'obtenerA':
-        obtener();
+        obtenerA();
         break;
     case 'eliminarP':
         cancelar();
         break;
 }
 
-function obtener(){
-    
+function obtenerA(){
+    if ($_SESSION['admin'] == 1){
+        $result = (new Pedido())->obtenerPedidos();
+        echo json_encode($result);
+    }
 }
 
 function realizar(){
+    $_SESSION['id'] = 243;
     if (isset($_SESSION['id'])){
-
         $calle = $_POST['calle'];
-        $num = $_POST['num'];
+        $num = $_POST['numCasa'];
         $piso = $_POST['piso'];
         $lugarRetiro = $_POST['lugarRetiro'];
         $productos = $_POST['productos'];

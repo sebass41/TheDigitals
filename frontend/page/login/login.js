@@ -19,7 +19,7 @@ async function login(){
 
         if(jsonResult.sucess){
             let datos = jsonResult.data;
-            guardarSesion(datos.Id_usuario, datos.Admin, datos.Nombre, datos.Apellido);
+            guardarSesion(datos.Id_usuario, datos.Admin, datos.Nombre, datos.Piso, datos.Calle, datos.Numero);
             alert("Se inició sesión correctamente");
             window.location.href = "http://localhost/TheDigitals/frontend/page/principal/index.html";
         }else{
@@ -29,9 +29,11 @@ async function login(){
     }
 }
 
-function guardarSesion(id, admin, nombre, apellido){
+function guardarSesion(id, admin, nombre, piso, calle, numCasa){
     localStorage.setItem("idSesion", id);
     localStorage.setItem("admin", admin);
     localStorage.setItem("nombre", nombre);
-    localStorage.setItem("apellido", apellido);
+    localStorage.setItem("piso", piso);
+    localStorage.setItem("calle", calle);
+    localStorage.setItem("numCasa", numCasa);
 }
