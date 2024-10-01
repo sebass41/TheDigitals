@@ -61,7 +61,7 @@ async function confirmarPedido(productos, total) {
     if (result.sucess) {
         localStorage.removeItem('carrito');
         localStorage.removeItem('detalle');
-        window.location = "";
+        window.location = "../principal/index.html";
     }else{
         console.log(result.msj);
     }

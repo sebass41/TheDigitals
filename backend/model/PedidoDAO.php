@@ -80,23 +80,63 @@ Class Pedido{
         try{
             $connection = conection();
             $sql = "SELECT 
+                        CONCAT(u.Nombre, ' ', u.Apellido) AS Cliente, 
+                        p.Lugar_retiro AS Lugar_Retiro, p.Estado,
+                        p.Fecha, p.Total, p.Id_pedido AS idPedido
+                    FROM pedido p 
+                    JOIN usuario u ON p.Id_Usuario = u.Id_usuario;";
+            $result = $connection->query($sql);
+            $pedidos = $result->fetch_all(MYSQLI_ASSOC);
+
+            $msj = "Pedidos obtenidos correctamente";
+            return new Respuesta(true, $msj, $pedidos);
+        }catch (Exception $e){
+            $msj = "Error: ". $e;
+            return new Respuesta(false, $msj, []);
+        }
+    }
+    
+    function obtenerDetalle($id){
+        try{
+            $connection = conection();
+            $sql = "SELECT 
                     CONCAT(u.Nombre, ' ', u.Apellido) AS Cliente,
-                    p.Lugar_retiro AS Lugar_Retiro,
+                    p.Id_pedido AS id,
                     CONCAT(p.Calle, ' ', p.Num_casa) AS Direccion_Entrega,
                     prod.Nombre AS Producto,
                     c.Detalle,
-                    c.Cantidad,
-                    p.Estado AS Estado_Pedido
+                    c.Cantidad
                     FROM pedido p
                     JOIN usuario u ON p.Id_Usuario = u.Id_usuario
                     JOIN contiene c ON p.Id_pedido = c.Id_pedido
-                    JOIN producto prod ON c.Id_producto = prod.Id_prod;";
-                    
-            $result = $connection->query($sql);
+                    JOIN producto prod ON c.Id_producto = prod.Id_prod
+                    WHERE p.Id_pedido = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $id);
+            $stmt->execute();
+
+            $result = $stmt->get_result();
             $pedidos = $result->fetch_all(MYSQLI_ASSOC);
-            
+
             $msj = "Pedidos obtenidos correctamente";
             return new Respuesta(true, $msj, $pedidos);
+
+        }catch (Exception $e){
+            $msj = "Error: ". $e;
+            return new Respuesta(false, $msj, []);
+        }
+    }
+
+    function cambiarEstado($id, $estado){
+        try{
+            $connection = conection();
+            $sql = "UPDATE pedido SET Estado = ? WHERE Id_Pedido = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("si", $estado, $id);
+            $stmt->execute();
+
+            $msj = "Estado cambiado correctamente";
+            return new Respuesta(true, $msj, []);
         }catch (Exception $e){
             $msj = "Error: ". $e;
             return new Respuesta(false, $msj, []);

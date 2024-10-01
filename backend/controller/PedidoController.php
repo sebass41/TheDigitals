@@ -6,8 +6,8 @@ require_once "../model/PedidoDAO.php";
 $funcion = $_GET['fun'];
 
 switch ($funcion){
-    case 'obtener':
-        obtener();
+    case 'obtenerPedido':
+        obtenerPedido();
         break;
     case 'realizar':
         realizar();
@@ -15,23 +15,36 @@ switch ($funcion){
     case 'modEstado':
         modEstado();
         break;
-    case 'obtenerA':
-        obtenerA();
+    case 'obtenerPedidos':
+        obtenerPedidos();
         break;
     case 'eliminarP':
         cancelar();
         break;
+    case 'obtenerDetalle':
+        obtenerDetalle();
+        break;
+    default:
+        echo json_encode(array('error' => 'Función no válida'));
+        break;
 }
 
-function obtenerA(){
+function obtenerPedidos(){
     if ($_SESSION['admin'] == 1){
         $result = (new Pedido())->obtenerPedidos();
         echo json_encode($result);
     }
 }
 
+function obtenerDetalle(){
+    if ($_SESSION['admin'] == 1){
+        $idPedido = $_POST['idPedido'];
+        $result = (new Pedido())->obtenerDetalle($idPedido);
+        echo json_encode($result);
+    }
+}
+
 function realizar(){
-    $_SESSION['id'] = 243;
     if (isset($_SESSION['id'])){
         $calle = $_POST['calle'];
         $num = $_POST['numCasa'];
@@ -54,13 +67,21 @@ function realizar(){
 }
 
 function modEstado(){
+    if ($_SESSION['admin'] == 1){
+        $idPedido = $_POST['idPedido'];
+        $estado = $_POST['estado'];
 
+        $result = (new Pedido())->cambiarEstado($idPedido, $estado);
+        echo json_encode($result);
+    }
 }
 
 function cancelar(){
 
 }
 
+function obtenerPedido(){
 
+}
 
 ?>

@@ -22,34 +22,46 @@
             <ul class="menu">
                 <li><a href="https://feroz.alacarta.online/" target="_blank">Carta</a></li>
                 <li><a href="../contacto/contacto.html">Contacto</a></li>
-                <li><a href="../login/login.html">Iniciar Sesion</a></li>
+                <li><button>Cerrar Sesión</button></li>
             </ul>
         </nav>
     </header>
     <main>
+        <div class="container">
+            <h1>Pedidos Recibidos</h1>
 
-    <div class="container">
-        <h1>Pedidos Recibidos</h1>
-        
-        <table id="orders-table">
-            <thead>
-                <tr>
+            <table>
+                <thead>
                     <th>Cliente</th>
-                    <th>Lugar de retiro</th>
-                    <th>Dirección de Entrega</th>
-                    <th>Producto</th>
-                    <th>Detalle</th>
-                    <th>Cantidad</th>
+                    <th>Lugar de Retiro</th>
+                    <th>Fecha</th>
+                    <th>Precio</th>
                     <th>Estado</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="tBodyPedidos">
-                
-            </tbody>
-        </table>
-    </div>
-</main>
+                    <th>Acción</th>
+                </thead>
+                <tbody id="tBodyPedidos"></tbody>
+            </table>
+        </div>
+        <div class="container">
+            <h1>Detalle del pedido</h1>
+            
+            <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Dirección de Entrega</th>
+                        <th>Producto</th>
+                        <th>Detalle</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody id="tBodyDetalle">
+                    
+                </tbody>
+            </table>
+        </div>
+        <button id="btnFinalizar">Finalizar Pedido</button>
+    </main>
 
 
 </body>
