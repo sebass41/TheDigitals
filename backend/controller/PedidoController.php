@@ -18,11 +18,14 @@ switch ($funcion){
     case 'obtenerPedidos':
         obtenerPedidos();
         break;
-    case 'eliminarP':
+    case 'cancelar':
         cancelar();
         break;
     case 'obtenerDetalle':
         obtenerDetalle();
+        break;
+    case 'finalizar':
+        finalizar();
         break;
     default:
         echo json_encode(array('error' => 'Función no válida'));
@@ -82,6 +85,12 @@ function cancelar(){
 
 function obtenerPedido(){
 
+}
+
+function finalizar(){
+    $idPedido = $_POST['idPedido'];
+    $result = (new Pedido())->finalizarPedido($idPedido);
+    echo json_encode($result);
 }
 
 ?>

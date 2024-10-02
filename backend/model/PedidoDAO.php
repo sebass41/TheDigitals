@@ -84,7 +84,8 @@ Class Pedido{
                         p.Lugar_retiro AS Lugar_Retiro, p.Estado,
                         p.Fecha, p.Total, p.Id_pedido AS idPedido
                     FROM pedido p 
-                    JOIN usuario u ON p.Id_Usuario = u.Id_usuario;";
+                    JOIN usuario u ON p.Id_Usuario = u.Id_usuario
+                    WHERE p.Estado <> 'Finalizado'";
             $result = $connection->query($sql);
             $pedidos = $result->fetch_all(MYSQLI_ASSOC);
 
@@ -136,6 +137,32 @@ Class Pedido{
             $stmt->execute();
 
             $msj = "Estado cambiado correctamente";
+            return new Respuesta(true, $msj, []);
+        }catch (Exception $e){
+            $msj = "Error: ". $e;
+            return new Respuesta(false, $msj, []);
+        }
+    }
+
+    function finalizarPedido($id){
+        try{
+            $connection = conection();
+            $sql = "DELETE FROM contiene WHERE Id_pedido = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $id);
+            
+            if(!$stmt->execute()){
+                throw new Exception("Error al eliminar los productos del pedido: ". $stmt->error);
+            }
+
+            $sql = "UPDATE pedido SET Estado = 'Finalizado' WHERE Id_Pedido = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $id);
+            if(!$stmt->execute()){
+                throw new Exception("Error al finalizar el pedido: ". $stmt->error);
+            }
+
+            $msj = "Pedido finalizado con éxito.";
             return new Respuesta(true, $msj, []);
         }catch (Exception $e){
             $msj = "Error: ". $e;
