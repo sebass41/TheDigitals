@@ -13,23 +13,22 @@ window.onload = () => {
 };
 
 
-function agregar(){
+function agregar() {
+    // Obtener el producto seleccionado desde el localStorage
     let producto = JSON.parse(localStorage.getItem('productoSelec'));
-    console.log(producto);
 
-    let carrito = localStorage.getItem('carrito');
-    if (carrito === null) {
-        carrito = [];
-    } else {
-        carrito = JSON.parse(carrito);
-    }
+    // Obtener el carrito actual, si existe
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-    if (carrito.some(productoCarrito => productoCarrito.Id_prod === producto.Id_prod)) {
-        alert('Este producto ya está en el carrito');
-        return;
-    } else {
+    // Verificar si el producto ya está en el carrito usando 'some'
+    let productoExistente = carrito.some(item => item.Id_prod === producto.Id_prod);
+
+    if (!productoExistente) {
+        // Si el producto no está en el carrito, agregarlo
         carrito.push(producto);
+        // Guardar el carrito actualizado en el localStorage
         localStorage.setItem('carrito', JSON.stringify(carrito));
-        alert(`Producto agregado: ${JSON.stringify(carrito)}`);
+    } else {
+        console.log("El producto ya está en el carrito.");
     }
 }

@@ -57,15 +57,11 @@ export default class PedidoDAO{
         let response = await fetch(url, config);
         return response.json();
     }
-    async finalizarPedido(id){
-        let formdata = new FormData();
-        formdata.append('idPedido', id);
-        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=finalizar";
-        let config = {
-            method: 'POST',
-            body: formdata
-        }
-        let response = await fetch(url, config);
+
+    async historialPedidos(){
+        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=obtenerHistorial";
+        let response = await fetch(url);
+
         return response.json();
-    }    
+    }
 }

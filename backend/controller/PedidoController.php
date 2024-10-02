@@ -24,11 +24,8 @@ switch ($funcion){
     case 'obtenerDetalle':
         obtenerDetalle();
         break;
-    case 'finalizar':
-        finalizar();
-        break;
-    default:
-        echo json_encode(array('error' => 'Función no válida'));
+    case 'obtenerHistorial':
+        obtenerHistorial();
         break;
 }
 
@@ -87,10 +84,13 @@ function obtenerPedido(){
 
 }
 
-function finalizar(){
-    $idPedido = $_POST['idPedido'];
-    $result = (new Pedido())->finalizarPedido($idPedido);
-    echo json_encode($result);
+function obtenerHistorial(){
+    if (isset($_SESSION['id'])){
+        $idUsuario = $_SESSION['id'];
+
+        $result = (new Pedido())->obtenerHistorial($idUsuario);
+        return json_encode($result);
+    }
 }
 
 ?>

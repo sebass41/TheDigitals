@@ -144,31 +144,38 @@ Class Pedido{
         }
     }
 
-    function finalizarPedido($id){
+    function obtenerHistorial($id){
         try{
             $connection = conection();
-            $sql = "DELETE FROM contiene WHERE Id_pedido = ?";
+            $sql = "SELECT 
+                        p.Id_pedido, 
+                        p.Fecha, 
+                        p.Estado, 
+                        pr.Nombre AS nombre_producto, 
+                        c.Cantidad, 
+                        pr.precio, 
+                        c.Costo,
+                        p.Total
+                    FROM pedido p
+                    JOIN contiene c ON p.Id_pedido = c.Id_pedido
+                    JOIN producto pr ON c.Id_producto = pr.Id_prod
+                    WHERE p.Id_Usuario = ?
+                    ORDER BY p.Fecha DESC";
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("i", $id);
+            $stmt->execute();
             
-            if(!$stmt->execute()){
-                throw new Exception("Error al eliminar los productos del pedido: ". $stmt->error);
-            }
+            $result = $stmt->get_result();
+            $pedidos = $result->fetch_all(MYSQLI_ASSOC);
 
-            $sql = "UPDATE pedido SET Estado = 'Finalizado' WHERE Id_Pedido = ?";
-            $stmt = $connection->prepare($sql);
-            $stmt->bind_param("i", $id);
-            if(!$stmt->execute()){
-                throw new Exception("Error al finalizar el pedido: ". $stmt->error);
-            }
-
-            $msj = "Pedido finalizado con éxito.";
-            return new Respuesta(true, $msj, []);
+            $msj = "Historial obtenido correctamente";
+            return new Respuesta(true, $msj, $pedidos);
         }catch (Exception $e){
             $msj = "Error: ". $e;
             return new Respuesta(false, $msj, []);
         }
     }
+
 }
 
 ?>

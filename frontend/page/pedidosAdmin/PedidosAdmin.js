@@ -6,7 +6,9 @@ window.onload = async () => {
     let btnFinalizar = document.querySelector(".btnFinalizar");
     
     btnFinalizar.onclick = async () => {
-        finalizarPedido();
+        let id = document.querySelector(".btnFinalizar").id;
+        let estado = "Finalizado";
+        cambiarEstado(id, estado);
         window.location.reload();
     }
 }
