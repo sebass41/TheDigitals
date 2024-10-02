@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Cuentas de Clientes</title>
+    <link rel="stylesheet" href="Gcliente.css">
+    <link rel="stylesheet" href="../../style/header.css">
+    <link rel="stylesheet" href="../../style/estiloGenetales.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../principal/index.html">
+                <div class="logo"><img src="../../asset/logotipo/feroz-texto-blanco.png" alt="Logo-Feroz"></div>
+            </a>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu">        
+                <li><a href="../usuarios/usuarios.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+    <div class="contenedor-admin">
+        <h2>Lista de Clientes</h2>
+
+        <table id="tabla-clientes">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Dirección</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="lista-clientes">
+                <!-- Se agregan los clientes dinámicamente desde el script -->
+            </tbody>
+        </table>
+
+        <!-- Modal para editar los datos de un cliente -->
+        <div id="modal-editar" class="modal">
+            <div class="modal-contenido">
+                <h2>Editar Datos del Cliente</h2>
+                <form id="form-editar">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" required>
+
+                    <label for="calle">Calle:</label>
+                    <input type="text" id="calle" required>
+
+                    <label for="piso">Piso:</label>
+                    <input type="text" id="piso">
+
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" required>
+
+                    <button type="submit">Guardar Cambios</button>
+                    <button type="button" id="cancelar">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <script src="Gcliente.js"></script>
+</body>
+</html>
