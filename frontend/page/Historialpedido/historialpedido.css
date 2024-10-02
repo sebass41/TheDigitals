@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-/* Estilos para el encabezado */
+
 
 
 h1 {
@@ -17,7 +17,7 @@ h2 {
     margin: 5px 0 20px;
 }
 
-/* Estilos para la tabla de historial de compras */
+
 .purchase-history {
     width: 80%;
     margin: 10% auto;

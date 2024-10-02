@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    width: 100vw;
+}
+
+
+h1 {
+    color: #000000;
+    font-size: 2.5em;
+}
+
+.contenedor-pedidos {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 2px solid #ffffff;
+    
+}
+
+table th {
+    background-color: #ff5722;
+    color: white;
+    font-size: 1.1em;
+}
+
+.estado {
+    font-weight: bold;
+}
+
+
