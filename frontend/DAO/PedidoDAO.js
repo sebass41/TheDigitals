@@ -24,7 +24,7 @@ export default class PedidoDAO{
         return response.json();
     }
     
-    async modEstado(estado){
+    async modEstado(idPedido, estado){
         let formdata = new FormData();
         formdata.append('idPedido', idPedido);
         formdata.append('estado', estado);
@@ -33,7 +33,9 @@ export default class PedidoDAO{
             method: 'POST',
             body: formdata
         }
+
         let response = await fetch(url, config);
+        return response.json();
     }
     
     async obtenerPedidos(){
@@ -57,12 +59,13 @@ export default class PedidoDAO{
     }
     async finalizarPedido(id){
         let formdata = new FormData();
-        formdata.append('id', id);
-        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/PedidoController.php?fun=eliminarP";
-        let config ={
+        formdata.append('idPedido', id);
+        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=finalizar";
+        let config = {
             method: 'POST',
             body: formdata
         }
         let response = await fetch(url, config);
+        return response.json();
     }    
 }
