@@ -1,30 +1,38 @@
 <?php
 
-require_once "../conexion/Conexion.php";
-require_once "res/Respuesta.php";
+require_once "../conexion/Conexion.php"; // Incluye el archivo de conexión a la base de datos
+require_once "res/Respuesta.php"; // Incluye el archivo que contiene la clase Respuesta
 
-ini_set('display_errors', '0');
-ini_set('display_startup_errors', '0');
-
-ini_set('log_errors', 1);
-ini_set('error_log', '../log/php_errors.log');
+// Configuración para la gestión de errores
+ini_set('display_errors', '0'); // Desactiva la visualización de errores en pantalla
+ini_set('display_startup_errors', '0'); // Desactiva la visualización de errores de inicio
+ini_set('log_errors', 1); // Activa el registro de errores
+ini_set('error_log', '../log/php_errors.log'); // Especifica el archivo de registro de errores
 
 class Usuario{
 
-    function obtener(){
-        try{
+    function obtener() {
+        try {
+            // Establecer una conexión a la base de datos
             $connection = conection();
+    
+            // Consulta SQL para obtener todos los usuarios
             $sql = "SELECT * FROM usuario;";
             $respuesta = $connection->query($sql);
+            
+            // Obtener todos los usuarios como un array asociativo
             $personas = $respuesta->fetch_all(MYSQLI_ASSOC);
             
+            // Mensaje de éxito al obtener los usuarios
             $msj = "Usuarios obtenidos correctamente";
             return new Respuesta(true, $msj, $personas);
-        }catch(Exception $e){
+        } catch (Exception $e) {
+            // Manejar excepciones y registrar errores
             $msj = $e->getMessage();
             return new Respuesta(false, $msj, []);
         }
     }
+    
 
     function registrar($nombre, $apellido, $tel, $calle, $num, $piso, $pass, $mail) {
         try {
