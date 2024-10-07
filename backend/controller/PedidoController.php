@@ -87,9 +87,11 @@ function obtenerPedido(){
 function obtenerHistorial(){
     if (isset($_SESSION['id'])){
         $idUsuario = $_SESSION['id'];
-
+    
         $result = (new Pedido())->obtenerHistorial($idUsuario);
-        return json_encode($result);
+        echo json_encode($result);
+    }else{
+        echo json_encode(array('error' => 'Debes iniciar sesión para ver tu historial de pedidos'));
     }
 }
 

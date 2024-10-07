@@ -219,3 +219,16 @@ Stack trace:
 =======
 >>>>>>> a1197cc48a9cb3f0d3947451481134e3cdd5ae39
 >>>>>>> 28e8b225464004f27d0fc358038a41b77c12a796
+[02-Oct-2024 19:38:15 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[02-Oct-2024 20:07:56 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:174
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php(174): mysqli_stmt->bind_param('i', 253)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(92): Pedido->obtenerHistorial(253)
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(28): obtenerHistorial()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 174
+[02-Oct-2024 20:22:35 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[07-Oct-2024 17:44:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 33
+[07-Oct-2024 17:45:03 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[07-Oct-2024 17:46:00 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
+[07-Oct-2024 17:47:03 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22

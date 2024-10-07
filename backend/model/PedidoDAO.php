@@ -167,14 +167,15 @@ Class Pedido{
             
             $result = $stmt->get_result();
             $pedidos = $result->fetch_all(MYSQLI_ASSOC);
-
+    
             $msj = "Historial obtenido correctamente";
             return new Respuesta(true, $msj, $pedidos);
-        }catch (Exception $e){
-            $msj = "Error: ". $e;
+        } catch (Exception $e) {
+            $msj = "Error: " . $e->getMessage();
             return new Respuesta(false, $msj, []);
         }
     }
+    
 
 }
 
