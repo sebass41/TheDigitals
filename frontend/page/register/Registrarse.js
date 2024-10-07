@@ -1,4 +1,5 @@
 import CuentaDAO from "../../DAO/CuentaDAO.js";
+
 window.onload = () => {
     crearCuenta();
 }
@@ -27,7 +28,6 @@ async function crearCuenta() {
                 console.log(result.msj);
             }
         }
-
 }
 
 function validarDatos(nombre, apellido, tel, email, pass, passRepeat, calle, num) {
