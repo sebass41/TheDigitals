@@ -232,3 +232,11 @@ Stack trace:
 [07-Oct-2024 17:45:03 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [07-Oct-2024 17:46:00 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [07-Oct-2024 17:47:03 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
+[08-Oct-2024 22:07:50 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'feroz' in C:\xampp\htdocs\TheDigitals\backend\conexion\conexion.php on line 19
+[08-Oct-2024 22:07:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php:20
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php(20): mysqli->prepare('SELECT * FROM u...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(23): Sesion->iniciarSesion('bogliacino115@g...', '099100323')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(10): iniciarSesion()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php on line 20
