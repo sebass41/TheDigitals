@@ -91,6 +91,27 @@ class Producto{
         }
             
     }
+
+    function obtenerMasVendido(){
+        try{
+            $connection = conection();
+            $sql = "SELECT p.Nombre, SUM(c.Cantidad) AS total_vendidos
+                    FROM contiene c
+                    JOIN producto p ON c.Id_producto = p.Id_prod
+                    GROUP BY p.Nombre
+                    ORDER BY total_vendidos DESC;";
+            $stmt = $connection->prepare($sql);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $masVendido = $result->fetch_all(MYSQLI_ASSOC);
+
+            $msj = "Se obtuvieron los productos más vendidos correctamente";
+            return new Respuesta(true, $msj, $masVendido);
+        }catch (Exception $e) {
+            $msj = "Error: ".$e->getMessage();
+            return new Respuesta(false, $msj, []);
+        }
+    }
 }
 
 ?>

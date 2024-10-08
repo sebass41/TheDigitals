@@ -1,7 +1,7 @@
 export default class PedidoDAO{
 
-    async obtenerPedido(){
-        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=obtenerA";
+    async obtenerInfoPedido(){
+        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=obtenerPedido";
         let response = await fetch(url);
         
         return response.json();

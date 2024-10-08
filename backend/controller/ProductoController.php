@@ -18,6 +18,9 @@ switch ($funcion){
     case 'eliminar':
         eliminar();
         break;
+    case 'masVendidos':
+        obtenerMasVendidos();
+        break;
 }
 
 function obtener(){
@@ -61,4 +64,8 @@ function eliminar(){
     return json_encode($eliminar);
 }
 
+function obtenerMasVendidos(){
+    $masVendidos = (new Producto())->obtenerMasVendido();
+    echo json_encode($masVendidos);
+}
 ?>
