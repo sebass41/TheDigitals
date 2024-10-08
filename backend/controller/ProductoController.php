@@ -19,6 +19,9 @@ switch ($funcion){
     case 'eliminar':
         eliminar();
         break;
+    case 'masVendidos':
+        obtenerMasVendidos();
+        break;
 }
 
 // Función para obtener todos los productos
@@ -68,4 +71,11 @@ function eliminar(){
     $eliminar = (new Producto())->eliminar($id);
     return json_encode($eliminar); // Devuelve el resultado en formato JSON
 }
+
+
+function obtenerMasVendidos(){
+    $masVendidos = (new Producto())->obtenerMasVendido();
+    echo json_encode($masVendidos);
+}
 ?>
+
