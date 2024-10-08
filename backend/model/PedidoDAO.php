@@ -1,67 +1,85 @@
 <?php
 
-require_once "../conexion/Conexion.php";
-require_once "res/Respuesta.php";
+require_once "../conexion/Conexion.php"; // Incluye el archivo de conexión a la base de datos
+require_once "res/Respuesta.php"; // Incluye el archivo que contiene la clase Respuesta
 
-ini_set('display_errors', '0');
-ini_set('display_startup_errors', '0');
+// Configuración para la gestión de errores
+ini_set('display_errors', '0'); // Desactiva la visualización de errores en pantalla
+ini_set('display_startup_errors', '0'); // Desactiva la visualización de errores de inicio
+ini_set('log_errors', 1); // Activa el registro de errores
+ini_set('error_log', '../log/php_errors.log'); // Especifica el archivo de registro de errores
 
-ini_set('log_errors', 1);
-ini_set('error_log', '../log/php_errors.log');
 
-Class Pedido{
+class Pedido {
 
-    function obtener(){
+    // Función para obtener detalles del pedido (implementación necesaria)
+    function obtener() {
         
     }
 
-    function hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario, $productosJson){
-        try{
+    // Función para realizar un pedido
+    function hacerPedido($calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario, $productosJson) {
+        try {
+            // Establecer una conexión a la base de datos
             $connection = conection();
 
+            // Consulta SQL para insertar un nuevo pedido
             $sqlPedido = "INSERT INTO pedido(Calle, Num_casa, Piso, Estado, Fecha, Lugar_retiro, Total, Id_Usuario) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
             $stmt = $connection->prepare($sqlPedido);
-            $stmt->bind_param("ssssssii",$calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario);
+            $stmt->bind_param("ssssssii", $calle, $num, $piso, $estado, $fecha, $lugarRetiro, $total, $idUsuario);
 
+            // Ejecutar la consulta y verificar si hay errores
             if (!$stmt->execute()) {
                 throw new Exception("Error al insertar el pedido: " . $stmt->error);
             }    
 
+            // Obtener el ID del pedido recién insertado
             $idPedido = $connection->insert_id;
 
+            // Consulta SQL para insertar los productos asociados al pedido
             $sqlContiene = "INSERT INTO contiene(Id_producto, Id_pedido, Detalle, Costo, Cantidad) VALUES (?, ?, ?, ?, ?)";
             $stmtContiene = $connection->prepare($sqlContiene);
 
+            // Decodificar el array JSON de productos
             $productos = json_decode($productosJson);
             if (empty($productos)) {
                 throw new Exception("El array de productos está vacío.");
             }
             
+            // Recorrer cada producto e insertarlo en la base de datos
             foreach ($productos as $producto) {
+                // Verificar si todos los datos necesarios del producto están presentes
                 if (!isset($producto->Id_prod, $producto->Detalle, $producto->precio, $producto->Cantidad)) {
                     throw new Exception("Faltan datos en uno de los productos: " . json_encode($producto));
                 }
 
+                // Extraer detalles del producto
                 $idProducto = $producto->Id_prod;
                 $detalle = $producto->Detalle;
                 $cantidad = $producto->Cantidad;
                 $costo = $producto->precio * $cantidad;
     
+                // Vincular parámetros y ejecutar la consulta
                 $stmtContiene->bind_param("iisii", $idProducto, $idPedido, $detalle, $costo, $cantidad);
     
                 if (!$stmtContiene->execute()) {
                     throw new Exception("Error al insertar el producto con ID $idProducto: " . $stmtContiene->error);
                 }
-                
             }
-    
+        } catch (Exception $e) {
+            // Manejar excepciones y registrar errores
+            error_log($e->getMessage());
+            throw $e;
+        }
+    }
+
             $msj = "Pedido realizado con éxito";        
             return new Respuesta(true, $msj, []);
         }catch (Exception $e){
             $msj = "Error: " . $e;
             return new Respuesta(false, $msj, []);
         }
-    }
+
 
     function cancelar($idPedido){
        try{
@@ -177,6 +195,6 @@ Class Pedido{
     }
     
 
-}
+
 
 ?>
