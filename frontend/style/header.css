@@ -12,6 +12,17 @@ body {
 header {
   width: 100vw; /* Establece el ancho del header en 100% del viewport */
 }
+#cerrarSesion{
+    background-color: #ff5722;
+    border: 0;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#cerrarSesion:hover {
+  background-color: #ff562280;
+}
 
 nav {
   display: flex; /* Utiliza flexbox para el diseño del contenedor */
@@ -74,6 +85,7 @@ nav a:hover {
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1); /* Añade una transición suave */
   border-radius: 2px; /* Redondea las esquinas */
 }
+
 
 .menu-button::before {
   content: ''; /* Añade contenido vacío antes del elemento */
