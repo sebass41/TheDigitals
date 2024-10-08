@@ -119,7 +119,7 @@ function eliminar($idProducto) {
         $msj = "Error: " . $e->getMessage();
         return new Respuesta(false, $msj, []);
     }
-
+}
     function obtenerMasVendido(){
         try{
             $connection = conection();
@@ -140,7 +140,7 @@ function eliminar($idProducto) {
             return new Respuesta(false, $msj, []);
         }
     }
-}
+
 
 }
 

@@ -71,13 +71,11 @@ function eliminar(){
     $eliminar = (new Producto())->eliminar($id);
     return json_encode($eliminar); // Devuelve el resultado en formato JSON
 }
-<<<<<<< HEAD
+
 
 function obtenerMasVendidos(){
     $masVendidos = (new Producto())->obtenerMasVendido();
     echo json_encode($masVendidos);
 }
 ?>
-=======
-?>
->>>>>>> be09739d1aa993be95464b614d72be952c1ebed3
+

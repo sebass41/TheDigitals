@@ -66,21 +66,15 @@ class Pedido {
                     throw new Exception("Error al insertar el producto con ID $idProducto: " . $stmtContiene->error);
                 }
             }
-        } catch (Exception $e) {
-            // Manejar excepciones y registrar errores
-            error_log($e->getMessage());
-            throw $e;
-        }
-    }
-
+            
             $msj = "Pedido realizado con éxito";        
             return new Respuesta(true, $msj, []);
-        }catch (Exception $e){
+        } catch (Exception $e){
             $msj = "Error: " . $e;
             return new Respuesta(false, $msj, []);
         }
-
-
+    }
+    
     function cancelar($idPedido){
        try{
         $connection = conection();
@@ -193,7 +187,7 @@ class Pedido {
             return new Respuesta(false, $msj, []);
         }
     }
-    
+}
 
 
 
