@@ -42,7 +42,7 @@ function cargarClientes() {
             <td>${cliente.email}</td>
             <td>${cliente.telefono}</td>
             <td>${cliente.direccion.calle}, Piso: ${cliente.direccion.piso}, Nro: ${cliente.direccion.numero}</td>
-            <td>
+            <td id="tdAcciones">
                 <button class="editar" onclick="editarCliente(${cliente.id})">Editar</button>
                 <button class="eliminar" onclick="eliminarCliente(${cliente.id})">Eliminar</button>
             </td>

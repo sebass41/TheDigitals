@@ -55,21 +55,25 @@ table td {
     text-align: center;
 }
 
-button {
+#tdAcciones button{
     padding: 8px 12px;
-    background-color: #ff5722;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 30px;
 }
 
-button.editar {
+.btn{
+    background-color: #f44336 ;
+    color: white
+}
+
+.editar {
     background-color: #505050;
     border-radius: 30px;
 }
 
-button.eliminar {
+.eliminar {
     background-color: #f44336;
     border-radius: 30px;
     color: black;
