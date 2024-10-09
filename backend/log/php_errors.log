@@ -823,3 +823,60 @@ Stack trace:
 [09-Oct-2024 06:09:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
 [09-Oct-2024 06:09:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
 [09-Oct-2024 06:09:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 08:45:58 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[09-Oct-2024 16:15:18 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[09-Oct-2024 16:57:25 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:02:40 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:07:27 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:08:22 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:09:18 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:17:35 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 17:17:35 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'Juan', 'Peerez', '1098375', 'los juancitos', '1234', NULL, 43)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(67): Usuario->actualizar(43, 'Juan', 'Peerez', '1098375', 'los juancitos', '1234', NULL)
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:18:37 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 17:18:37 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'Alvaro', 'Peerez', '1098375', 'los juancitos', '1234', NULL, 43)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(67): Usuario->actualizar(43, 'Alvaro', 'Peerez', '1098375', 'los juancitos', '1234', NULL)
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:20:14 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 17:25:39 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 59
+[09-Oct-2024 17:25:39 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 17:26:23 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65

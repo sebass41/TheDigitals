@@ -21,6 +21,9 @@ switch ($funcion){
     case 'obtener':
         obtener(); // Llama a la función obtener si 'fun' es 'obtener'
         break;
+    case 'obtenerUsuario':
+        obtenerUsuario(); // Llama a la función obtenerUsuario si 'fun' es 'obtenerUsuario'
+        break;
 }
 
 function crear(){
@@ -51,7 +54,19 @@ function recuperar(){
 }
 
 function editar(){
-    if (isset($_SESSION['id'])){
+    $_SESSION['admin'] = 1; 
+    if ($_SESSION['admin'] == 1){
+        $idUsuario = $_POST['idUsuario'];
+        $nombre = $_POST['nombre']; // Obtiene el valor de 'nombre' del formulario
+        $apell = $_POST['apellido']; // Obtiene el valor de 'apell' del formulario
+        $tel = $_POST['tel']; // Obtiene el valor de 'tel' del formulario
+        $calle = $_POST['calle']; // Obtiene el valor de 'calle' del formulario
+        $num = $_POST['num']; // Obtiene el valor de 'num' del formulario
+        $piso = $_POST['piso']; // Obtiene el valor de 'piso' del formulario
+
+        $result = (new Usuario())->actualizar($idUsuario, $nombre, $apell, $tel, $calle, $num, $piso); // Llama al método actualizar de la clase Usuario
+        echo json_encode($result); // Devuelve el resultado en formato JSON
+    }else if (isset($_SESSION['id'])){
         $idUsuario = $_SESSION['id'];
         $nombre = $_POST['nombre']; // Obtiene el valor de 'nombre' del formulario
         $apell = $_POST['apellido']; // Obtiene el valor de 'apell' del formulario
@@ -68,6 +83,20 @@ function editar(){
 function obtener(){
     if (isset($_SESSION['id'])){
         $result = (new Usuario())->obtener();
+        echo json_encode($result); // Devuelve el resultado en formato JSON
+    }
+}
+
+function obtenerUsuario(){
+    if ($_SESSION['admin'] == 1 ){
+        
+        $idUsuario = $_POST['idUsuario'];
+        $result = (new Usuario())->obtenerUsuario($idUsuario);
+        echo json_encode($result); // Devuelve el resultado en formato JSON
+    }else if (isset($_SESSION['id'])){
+
+        $idUsuario = $_SESSION['id'];
+        $result = (new Usuario())->obtenerUsuario($idUsuario);
         echo json_encode($result); // Devuelve el resultado en formato JSON
     }
 }

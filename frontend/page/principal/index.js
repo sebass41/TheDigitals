@@ -25,9 +25,8 @@ function mostrarMenuAdmin(menu) {
     if (localStorage.getItem('idSesion') !== null){
         menu.innerHTML += `<li><a href="../productosI/insertar.html">Insertar Productos</a></li>`;
         menu.innerHTML += `<li><a href="../pedidosAdmin/pedidosadmin.html">Gestionar Pedidos</a></li>`;
-        menu.innerHTML += `<li><a href="#">Productos</a></li>`;
         menu.innerHTML += `<li><a href="../masVendido/masVendido.html">Productos más vendidos</a></li>`;
-        menu.innerHTML += `<li><a href="../contacto/contacto.html">Perfil</a></li>`;    
+        menu.innerHTML += `<li><a href="../Gcliente/Gcliente.html">Gestionar Usuarios</a></li>`;    
     }
 }
 

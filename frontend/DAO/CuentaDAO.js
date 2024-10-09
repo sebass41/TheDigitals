@@ -3,8 +3,22 @@ export default class CuentaDAO {
     async obtener(){
         let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=obtener";
         let response = await fetch(url);
-        
+
         return await response.json();
+    }
+
+    async obtenerUsuario(id){
+        let formdata  = new FormData();
+        formdata.append('idUsuario', id);
+
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=obtenerUsuario";
+        let config = {
+            method: 'POST',
+            body: formdata
+        };
+        let response = await fetch(url, config);
+
+        return response.json();
     }
 
     async crear(nombre, apellido, tel, calle, numero, piso, pass, email) {
@@ -67,6 +81,7 @@ export default class CuentaDAO {
             body: formdata
         }
         let response = await fetch(url, config);
+        return await response.json();
     }
 
 }

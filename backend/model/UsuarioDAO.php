@@ -32,7 +32,29 @@ class Usuario{
             return new Respuesta(false, $msj, []);
         }
     }
-    
+
+    function obtenerUsuario($idUsuario){
+        try {
+            $connection = conection();
+            $sql = "SELECT * FROM usuario WHERE Id_usuario = ?;";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $idUsuario);
+            $stmt->execute();
+            $respuesta = $stmt->get_result();
+            $persona = $respuesta->fetch_all(MYSQLI_ASSOC);
+            
+            if ($persona == null){
+                $msj = "Usuario no encontrado";
+                return new Respuesta(false, $msj, []);
+            }
+            
+            $msj = "Usuario obtenido correctamente";
+            return new Respuesta(true, $msj, $persona);
+        } catch (Exception $e) {
+            $msj = "Error: ". $e->getMessage();
+            return new Respuesta(false, $msj, []);
+        }
+    }    
 
     function registrar($nombre, $apellido, $tel, $calle, $num, $piso, $pass, $mail) {
         try {
@@ -54,13 +76,15 @@ class Usuario{
     function actualizar($idUsuario, $nombre, $apellido, $tel, $calle, $num, $piso){
         try{
             $connection = conection();
-            $sql = "UPDATE usuario SET Nombre = ?, Apellido = ?, Tel = ?, Calle = ?, Numero = ?
+            $sql = "UPDATE usuario SET Nombre = ?, Apellido = ?, Tel = ?, Calle = ?, Numero = ?, Piso = ?
                     WHERE Id_usuario = ?;";
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("ssisisi", $nombre, $apellido, $tel, $calle, $num, $piso, $idUsuario);
             if(!$stmt->execute()){
                 throw new Exception ("Error: ". $stmt->error);
-                return new Respuesta(false, $msj, []);
+            }
+            if ($stmt->affected_rows === 0) { // Verifica si no se afectó ninguna fila
+                throw new Exception("Error: ". $stmt->error);
             }
 
             $msj = "Se actualizaron los datos correctamente";
