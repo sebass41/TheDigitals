@@ -74,11 +74,16 @@ class Usuario{
     function eliminar($id){
         try{
             $connection = conection();
-            $sql = "DELETE FROM usuario WHERE id_Usuario  = $id";
-            $respuesta = $connection->query($sql);
+            $sql = "DELETE FROM usuario WHERE id_Usuario = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $id);
+            if(!$stmt->execute()){
+                throw new Exception ("Error: " . $stmt->error);
+                return new Respuesta(false, $msj, []);
+            }
             
             $msj = "Usuario eliminado correctamente";
-            return new Respuesta(true, $msj, $respuesta);
+            return new Respuesta(true, $msj, []);
     
         }catch(Exception $e){
             $msj = "Error al eliminar el Usuario:". $e->getMessage();

@@ -1,19 +1,54 @@
-// Datos simulados de clientes con ejemplos
-let clientes = [
-    {
-        id: 1, nombre: 'Juan', apellido: 'Pérez', email: 'juan.perez@example.com', telefono: '123456789',
-        direccion: { calle: 'Calle Falsa', piso: '3', numero: '456' }
-    },
-    {
-        id: 2, nombre: 'Ana', apellido: 'Gómez', email: 'ana.gomez@example.com', telefono: '987654321',
-        direccion: { calle: 'Avenida Siempre Viva', piso: '2', numero: '123' }
-    },
-    {
-        id: 3, nombre: 'Carlos', apellido: 'Rodríguez', email: 'carlos.rodriguez@example.com', telefono: '555123456',
-        direccion: { calle: 'Calle Luna', piso: '4', numero: '789' }
-    }
-];
+import CuentaDAO from "../../DAO/CuentaDAO.js";
 
+window.onload = async () => {
+    let usuarios = await (new CuentaDAO()).obtener();
+    console.log(usuarios.data);
+    mostrarUsuarios(usuarios.data);
+
+    // Evento para botón de editar
+    let btnEditar = document.querySelector(".editar");
+    btnEditar.addEventListener("click", () => {
+        console.log("Editar")
+        clienteActual = clientes.find(cliente => cliente.id === id);
+
+        // Rellenar los campos del formulario
+        inputNombre.value = clienteActual.nombre;
+        inputApellido.value = clienteActual.apellido;
+        inputEmail.value = clienteActual.email;
+        inputTelefono.value = clienteActual.telefono;
+        inputCalle.value = clienteActual.direccion.calle;
+        inputPiso.value = clienteActual.direccion.piso;
+        inputNumero.value = clienteActual.direccion.numero;
+    
+        modalEditar.style.display = 'flex'; // Mostrar modal
+    })
+}
+
+function mostrarUsuarios(usuarios){
+    let tbodyUsuarios = document.getElementById("tBodyUsuarios");
+    tbodyUsuarios.innerHTML = "";
+
+    usuarios.forEach(usuario => {
+        let tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td>${usuario.Nombre}</td>
+            <td>${usuario.Apellido}</td>
+            <td>${usuario.Mail}</td>
+            <td>${usuario.Tel}</td>
+            <td>${usuario.Calle}</td>
+            <td>${usuario.Numero}</td>
+            <td>${usuario.Piso}</td>
+            <td id="tdAcciones">
+                <button class="editar">Editar</button>
+                <button class="eliminar" onclick="eliminarUsuario(${usuario.Id})">Eliminar</button>
+            </td>
+        `;
+        tbodyUsuarios.appendChild(tr);
+    });
+}
+
+
+/*
 const listaClientes = document.getElementById('lista-clientes');
 const modalEditar = document.getElementById('modal-editar');
 const formEditar = document.getElementById('form-editar');
@@ -96,4 +131,4 @@ function eliminarCliente(id) {
 }
 
 // Cargar los clientes al iniciar la página
-cargarClientes();
+cargarClientes();*/
