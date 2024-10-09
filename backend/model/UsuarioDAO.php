@@ -51,12 +51,20 @@ class Usuario{
     }
     
 
-    function actualizar($id, $nombre, $apellido, $tel, $apodo, $calle, $num, $piso, $pass, $mai){
+    function actualizar($idUsuario, $nombre, $apellido, $tel, $calle, $num, $piso){
         try{
             $connection = conection();
-            $sql = "UPDATE usuario SET Nombre = ?, ";
-            $respuesta = $connection->query($sql);
-            return $respuesta;
+            $sql = "UPDATE usuario SET Nombre = ?, Apellido = ?, Tel = ?, Calle = ?, Numero = ?
+                    WHERE Id_usuario = ?;";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("ssisisi", $nombre, $apellido, $tel, $calle, $num, $piso, $idUsuario);
+            if(!$stmt->execute()){
+                throw new Exception ("Error: ". $stmt->error);
+                return new Respuesta(false, $msj, []);
+            }
+
+            $msj = "Se actualizaron los datos correctamente";
+            return new Respuesta(true, $msj, $stmt);
         }catch (Exception $e){
             $msj = "Error: " . $e;
             return new Respuesta(false, $msj, []);
