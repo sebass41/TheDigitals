@@ -7,8 +7,8 @@ $funcion = $_GET['fun']; // Obtiene el parámetro 'fun' de la URL
 
 // Dependiendo del valor de 'fun', se llama a una función específica
 switch ($funcion){
-    case 'obtenerPedido':
-        obtenerPedido();
+    case 'obtenerInfoPedido':
+        obtenerInfoPedido();
         break;
     case 'realizar':
         realizar();
@@ -88,8 +88,13 @@ function cancelar(){
 }
 
 // Función para obtener un pedido específico (aún no implementada)
-function obtenerPedido(){
-    
+function obtenerInfoPedido(){
+    if (isset($_SESSION['id'])){
+        $idUsuario = $_SESSION['id'];
+
+        $result = (new Pedido())->obtenerInfoPedido($idUsuario); // Llama al método obtenerPedido de la clase Pedido
+        echo json_encode($result); // Devuelve el resultado en formato JSON
+    }
 }
 
 // Función para obtener el historial de pedidos de un usuario
