@@ -46,13 +46,14 @@ export default class CuentaDAO {
     
     async eliminar(id){
         let formdata = new FormData();
-        formdata.append('id', id);
+        formdata.append('idUsuario', id);
         let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=eliminar";
         let config ={
             method: 'POST',
             body: formdata
         }
         let response = await fetch(url, config);
+        return await response.json();
     }
     
     async recuperar(email){

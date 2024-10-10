@@ -880,3 +880,11 @@ Stack trace:
 [09-Oct-2024 17:25:39 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 59
 [09-Oct-2024 17:25:39 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
 [09-Oct-2024 17:26:23 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 18:45:01 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:03 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:04 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:05 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:06 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:49 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 21:32:35 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[09-Oct-2024 22:03:35 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25

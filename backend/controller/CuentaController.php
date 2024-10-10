@@ -43,10 +43,12 @@ function crear(){
 }
 
 function eliminar(){
-    $idUsuario = $_POST['idUsuario'];
+    if ($_SESSION['admin'] == 1){
+        $idUsuario = $_POST['idUsuario'];
 
-    $result = (new Usuario())->eliminar($idUsuario); // Llama al método eliminar de la clase Usuario
-    echo json_encode($result); // Devuelve el resultado en formato JSON
+        $result = (new Usuario())->eliminar($idUsuario); // Llama al método eliminar de la clase Usuario
+        echo json_encode($result); // Devuelve el resultado en formato JSON
+    }
 }
 
 function recuperar(){
@@ -54,7 +56,6 @@ function recuperar(){
 }
 
 function editar(){
-    $_SESSION['admin'] = 1; 
     if ($_SESSION['admin'] == 1){
         $idUsuario = $_POST['idUsuario'];
         $nombre = $_POST['nombre']; // Obtiene el valor de 'nombre' del formulario

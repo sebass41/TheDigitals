@@ -44,20 +44,33 @@ async function editarUsuario(id) {
         let calle = formData.get("calle");
         let numero = formData.get("numero");
         let piso = formData.get("piso");
-        //console.log(nombre + " " + apellido);
 
 
         let result = await (new CuentaDAO()).editar(id, nombre, apellido, tel, calle, numero, piso);
         console.log(result);
         if (result.sucess) {
             modalEditar.style.display = 'none'; // Cerrar modal
-            //mostrarUsuarios(obtenerUsuario());
+            location.reload(); // Recargar la página para mostrar los cambios
         }else {
             console.log(result.msj);
         }
     });
+
+    document.getElementById('cancelar').addEventListener('click', function () {
+        modalEditar.style.display = 'none'; // Cerrar modal
+    });
+
 }
 
+async function eliminarUsuario(id) {
+    let result = await (new CuentaDAO()).eliminar(id);
+    console.log(result);
+    if (result.sucess) {
+        location.reload(); // Recargar la página para mostrar los cambios
+    }else {
+        console.log(result.msj);
+    }
+}
 function mostrarUsuarios(usuarios){
     let tbodyUsuarios = document.getElementById("tBodyUsuarios");
     tbodyUsuarios.innerHTML = "";
@@ -82,11 +95,10 @@ function mostrarUsuarios(usuarios){
         btnEliminar.classList.add("eliminar");
 
         btnEditar.onclick = () => {
-            btnEditar.id = usuario.Id_usuario;
             editarUsuario(usuario.Id_usuario)
         };
         btnEliminar.onclick = () => {
-
+            eliminarUsuario(usuario.Id_usuario)
         }
 
         let td = document.createElement("td");
