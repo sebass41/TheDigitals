@@ -1,5 +1,25 @@
 export default class CuentaDAO {
-    
+
+    async obtener(){
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=obtener";
+        let response = await fetch(url);
+
+        return await response.json();
+    }
+
+    async obtenerUsuario(id){
+        let formdata  = new FormData();
+        formdata.append('idUsuario', id);
+
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=obtenerUsuario";
+        let config = {
+            method: 'POST',
+            body: formdata
+        };
+        let response = await fetch(url, config);
+
+        return response.json();
+    }
 
     async crear(nombre, apellido, tel, calle, numero, piso, pass, email) {
         let formdata = new FormData();
@@ -26,13 +46,14 @@ export default class CuentaDAO {
     
     async eliminar(id){
         let formdata = new FormData();
-        formdata.append('id', id);
+        formdata.append('idUsuario', id);
         let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=eliminar";
         let config ={
             method: 'POST',
             body: formdata
         }
         let response = await fetch(url, config);
+        return await response.json();
     }
     
     async recuperar(email){
@@ -44,7 +65,24 @@ export default class CuentaDAO {
             body: formdata
         }
         let response = await fetch(url, config);
+    }
 
+    async editar(idUsuario, nombre, apellido, tel, calle, num, piso){
+        let formdata = new FormData();
+        formdata.append('idUsuario', idUsuario);
+        formdata.append('nombre', nombre);
+        formdata.append('apellido', apellido);
+        formdata.append('tel', tel);
+        formdata.append('calle', calle);
+        formdata.append('num', num);
+        formdata.append('piso', piso);
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=editar";
+        let config = {
+            method: 'POST',
+            body: formdata
+        }
+        let response = await fetch(url, config);
+        return await response.json();
     }
 
 }

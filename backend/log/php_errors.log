@@ -232,3 +232,659 @@ Stack trace:
 [07-Oct-2024 17:45:03 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [07-Oct-2024 17:46:00 Europe/Berlin] PHP Warning:  session_destroy(): Trying to destroy uninitialized session in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 31
 [07-Oct-2024 17:47:03 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
+<<<<<<< HEAD
+[08-Oct-2024 22:07:50 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'feroz' in C:\xampp\htdocs\TheDigitals\backend\conexion\conexion.php on line 19
+[08-Oct-2024 22:07:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php:20
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php(20): mysqli->prepare('SELECT * FROM u...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(23): Sesion->iniciarSesion('bogliacino115@g...', '099100323')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(10): iniciarSesion()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php on line 20
+=======
+[08-Oct-2024 20:18:16 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
+[08-Oct-2024 21:55:43 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+>>>>>>> a0128998abeedc7d188dd4e6b890c5aa981369fd
+[09-Oct-2024 04:49:05 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'feroz' in C:\xampp\htdocs\TheDigitals\backend\conexion\conexion.php on line 19
+[09-Oct-2024 04:49:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php:20
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php(20): mysqli->prepare('SELECT * FROM u...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(23): Sesion->iniciarSesion('bogliacino115@g...', 'Santi0991003213')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(10): iniciarSesion()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php on line 20
+[09-Oct-2024 04:49:07 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'feroz' in C:\xampp\htdocs\TheDigitals\backend\conexion\conexion.php on line 19
+[09-Oct-2024 04:49:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php:20
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php(20): mysqli->prepare('SELECT * FROM u...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(23): Sesion->iniciarSesion('bogliacino115@g...', 'Santi0991003213')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(10): iniciarSesion()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php on line 20
+[09-Oct-2024 04:49:07 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'feroz' in C:\xampp\htdocs\TheDigitals\backend\conexion\conexion.php on line 19
+[09-Oct-2024 04:49:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php:20
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php(20): mysqli->prepare('SELECT * FROM u...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(23): Sesion->iniciarSesion('bogliacino115@g...', 'Santi0991003213')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(10): iniciarSesion()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php on line 20
+[09-Oct-2024 04:49:07 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'feroz' in C:\xampp\htdocs\TheDigitals\backend\conexion\conexion.php on line 19
+[09-Oct-2024 04:49:07 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php:20
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php(20): mysqli->prepare('SELECT * FROM u...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(23): Sesion->iniciarSesion('bogliacino115@g...', 'Santi0991003213')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(10): iniciarSesion()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php on line 20
+[09-Oct-2024 04:49:08 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'feroz' in C:\xampp\htdocs\TheDigitals\backend\conexion\conexion.php on line 19
+[09-Oct-2024 04:49:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php:20
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php(20): mysqli->prepare('SELECT * FROM u...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(23): Sesion->iniciarSesion('bogliacino115@g...', 'Santi0991003213')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(10): iniciarSesion()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php on line 20
+[09-Oct-2024 04:49:08 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'feroz' in C:\xampp\htdocs\TheDigitals\backend\conexion\conexion.php on line 19
+[09-Oct-2024 04:49:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php:20
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php(20): mysqli->prepare('SELECT * FROM u...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(23): Sesion->iniciarSesion('bogliacino115@g...', 'Santi0991003213')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php(10): iniciarSesion()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php on line 20
+[09-Oct-2024 04:53:59 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[09-Oct-2024 04:54:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:177
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(101): Pedido->obtenerHistorial(248)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(29): obtenerHistorial()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 177
+[09-Oct-2024 05:05:34 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[09-Oct-2024 05:05:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:177
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(101): Pedido->obtenerHistorial(248)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(29): obtenerHistorial()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 177
+[09-Oct-2024 05:11:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:11:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:18:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:18:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:18:23 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:18:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:18:25 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:18:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:18:27 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:18:28 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:19 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:23 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:23 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:25 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:27 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:29 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:30 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:33 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:34 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:34 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:35 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:36 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:36 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:37 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:38 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:38 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:39 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:40 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:41 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:43 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:44 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:57 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:57 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:21:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:05 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:06 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:07 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:09 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:10 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:11 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:13 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:13 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:15 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:16 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:17 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:18 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:19 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:23 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:25 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:28 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:28 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:29 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:30 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:33 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:35 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:35 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:36 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:37 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:39 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:41 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:43 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:43 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:44 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:45 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:57 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:22:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:05 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:06 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:09 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:10 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:11 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:15 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:16 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:17 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:17 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:18 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:19 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:23 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:25 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:25 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:28 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:29 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:23:33 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:41 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:43 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:44 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:45 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:46 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:24:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:05 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:06 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:10 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:11 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:13 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:15 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:16 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:17 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:18 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:19 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:23 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:27 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:28 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:29 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:30 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:33 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:34 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:35 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:36 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:38 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:40 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:41 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:44 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:57 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:25:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:05 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:06 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:10 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:11 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:15 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:16 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:17 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:19 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:23 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:25 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:27 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:28 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:29 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:30 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:33 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:34 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:35 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:36 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:37 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:38 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:40 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:41 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:43 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:44 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:45 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:45 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:57 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:26:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:06 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:07 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:09 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:10 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:11 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:13 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:15 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:16 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:17 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:18 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:19 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:23 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:25 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:28 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:29 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:34 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:34 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:35 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:36 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:37 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:37 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:38 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:39 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:27:40 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:11 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:13 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:14 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:15 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:16 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:18 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:19 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:20 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:25 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:28 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:29 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:33 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:33 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:34 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:35 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:36 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:37 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:38 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:39 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:40 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:41 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:43 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:43 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:44 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:46 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:57 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:28:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:05 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:07 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:09 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:10 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:13 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:16 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:17 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:18 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:19 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:23 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:25 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:26 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:27 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:28 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:29 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:30 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:31 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:33 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:34 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:35 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:36 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:37 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:38 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:39 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:40 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:41 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:43 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:45 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 05:29:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:04:32 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[09-Oct-2024 06:05:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:05:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:07:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:07:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:07:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:07:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:07:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:07:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:43 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:46 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:46 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:46 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:46 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:47 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:48 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:50 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:51 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:52 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:53 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:55 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:56 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:57 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:57 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:57 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:58 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:08:59 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:00 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:01 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:02 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:03 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 06:09:04 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Oct-2024 08:45:58 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[09-Oct-2024 16:15:18 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[09-Oct-2024 16:57:25 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:02:40 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:07:27 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:08:22 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:09:18 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'null', 'null', 'null', 'null', 'null', 'null', 249)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(66): Usuario->actualizar(249, 'null', 'null', 'null', 'null', 'null', 'null')
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:17:35 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 17:17:35 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'Juan', 'Peerez', '1098375', 'los juancitos', '1234', NULL, 43)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(67): Usuario->actualizar(43, 'Juan', 'Peerez', '1098375', 'los juancitos', '1234', NULL)
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:18:37 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 17:18:37 Europe/Berlin] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php:82
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php(82): mysqli_stmt->bind_param('ssisisi', 'Alvaro', 'Peerez', '1098375', 'los juancitos', '1234', NULL, 43)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(67): Usuario->actualizar(43, 'Alvaro', 'Peerez', '1098375', 'los juancitos', '1234', NULL)
+#2 C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php(19): editar()
+#3 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 82
+[09-Oct-2024 17:20:14 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 17:25:39 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 59
+[09-Oct-2024 17:25:39 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 17:26:23 Europe/Berlin] PHP Warning:  Undefined array key "piso" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 65
+[09-Oct-2024 18:45:01 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:03 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:04 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:05 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:06 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 18:45:49 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
+[09-Oct-2024 21:32:35 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[09-Oct-2024 22:03:35 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25

@@ -13,8 +13,31 @@ ini_set('error_log', '../log/php_errors.log'); // Especifica el archivo de regis
 class Pedido {
 
     // Función para obtener detalles del pedido (implementación necesaria)
-    function obtener() {
-        
+    function obtenerInfoPedido($idUsuario) {
+        try{
+            $connection = conection();
+
+            $sql = "SELECT p.Id_pedido, u.Nombre AS nombre_usuario, GROUP_CONCAT(pr.Nombre SEPARATOR ', ') AS productos, 
+                        p.Fecha, p.Estado 
+                    FROM pedido p 
+                    JOIN usuario u ON p.Id_Usuario = u.Id_usuario 
+                    JOIN contiene c ON p.Id_pedido = c.Id_pedido 
+                    JOIN producto pr ON c.Id_producto = pr.Id_prod 
+                    WHERE p.Estado != 'Finalizado' AND u.Id_usuario = ? 
+                    GROUP BY p.Id_pedido, u.Nombre, u.Apellido, p.Fecha, p.Estado;";
+
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $idUsuario);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $datosPedido = $result->fetch_all(MYSQLI_ASSOC);
+
+            $msj = "Pedido obtenido correctamente";
+            return new Respuesta(true, $msj, $datosPedido);
+        }catch (Exception $e) {
+            $msj = "Error: ". $e;
+            return new Respuesta(false, $msj, []);
+        }
     }
 
     // Función para realizar un pedido
@@ -66,21 +89,15 @@ class Pedido {
                     throw new Exception("Error al insertar el producto con ID $idProducto: " . $stmtContiene->error);
                 }
             }
-        } catch (Exception $e) {
-            // Manejar excepciones y registrar errores
-            error_log($e->getMessage());
-            throw $e;
-        }
-    }
-
+            
             $msj = "Pedido realizado con éxito";        
             return new Respuesta(true, $msj, []);
-        }catch (Exception $e){
+        } catch (Exception $e){
             $msj = "Error: " . $e;
             return new Respuesta(false, $msj, []);
         }
-
-
+    }
+    
     function cancelar($idPedido){
        try{
         $connection = conection();
@@ -193,7 +210,7 @@ class Pedido {
             return new Respuesta(false, $msj, []);
         }
     }
-    
+}
 
 
 

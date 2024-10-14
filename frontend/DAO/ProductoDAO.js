@@ -50,4 +50,11 @@ export default class ProductoDAO{
         }
         let response = await fetch(url, config);
     }
+
+    async obtenerMasVendido(){
+        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=masVendidos";
+        let response = await fetch(url);
+
+        return response.json();
+    }
 }

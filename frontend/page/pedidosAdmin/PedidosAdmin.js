@@ -12,7 +12,7 @@ window.onload = async () => {
         window.location.reload();
     }
 }
-
+ 
 async function mostrarPedidos(pedidos) {
     let tBodyPedidos = document.getElementById("tBodyPedidos");
     tBodyPedidos.innerHTML = "";

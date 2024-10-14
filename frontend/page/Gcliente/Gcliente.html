@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="Gcliente.css">
     <link rel="stylesheet" href="../../style/header.css">
     <link rel="stylesheet" href="../../style/estiloGenetales.css">
+    <script type="module" src="Gcliente.js"></script>
 </head>
 <body>
     <header>
@@ -20,7 +21,12 @@
                 <div class='menu-button'></div>
             </label>
             <ul class="menu">        
-                <li><a href="../usuarios/usuarios.html">Perfil</a></li>
+                <li><a href="../productosI/insertar.html">Insertar Productos</a></li>
+                <li><a href="../pedidosAdmin/pedidosadmin.html">Gestionar Pedidos</a></li>
+                <li><a href="../masVendido/masVendido.html">Productos más vendidos</a></li>
+                <li><a href="../contacto/contacto.html">Perfil</a></li>
+                <li><a href="../Gcliente/Gcliente.html">Gestionar usuario</a></li>
+                <li><button id="cerrarSesion">Cerrar Sesion</button></li>
             </ul>
         </nav>
     </header>
@@ -30,16 +36,18 @@
 
         <table id="tabla-clientes">
             <thead>
-                <tr>
+                <tr> 
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Email</th>
                     <th>Teléfono</th>
-                    <th>Dirección</th>
+                    <th>Calle</th>
+                    <th>Número</th>
+                    <th>Piso</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody id="lista-clientes">
+            <tbody id="tBodyUsuarios">
                 
             </tbody>
         </table>
@@ -50,34 +58,33 @@
                 <h2>Editar Datos del Cliente</h2>
                 <form id="form-editar">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" required>
+                    <input type="text" id="nombre" name="nombre" required>
 
                     <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" required>
+                    <input type="text" id="apellido" name="apellido" required>
 
                     <label for="email">Email:</label>
                     <input type="email" id="email" required>
 
                     <label for="telefono">Teléfono:</label>
-                    <input type="text" id="telefono" required>
+                    <input type="text" id="telefono" name="tel" required>
 
                     <label for="calle">Calle:</label>
-                    <input type="text" id="calle" required>
+                    <input type="text" id="calle" name="calle" required> 
 
                     <label for="piso">Piso:</label>
-                    <input type="text" id="piso">
+                    <input type="text" id="piso" name="piso">
 
                     <label for="numero">Número:</label>
-                    <input type="text" id="numero" required>
+                    <input type="text" id="numero" name="numero" required>
 
-                    <button type="submit">Guardar Cambios</button>
-                    <button type="button" id="cancelar">Cancelar</button>
+                    <button type="submit" class="btn" >Guardar Cambios</button>
+                    <button type="button" class="btn" id="cancelar">Cancelar</button>
+                
                 </form>
             </div>
         </div>
     </div>
     </main>
-
-    <script src="Gcliente.js"></script>
 </body>
 </html>

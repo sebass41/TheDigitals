@@ -32,7 +32,29 @@ class Usuario{
             return new Respuesta(false, $msj, []);
         }
     }
-    
+
+    function obtenerUsuario($idUsuario){
+        try {
+            $connection = conection();
+            $sql = "SELECT * FROM usuario WHERE Id_usuario = ?;";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $idUsuario);
+            $stmt->execute();
+            $respuesta = $stmt->get_result();
+            $persona = $respuesta->fetch_all(MYSQLI_ASSOC);
+            
+            if ($persona == null){
+                $msj = "Usuario no encontrado";
+                return new Respuesta(false, $msj, []);
+            }
+            
+            $msj = "Usuario obtenido correctamente";
+            return new Respuesta(true, $msj, $persona);
+        } catch (Exception $e) {
+            $msj = "Error: ". $e->getMessage();
+            return new Respuesta(false, $msj, []);
+        }
+    }    
 
     function registrar($nombre, $apellido, $tel, $calle, $num, $piso, $pass, $mail) {
         try {
@@ -51,32 +73,75 @@ class Usuario{
     }
     
 
-    function actualizar($id, $nombre, $apellido, $tel, $apodo, $calle, $num, $piso, $pass, $mai){
+    function actualizar($idUsuario, $nombre, $apellido, $tel, $calle, $num, $piso){
         try{
             $connection = conection();
-            $sql = "UPDATE usuario SET Nombre = ?, ";
-            $respuesta = $connection->query($sql);
-            return $respuesta;
+            $sql = "UPDATE usuario SET Nombre = ?, Apellido = ?, Tel = ?, Calle = ?, Numero = ?, Piso = ?
+                    WHERE Id_usuario = ?;";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("ssisisi", $nombre, $apellido, $tel, $calle, $num, $piso, $idUsuario);
+            if(!$stmt->execute()){
+                throw new Exception ("Error: ". $stmt->error);
+            }
+            if ($stmt->affected_rows === 0) { // Verifica si no se afectó ninguna fila
+                throw new Exception("Error: ". $stmt->error);
+            }
+
+            $msj = "Se actualizaron los datos correctamente";
+            return new Respuesta(true, $msj, $stmt);
         }catch (Exception $e){
             $msj = "Error: " . $e;
             return new Respuesta(false, $msj, []);
         }
     }
 
-    function eliminar($id){
-        try{
+    function eliminar($id) {
+        try {
             $connection = conection();
-            $sql = "DELETE FROM usuario WHERE id_Usuario  = $id";
-            $respuesta = $connection->query($sql);
             
-            $msj = "Usuario eliminado correctamente";
-            return new Respuesta(true, $msj, $respuesta);
+            // Iniciar transacción para asegurar que todas las operaciones se ejecuten de forma atómica
+            $connection->begin_transaction();
     
-        }catch(Exception $e){
-            $msj = "Error al eliminar el Usuario:". $e->getMessage();
+            // 1. Eliminar registros de la tabla `contiene` relacionados a los pedidos del usuario
+            $sql = "DELETE c FROM contiene c 
+                    JOIN pedido p ON c.Id_pedido = p.Id_pedido
+                    WHERE p.Id_Usuario = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $id);
+            if (!$stmt->execute()) {
+                throw new Exception("Error al eliminar productos de los pedidos del usuario: " . $stmt->error);
+            }
+    
+            // 2. Eliminar los pedidos del usuario
+            $sql = "DELETE FROM pedido WHERE Id_Usuario = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $id);
+            if (!$stmt->execute()) {
+                throw new Exception("Error al eliminar pedidos del usuario: " . $stmt->error);
+            }
+    
+            // 3. Finalmente, eliminar al usuario
+            $sql = "DELETE FROM usuario WHERE Id_usuario = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("i", $id);
+            if (!$stmt->execute()) {
+                throw new Exception("Error al eliminar el usuario: " . $stmt->error);
+            }
+    
+            // Confirmar la transacción si todo ha ido bien
+            $connection->commit();
+    
+            $msj = "Usuario y toda la información relacionada eliminados correctamente";
+            return new Respuesta(true, $msj, []);
+        
+        } catch (Exception $e) {
+            // En caso de error, revertir los cambios
+            $connection->rollback();
+            $msj = "Error al eliminar el Usuario y su información: " . $e->getMessage();
             return new Respuesta(false, $msj, []);
         }
     }
+    
     
 
 }
