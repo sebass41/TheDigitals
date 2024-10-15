@@ -888,3 +888,11 @@ Stack trace:
 [09-Oct-2024 18:45:49 Europe/Berlin] PHP Warning:  Undefined array key "idUsuario" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 46
 [09-Oct-2024 21:32:35 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
 [09-Oct-2024 22:03:35 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[13-Oct-2024 03:47:17 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[13-Oct-2024 04:04:12 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[13-Oct-2024 04:04:15 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[13-Oct-2024 04:04:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[13-Oct-2024 04:04:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[13-Oct-2024 04:04:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[13-Oct-2024 04:04:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[13-Oct-2024 04:04:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
