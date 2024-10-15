@@ -28,7 +28,25 @@ function agregar() {
         carrito.push(producto);
         // Guardar el carrito actualizado en el localStorage
         localStorage.setItem('carrito', JSON.stringify(carrito));
+        notification();
     } else {
         console.log("El producto ya está en el carrito.");
     }
 }
+function notification() {
+   
+    
+    const notification = document.getElementById('notification');
+    notification.style.display = 'block';
+    notification.style.opacity = 1;
+
+    
+    setTimeout(() => {
+        notification.style.opacity = 0;
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 500); 
+    }, 3000);
+   
+}
+
