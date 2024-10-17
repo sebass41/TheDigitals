@@ -13,10 +13,18 @@ function mostrarProductos(productos) {
     if (productos) {
         productos.forEach(prod => {
             let div = document.createElement('div');
+            let ext = ["jpg", "png", "jpeg"]
+            let tipoImg = prod.extencion;
+            let rutaImg = "../../asset/burga/noImg.jpg";
+
+            if (ext.includes(tipoImg)) {
+                rutaImg = `../../../backend/img/producto/${prod.Id_prod}.${tipoImg}`;   
+            }
+
             div.className = 'product';
             div.innerHTML = `
                 <div class="producto">    
-                    <img src='../../asset/burga/feroz_3.png' alt='Producto'>
+                    <img src='${rutaImg}' alt='Producto'>
                     <h3>${prod.Nombre}</h3>
                     <p>$${prod.precio}</p>
                     <input type='number' id="cantidad-${prod.Id_prod}" value='1' min='1' max='10' onchange='actualizarCantidad(${prod.Id_prod})'>
