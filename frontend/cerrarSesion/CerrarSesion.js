@@ -13,7 +13,7 @@ function agregarBotonSesion() {
             let sesionDAO = new SesionDAO();
             let result = await sesionDAO.cerrarSesion();
             console.log(result);
-            location.reload();
+            window.location.href = "../principal/index.html";
         });
 }else {
     document.querySelector('.menu').innerHTML += '<li><a href="../login/login.html">Iniciar Sesión</a></li>';

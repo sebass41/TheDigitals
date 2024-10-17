@@ -57,7 +57,7 @@ tr:nth-child(even) {
 
 
 
-td button {
+.btnFinalizar {
     padding: 6px 12px;
     background-color: #ff5722;
     color: white;
@@ -66,7 +66,7 @@ td button {
     cursor: pointer;
 }
 
-td button:hover {
+.btnFinalizar :hover {
     background-color:  #a03716;
 }
 
@@ -76,7 +76,7 @@ td button:hover {
     margin-top: 20px;
 }
 
-button {
+.btnFinalizar {
     padding: 10px 20px;
     background-color: #ff5722;
     color: white;
@@ -87,7 +87,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.btnFinalizar:hover {
     background-color:  #fa4c18;
 }
 

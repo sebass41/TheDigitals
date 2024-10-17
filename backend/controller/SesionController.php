@@ -1,5 +1,4 @@
 <?php
-session_start(); // Inicia una nueva sesión o reanuda la existente
 require_once "../model/SesionDAO.php"; // Incluye el archivo SesionDAO.php, que contiene la clase Sesion
 
 $funcion = $_GET['fun']; // Obtiene el parámetro 'fun' de la URL
@@ -32,6 +31,7 @@ function iniciarSesion(){
 
 // Función para cerrar sesión
 function cerrarSesion(){
+    session_start(); // Inicia una nueva sesión o reanuda la existente
     session_unset(); // Elimina todas las variables de sesión
     session_destroy(); // Destruye la sesión
 

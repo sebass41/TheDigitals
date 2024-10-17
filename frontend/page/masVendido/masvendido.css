@@ -6,7 +6,7 @@
 
 main {
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-color: whitesmoke;
 }
 
@@ -17,20 +17,16 @@ h1 {
     margin-top: 20px;
 }
 
-.productos-mas-vendidos {
+.tabla {
     max-width: 900px;
-    margin: 0 auto;
-    margin-top: 10%;
+    width: 100%; /* Se ajusta el ancho al 100% dentro de max-width */
+    margin: 0 auto; /* Centra la tabla */
     background-color: #1F1F1F;
     border-radius: 8px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    
-}
-
-.tabla {
-    background-color: #1f1f1f; 
+    align-items: center;
 }
 
 h2 {
@@ -40,12 +36,12 @@ h2 {
 }
 
 table {
-    width: 100%;
+    width: 100%; /* La tabla ocupa el 100% del contenedor */
+    max-width: 800px; /* Se establece un ancho máximo para la tabla */
     border-collapse: collapse;
     color: white;
-    margin: 0 auto;
     background-color: #1f1f1f; 
-   
+    margin: 0 auto; /* Centra la tabla */
 }
 
 table th, table td {

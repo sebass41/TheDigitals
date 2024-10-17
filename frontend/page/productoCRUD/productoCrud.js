@@ -1,16 +1,13 @@
-import CuentaDAO from "../../DAO/CuentaDAO.js";
+import ProductoDAO from "../../DAO/ProductoDAO.js";
 
 window.onload = async () => {
-    let usuarios = await (new CuentaDAO()).obtener();
-    console.log(usuarios.data);
-    mostrarUsuarios(usuarios.data);
-
-    // Evento para botón de editar
-    
+    let productos = await (new ProductoDAO()).obtener();
+    console.log(productos.data);
+    mostrarProductos(productos.data);
 }
 
-async function editarUsuario(id) {
-    let usuario = await obtenerUsuario(id);
+async function editarProducto(id) {
+    let producto = await obtenerproducto(id);
     let inputNombre = document.getElementById('nombre');
     let inputApellido = document.getElementById('apellido');
     let inputEmail = document.getElementById('email');
@@ -20,17 +17,17 @@ async function editarUsuario(id) {
     let inputNumero = document.getElementById('numero');
     let modalEditar = document.getElementById('modal-editar');
     let formEditar = document.getElementById('form-editar');
-    usuario = usuario.data[0];
-    console.log(usuario);
+    producto = producto.data[0];
+    console.log(producto);
     
     // Rellenar los campos del formulario
-    inputNombre.value = usuario.Nombre;
-    inputApellido.value = usuario.Apellido;
-    inputEmail.value = usuario.Mail;
-    inputTelefono.value = usuario.Tel;
-    inputCalle.value = usuario.Calle;
-    inputPiso.value = usuario.Piso;
-    inputNumero.value = usuario.Numero;
+    inputNombre.value = producto.Nombre;
+    inputApellido.value = producto.Apellido;
+    inputEmail.value = producto.Mail;
+    inputTelefono.value = producto.Tel;
+    inputCalle.value = producto.Calle;
+    inputPiso.value = producto.Piso;
+    inputNumero.value = producto.Numero;
 
     modalEditar.style.display = 'flex'; // Mostrar modal
 
@@ -62,8 +59,8 @@ async function editarUsuario(id) {
 
 }
 
-async function eliminarUsuario(id) {
-    let result = await (new CuentaDAO()).eliminar(id);
+async function eliminarProducto(id) {
+    let result = await (new ProductoDAO()).eliminar(id);
     console.log(result);
     if (result.sucess) {
         location.reload(); // Recargar la página para mostrar los cambios
@@ -71,20 +68,19 @@ async function eliminarUsuario(id) {
         console.log(result.msj);
     }
 }
-function mostrarUsuarios(usuarios){
-    let tbodyUsuarios = document.getElementById("tBodyUsuarios");
-    tbodyUsuarios.innerHTML = "";
+function mostrarProductos(productos){
+    let tBodyProductos = document.getElementById("tBodyProductos");
+    tBodyProductos.innerHTML = "";
 
-    usuarios.forEach(usuario => {
+    productos.forEach(producto => {
         let tr = document.createElement("tr");
         tr.innerHTML = `
-            <td>${usuario.Nombre}</td>
-            <td>${usuario.Apellido}</td>
-            <td>${usuario.Mail}</td>
-            <td>${usuario.Tel}</td>
-            <td>${usuario.Calle}</td>
-            <td>${usuario.Numero}</td>
-            <td>${usuario.Piso}</td>
+            <td>${producto.Id_prod}</td>
+            <td>${producto.Nombre}</td>
+            <td>${producto.tipo}</td>
+            <td>${producto.Descripcion}</td>
+            <td>${producto.precio}</td>
+            <td><img src="../../../backend/img/producto/${producto.Id_prod}.${producto.extencion}"></td>
         `;
         let btnEditar = document.createElement("button");
         let btnEliminar = document.createElement("button");
@@ -95,10 +91,10 @@ function mostrarUsuarios(usuarios){
         btnEliminar.classList.add("eliminar");
 
         btnEditar.onclick = () => {
-            editarUsuario(usuario.Id_usuario)
+            editarProducto(producto.Id_prod)
         };
         btnEliminar.onclick = () => {
-            eliminarUsuario(usuario.Id_usuario)
+            eliminarProducto(producto.Id_prod)
         }
 
         let td = document.createElement("td");
@@ -106,13 +102,13 @@ function mostrarUsuarios(usuarios){
         td.appendChild(btnEditar);
         tr.appendChild(td);
 
-        tbodyUsuarios.appendChild(tr);
+        tBodyProductos.appendChild(tr);
     });
 }
 
-async function obtenerUsuario(id){
-    let usuario = await (new CuentaDAO()).obtenerUsuario(id);
-    return usuario;
+async function obtenerproducto(id){
+    let producto = await (new CuentaDAO()).obtenerproducto(id);
+    return producto;
 }
 /*
     let listaClientes = document.getElementById('lista-clientes');
@@ -128,20 +124,20 @@ async function obtenerUsuario(id){
     let inputPiso = document.getElementById('piso');
     let inputNumero = document.getElementById('numero');
 
-let usuario = null; // Cliente seleccionado para editar
+let producto = null; // Cliente seleccionado para editar
 
 // Función para abrir el modal y editar los datos del cliente
 function editarCliente(id) {
-    usuario = clientes.find(cliente => cliente.id === id);
+    producto = clientes.find(cliente => cliente.id === id);
 
     // Rellenar los campos del formulario
-    inputNombre.value = usuario.nombre;
-    inputApellido.value = usuario.apellido;
-    inputEmail.value = usuario.email;
-    inputTelefono.value = usuario.telefono;
-    inputCalle.value = usuario.direccion.calle;
-    inputPiso.value = usuario.direccion.piso;
-    inputNumero.value = usuario.direccion.numero;
+    inputNombre.value = producto.nombre;
+    inputApellido.value = producto.apellido;
+    inputEmail.value = producto.email;
+    inputTelefono.value = producto.telefono;
+    inputCalle.value = producto.direccion.calle;
+    inputPiso.value = producto.direccion.piso;
+    inputNumero.value = producto.direccion.numero;
 
     modalEditar.style.display = 'flex'; // Mostrar modal
 }
@@ -151,13 +147,13 @@ formEditar.addEventListener('submit', function (e) {
     e.preventDefault();
 
     // Actualizar los datos del cliente
-    usuario.nombre = inputNombre.value;
-    usuario.apellido = inputApellido.value;
-    usuario.email = inputEmail.value;
-    usuario.telefono = inputTelefono.value;
-    usuario.direccion.calle = inputCalle.value;
-    usuario.direccion.piso = inputPiso.value;
-    usuario.direccion.numero = inputNumero.value;
+    producto.nombre = inputNombre.value;
+    producto.apellido = inputApellido.value;
+    producto.email = inputEmail.value;
+    producto.telefono = inputTelefono.value;
+    producto.direccion.calle = inputCalle.value;
+    producto.direccion.piso = inputPiso.value;
+    producto.direccion.numero = inputNumero.value;
 
     cargarClientes(); // Volver a cargar la tabla
     modalEditar.style.display = 'none'; // Cerrar modal

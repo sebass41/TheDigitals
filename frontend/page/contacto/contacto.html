@@ -23,24 +23,25 @@
                 <li><a href="../catalogo/catalogo.html">Hacé tú pedido</a></li>  
                 <li><a href="../carrito/carrito.html">Carrito</a></li>          
                 <li><a href="../usuarios/usuarios.html">Perfil</a></li>
+                <li><button id="cerrarSesion">Cerrar Sesion</button></li>
             </ul>
         </nav>
         </header>
     <main>
         <div class="container">
-            <form class="form">
+            <form class="form" action="https://formsubmit.co/ssdible@gmail.com" method="POST">
                 <h2>Contactanos</h2>
                 <p>
                     Deja tu reseña para que podamos seguir mejorando!
                 </p>
                 <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" class="box" placeholder="Nombre Completo">
+                <input type="text" id="nombre" name="nombre" class="box" placeholder="Nombre Completo">
 
                 <label for="correo">Correo</label>
-                <input type="email" id="correo" class="box" placeholder="tu_correo@mail.com">
+                <input type="email" id="correo" name="correo" class="box" placeholder="tu_correo@mail.com">
 
                 <label for="mensaje">Mensaje </label>
-                <textarea class="box" id="mensaje" cols="30" rows="10"></textarea>
+                <textarea class="box" id="mensaje" name="mensaje" cols="30" rows="10"></textarea>
                 <input type="submit" value="Enviar" class="submit">
             </form>
 
