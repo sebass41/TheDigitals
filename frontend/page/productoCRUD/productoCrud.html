@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../asset/isotipo/ferozAdmin.png" type="image/x-icon">
     <title>Modificar Producto</title>
-    <link rel="stylesheet" href="modificarProducto.css">
+    <link rel="stylesheet" href="productoCrud.css">
     <link rel="stylesheet" href="../../style/header.css">
     <link rel="stylesheet" href="../../style/estiloGenetales.css">
-    <script src="modificarProducto.js"></script>
+    <script src="productoCrud.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -29,46 +29,17 @@
             <thead>
                 <tr>
                     <th>ID</th>
+                    <th>Nombre</th>
                     <th>Tipo</th>
                     <th>Producto</th>
                     <th>Descripción</th>
                     <th>Precio</th>
+                    <th>Imágen</th>
                     <th>Acción</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Hamburguesa</td>
-                    <td>Producto 1</td>
-                    <td>Descripción del producto 1</td>
-                    <td>$10.00</td>
-                    <td><button class="modificar-btn">Modificar</button></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Papa</td>
-                    <td>Producto 2</td>
-                    <td>Descripción del producto 2</td>
-                    <td>$20.00</td>
-                    <td><button class="modificar-btn">Modificar</button></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Bebida</td>
-                    <td>Producto 3</td>
-                    <td>Descripción del producto 3</td>
-                    <td>$30.00</td>
-                    <td><button class="modificar-btn">Modificar</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Pancho</td>
-                    <td>Producto 4</td>
-                    <td>Descripción del producto 4</td>
-                    <td>$40.00</td>
-                    <td><button class="modificar-btn">Modificar</button></td>
-                </tr>
+            <tbody id="tBodyProductos">
+
             </tbody>
         </table> 
 
