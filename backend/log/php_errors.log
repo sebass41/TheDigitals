@@ -245,3 +245,5 @@ Stack trace:
 [08-Oct-2024 20:18:16 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
 [08-Oct-2024 21:55:43 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
 >>>>>>> a0128998abeedc7d188dd4e6b890c5aa981369fd
+[17-Oct-2024 04:48:24 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[17-Oct-2024 04:54:37 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
