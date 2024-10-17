@@ -82,12 +82,15 @@ function mostrarDatos(productos,idElemento) {
             elemento.appendChild(fila);
         }
 
+        let ext = ["jpg", "png", "jpeg"]
         let tipoImg = producto.extencion;
         let rutaImg;
-        if (tipoImg !== "png") {
+        console.log(tipoImg)
+        if (ext.includes(tipoImg)) {
             rutaImg = "../../asset/burga/noImg.jpg";
         }else{
-            rutaImg = `../../../backend/img/producto/${producto.Id_prod}.png`
+            rutaImg = `../../../backend/img/producto/${producto.Id_prod}.jpeg`
+            
         }
         let card = document.createElement("div");
         card.classList.add("producto");

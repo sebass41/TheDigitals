@@ -245,6 +245,10 @@ Stack trace:
 [08-Oct-2024 20:18:16 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 22
 [08-Oct-2024 21:55:43 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
 >>>>>>> a0128998abeedc7d188dd4e6b890c5aa981369fd
+<<<<<<< HEAD
+[17-Oct-2024 04:48:24 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+[17-Oct-2024 04:54:37 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TheDigitals\backend\controller\SesionController.php on line 25
+=======
 [09-Oct-2024 04:49:05 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1049): Unknown database 'feroz' in C:\xampp\htdocs\TheDigitals\backend\conexion\conexion.php on line 19
 [09-Oct-2024 04:49:05 Europe/Berlin] PHP Fatal error:  Uncaught Error: mysqli object is already closed in C:\xampp\htdocs\TheDigitals\backend\model\SesionDAO.php:20
 Stack trace:
@@ -896,3 +900,6 @@ Stack trace:
 [13-Oct-2024 04:04:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
 [13-Oct-2024 04:04:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
 [13-Oct-2024 04:04:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[15-Oct-2024 22:35:22 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[17-Oct-2024 04:47:17 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+>>>>>>> fa046ec2119ac77219e1841921f2da3f72b4d07a
