@@ -36,7 +36,6 @@ body {
     position: absolute;
     right: 48%;
     transition: all .5s;
-    z-index: 1;
 }
 
 #flechaCatalogo{

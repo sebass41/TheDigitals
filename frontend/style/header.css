@@ -12,6 +12,19 @@ body {
 header {
   width: 100vw; /* Establece el ancho del header en 100% del viewport */
 }
+.menu{
+  align-items: center;
+}
+.icono {
+  max-width: 45px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.icono:hover {
+  transform: scale(1.08);
+  transition: transform 0.3s; 
+}
 #cerrarSesion{
     background-color: #ff5722;
     border: 0;
