@@ -8,12 +8,7 @@
     <link rel="stylesheet" href="productoCrud.css">
     <link rel="stylesheet" href="../../style/header.css">
     <link rel="stylesheet" href="../../style/estiloGenetales.css">
-<<<<<<< HEAD:frontend/page/modificarProducto/modificarProducto.html
-    <script src="modificarProducto.js"></script>
-    
-=======
     <script src="productoCrud.js" type="module"></script>
->>>>>>> cf6603db67f2d801da9f37cf36618a601cf95c02:frontend/page/productoCRUD/productoCrud.html
 </head>
 <body>
     <header>
@@ -35,7 +30,6 @@
                     <th>ID</th>
                     <th>Nombre</th>
                     <th>Tipo</th>
-                    <th>Producto</th>
                     <th>Descripción</th>
                     <th>Precio</th>
                     <th>Imágen</th>
@@ -48,26 +42,27 @@
         </table> 
 
         <!-- Modal para Modificar Producto -->
-        <div class="modal" id="miModal">
+        <div class="modal" id="modal-editar">
             <div class="modal-contenido">
                 <h2>Modificar Producto</h2>
-                <form id="formModificar">
+                <form id="form-editar">
                     <label for="id">ID</label>
-                    <input type="text" id="id" disabled>
+                    <input type="text" name="idProd" id="id" disabled>
+                    
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre">
                     
                     <label for="tipo">Tipo</label>
-                    <select id="tipo">
+                    <select id="tipo" name="tipo">
                         <option value="Hamburguesa">Hamburguesa</option>
                         <option value="Papa">Papa</option>
                         <option value="Bebida">Bebida</option>
                         <option value="Pancho">Pancho</option>
                     </select>
                     
-                    <label for="producto">Producto</label>
-                    <input type="text" id="producto" required>
+                    <label for="producto">Descripción</label>
+                    <textarea name="descripcion" id="descripcion"></textarea>
                     
-                    <label for="descripcion">Descripción</label>
-                    <textarea id="descripcion" required></textarea>
                     
                     <div class="file">
                         <label for="imagen">Cambiar imagen</label>
@@ -75,10 +70,10 @@
                     </div>
                     
                     <label for="precio">Precio</label>
-                    <input type="text" id="precio" required>
+                    <input type="number" name="precio" id="precio" required>
                     
                     <input type="submit" value="Modificar">
-                    <button type="button" id="cerrarModal">Cerrar</button>
+                    <button type="button" id="cancelar">Cerrar</button>
                 </form>
             </div>
         </div>

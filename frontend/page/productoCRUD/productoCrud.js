@@ -2,32 +2,27 @@ import ProductoDAO from "../../DAO/ProductoDAO.js";
 
 window.onload = async () => {
     let productos = await (new ProductoDAO()).obtener();
-    console.log(productos.data);
     mostrarProductos(productos.data);
 }
 
 async function editarProducto(id) {
-    let producto = await obtenerproducto(id);
+    let producto = await obtenerProducto(id);
+    let inputId = document.getElementById('id');
+    let inputTipo = document.getElementById('tipo');
     let inputNombre = document.getElementById('nombre');
-    let inputApellido = document.getElementById('apellido');
-    let inputEmail = document.getElementById('email');
-    let inputTelefono = document.getElementById('telefono');
-    let inputCalle = document.getElementById('calle');
-    let inputPiso = document.getElementById('piso');
-    let inputNumero = document.getElementById('numero');
+    let inputDescripcion = document.getElementById('descripcion');
+    let inputPrecio = document.getElementById('precio');
     let modalEditar = document.getElementById('modal-editar');
     let formEditar = document.getElementById('form-editar');
     producto = producto.data[0];
     console.log(producto);
     
     // Rellenar los campos del formulario
+    inputId.value = producto.Id_prod;
+    inputTipo.value = producto.tipo;
+    inputDescripcion.value = producto.Descripcion;
     inputNombre.value = producto.Nombre;
-    inputApellido.value = producto.Apellido;
-    inputEmail.value = producto.Mail;
-    inputTelefono.value = producto.Tel;
-    inputCalle.value = producto.Calle;
-    inputPiso.value = producto.Piso;
-    inputNumero.value = producto.Numero;
+    inputPrecio.value = producto.precio;
 
     modalEditar.style.display = 'flex'; // Mostrar modal
 
@@ -36,18 +31,14 @@ async function editarProducto(id) {
 
         let formData = new FormData(formEditar);
         let nombre = formData.get("nombre");
-        let apellido = formData.get("apellido");
-        let tel = formData.get("tel");
-        let calle = formData.get("calle");
-        let numero = formData.get("numero");
-        let piso = formData.get("piso");
+        let tipo = formData.get("tipo");
+        let descripcion = formData.get("descripcion");
+        let precio = formData.get("precio");
 
-
-        let result = await (new CuentaDAO()).editar(id, nombre, apellido, tel, calle, numero, piso);
+        let result = await (new ProductoDAO()).editar(id, tipo, nombre, descripcion, precio);
         console.log(result);
         if (result.sucess) {
             modalEditar.style.display = 'none'; // Cerrar modal
-            location.reload(); // Recargar la página para mostrar los cambios
         }else {
             console.log(result.msj);
         }
@@ -74,13 +65,20 @@ function mostrarProductos(productos){
 
     productos.forEach(producto => {
         let tr = document.createElement("tr");
+        let ext = ["jpg", "png", "jpeg"]
+            let tipoImg = producto.extencion;
+            let rutaImg = "../../asset/burga/noImg.jpg";
+
+            if (ext.includes(tipoImg)) {
+                rutaImg = `../../../backend/img/producto/${producto.Id_prod}.${tipoImg}`;   
+            }
         tr.innerHTML = `
             <td>${producto.Id_prod}</td>
             <td>${producto.Nombre}</td>
             <td>${producto.tipo}</td>
             <td>${producto.Descripcion}</td>
             <td>${producto.precio}</td>
-            <td><img src="../../../backend/img/producto/${producto.Id_prod}.${producto.extencion}"></td>
+            <td><img src="${rutaImg}"></td>
         `;
         let btnEditar = document.createElement("button");
         let btnEliminar = document.createElement("button");
@@ -106,8 +104,8 @@ function mostrarProductos(productos){
     });
 }
 
-async function obtenerproducto(id){
-    let producto = await (new CuentaDAO()).obtenerproducto(id);
+async function obtenerProducto(id){
+    let producto = await (new ProductoDAO()).obtenerProducto(id);
     return producto;
 }
 /*

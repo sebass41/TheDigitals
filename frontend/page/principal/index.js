@@ -26,6 +26,7 @@ function mostrarMenuAdmin(menu) {
         menu.innerHTML += `<li><a href="../productosI/insertar.html">Insertar Productos</a></li>`;
         menu.innerHTML += `<li><a href="../pedidosAdmin/pedidosadmin.html">Gestionar Pedidos</a></li>`;
         menu.innerHTML += `<li><a href="../masVendido/masVendido.html">Productos más vendidos</a></li>`;
+        menu.innerHTML += `<li><a href="../productoCRUD/productoCrud.html">Gestionar Productos</a></li>`;
         menu.innerHTML += `<li><a href="../Gcliente/Gcliente.html">Gestionar Usuarios</a></li>`;    
     }
 }

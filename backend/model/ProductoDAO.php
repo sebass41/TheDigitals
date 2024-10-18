@@ -67,15 +67,10 @@ class Producto{
     }
     
 
-function actualizar($idProducto, $tipo, $nombre, $descripcion, $img, $precio) {
+function editar($idProducto, $tipo, $nombre, $descripcion, $precio) {
     try {
         // Establecer una conexión a la base de datos
         $connection = conection();
-
-        // Obtener el nombre de la imagen y su extensión
-        $nomImg = $img['name'];
-        $extencion = pathinfo($nomImg, PATHINFO_EXTENSION);
-        $rutaTemp = $img['tmp_name'];
 
         // Consulta SQL para actualizar un producto existente
         $sql = "UPDATE producto SET tipo = ?, Nombre = ?, Descripcion = ?, precio = ? WHERE Id_prod = ?";
@@ -83,10 +78,10 @@ function actualizar($idProducto, $tipo, $nombre, $descripcion, $img, $precio) {
         $stmt->bind_param("sssii", $tipo, $nombre, $descripcion, $precio, $idProducto);
         
         // Ejecutar la consulta y verificar si hay errores
-        if ($stmt->execute()) {
-            // Si la consulta se ejecuta correctamente, mover la imagen subida a la carpeta de destino
-            $nombreImg = $idProducto . '.' . $extencion;
-            move_uploaded_file($rutaTemp, "../img/productos/" . $nombreImg);
+        if (!$stmt->execute()) {
+            // Manejar el error de ejecución
+            $msj = "Error al actualizar los datos";
+            return new Respuesta(false, $msj, []);
         }
 
         // Mensaje de éxito al actualizar los datos
@@ -141,7 +136,23 @@ function eliminar($idProducto) {
         }
     }
 
+    function obtenerProducto($id){
+        try{
+            $connection = conection();
+            $sql = "SELECT * FROM producto WHERE Id_prod =?;";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param('i', $id);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $producto = $result->fetch_all(MYSQLI_ASSOC);
 
+            $msj = "Se obtuvo el producto correctamente";
+            return new Respuesta(true, $msj, $producto);
+        }catch(Exception $e){
+            $msj = "Error: ".$e->getMessage();
+            return new Respuesta(false, $msj, []);
+        }
+    }
 }
 
 ?>

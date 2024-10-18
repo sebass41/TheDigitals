@@ -13,14 +13,17 @@ switch ($funcion){
     case 'insertar':
         insertar();
         break;
-    case 'actualizar':
-        actualizar();
+    case 'editar':
+        editar();
         break;
     case 'eliminar':
         eliminar();
         break;
     case 'masVendidos':
         obtenerMasVendidos();
+        break;
+    case 'obtenerProducto':
+        obtenerProducto();
         break;
 }
 
@@ -48,19 +51,19 @@ function insertar(){
 }
 
 // Función para actualizar un producto existente
-function actualizar(){
-    $id = $_POST['id'];
-    $tipo = $_POST['tipo'];
-    $nombre = $_POST['name'];
-    $descripcion = $_POST['desc'];
-    $categoria = $_POST['cate'];
-    $img = $_FILES['img'];
-    $precio = $_POST['precio'];
-    $idPedido = $_POST['idPedido'];
-
-    // Llama al método actualizar de la clase Producto
-    $actualizar = (new Producto())->actualizar($id, $tipo, $nombre, $descripcion, $categoria, $img, $precio, $idPedido);
-    echo json_encode($actualizar); // Devuelve el resultado en formato JSON
+function editar(){
+    $_SESSION['admin'] = 1;
+    if ($_SESSION['admin'] == 1){
+        $id = $_POST['id'];
+        $tipo = $_POST['tipo'];
+        $nombre = $_POST['nombre'];
+        $descripcion = $_POST['descripcion'];
+        $precio = $_POST['precio'];
+        
+        // Llama al método actualizar de la clase Producto
+        $actualizar = (new Producto())->editar($id, $tipo, $nombre, $descripcion, $precio);
+        echo json_encode($actualizar); // Devuelve el resultado en formato JSON
+    }
 }
 
 // Función para eliminar un producto
@@ -76,6 +79,13 @@ function eliminar(){
 function obtenerMasVendidos(){
     $masVendidos = (new Producto())->obtenerMasVendido();
     echo json_encode($masVendidos);
+}
+
+function obtenerProducto(){
+    $id = $_POST['id']; // Obtiene el ID del producto desde el formulario
+    $result = (new Producto())->obtenerProducto($id);
+
+    echo json_encode($result); // Devuelve el resultado en formato JSON
 }
 ?>
 

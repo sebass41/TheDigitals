@@ -23,21 +23,21 @@ export default class ProductoDAO{
         return response;
     }
     
-    async actualizar(id, tipo, nombre, descripcion, categoria, img, precio){
+    async editar(id, tipo, nombre, descripcion, precio){
         let formdata = new FormData();
         formdata.append('id', id);
         formdata.append('tipo', tipo);
         formdata.append('nombre', nombre);
         formdata.append('descripcion', descripcion);
-        formdata.append('categoria', categoria);
-        formdata.append('img', img);
         formdata.append('precio', precio);
-        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/ProductoController.php?fun=actualizar";
+        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=editar";
         let config ={
             method: 'POST',
             body: formdata
         }
         let response = await fetch(url, config);
+
+        return response.json();
     }
     
      async eliminar(id){
@@ -54,6 +54,19 @@ export default class ProductoDAO{
     async obtenerMasVendido(){
         let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=masVendidos";
         let response = await fetch(url);
+
+        return response.json();
+    }
+
+    async obtenerProducto(id){
+        let formdata = new FormData();
+        formdata.append('id', id);
+        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=obtenerProducto"
+        let config = {
+            method: 'POST',
+            body: formdata
+        }
+        let response = await fetch(url, config);
 
         return response.json();
     }
