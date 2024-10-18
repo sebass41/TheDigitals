@@ -52,7 +52,6 @@ function insertar(){
 
 // Función para actualizar un producto existente
 function editar(){
-    $_SESSION['admin'] = 1;
     if ($_SESSION['admin'] == 1){
         $id = $_POST['id'];
         $tipo = $_POST['tipo'];
@@ -68,11 +67,13 @@ function editar(){
 
 // Función para eliminar un producto
 function eliminar(){
-    $id = $_POST['id']; // Obtiene el ID del producto desde el formulario
+    if ($_SESSION['admin'] == 1){
+        $id = $_POST['id']; // Obtiene el ID del producto desde el formulario
 
-    // Llama al método eliminar de la clase Producto
-    $eliminar = (new Producto())->eliminar($id);
-    return json_encode($eliminar); // Devuelve el resultado en formato JSON
+        // Llama al método eliminar de la clase Producto
+        $eliminar = (new Producto())->eliminar($id);
+        return json_encode($eliminar); // Devuelve el resultado en formato JSON
+    }
 }
 
 

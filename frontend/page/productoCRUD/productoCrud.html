@@ -19,11 +19,16 @@
                 <div class='menu-button'></div>
             </label>
             <ul class="menu">
-                <li><a href="../usuarios/usuarios.html">Perfil</a></li>
+                <li><a href="../productosI/insertar.html">Insertar Productos</a></li>
+                <li><a href="../pedidosAdmin/pedidosadmin.html">Gestionar Pedidos</a></li>
+                <li><a href="../masVendido/masVendido.html">Productos más vendidos</a></li>
+                <li><a href="../productoCRUD/productoCrud.html"  class="paginaActual">Gestionar Productos</a></li>
+                <li><a href="../Gcliente/Gcliente.html">Gestionar usuario</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <input type="text" placeholder="Buscar Producto">
         <table>
             <thead>
                 <tr>
@@ -62,12 +67,6 @@
                     
                     <label for="producto">Descripción</label>
                     <textarea name="descripcion" id="descripcion"></textarea>
-                    
-                    
-                    <div class="file">
-                        <label for="imagen">Cambiar imagen</label>
-                        <input type="file" id="imagen">
-                    </div>
                     
                     <label for="precio">Precio</label>
                     <input type="number" name="precio" id="precio" required>

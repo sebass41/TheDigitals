@@ -83,6 +83,10 @@ nav a:hover {
   align-items: center; /* Alinea los elementos hijos horizontalmente al centro */
 }
 
+.paginaActual{
+  color: yellow;
+}
+
 #menu-toggle {
   display: none; /* Oculta el checkbox del menú */
 }

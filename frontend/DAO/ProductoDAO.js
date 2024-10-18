@@ -43,12 +43,13 @@ export default class ProductoDAO{
      async eliminar(id){
         let formdata = new FormData();
         formdata.append('id', id);
-        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/ProductoController.php?fun=eliminar";
+        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=eliminar";
         let config ={
             method: 'POST',
             body: formdata
         }
         let response = await fetch(url, config);
+        
     }
 
     async obtenerMasVendido(){
