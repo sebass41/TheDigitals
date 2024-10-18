@@ -16,8 +16,8 @@ function agregarBotonSesion() {
             window.location.href = "../principal/index.html";
         });
 }else {
+    document.querySelector(".menu").innerHTML = '<li><a href="../catalogo/catalogo.html">Hacé tú Pedido</a></li>';
     document.querySelector('.menu').innerHTML += '<li><a href="../login/login.html">Iniciar Sesión</a></li>';
-    console.log("entró")
 }
 }
 

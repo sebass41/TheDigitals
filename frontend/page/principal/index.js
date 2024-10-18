@@ -12,10 +12,10 @@ function mostrarMenu(menu) {
     if (localStorage.getItem('idSesion') !== null){
         menu.innerHTML += `<li><a href="../catalogo/catalogo.html">Hacé tú pedido</a></li>`;
         menu.innerHTML += `<li><a href="../carrito/carrito.html">Carrito</a></li>`;
-        menu.innerHTML += `<li><a href="../estadopedido/estadopedido.html">Estado del pedido</a></li>`;
+        menu.innerHTML += `<li><a href="../estadopedido/estadopedido.html">Mi Pedido</a></li>`;
         menu.innerHTML += `<li><a href="../Historialpedido/historialpedido.html">Pedidos realizados</a></li>`;
         menu.innerHTML += `<li><a href="../contacto/contacto.html">Contacto</a></li>`;    
-        menu.innerHTML += `<li><a href="../usuarios/usuarios.html">Perfil</a></li>`;    
+        menu.innerHTML += `<li><a href="../sobreNosotros/nosotros.html">Sobre Nosotros</a></li>`;    
     }else {
         menu.innerHTML = "";
     }

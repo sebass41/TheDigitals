@@ -10,6 +10,7 @@ window.onload = async () => {
 
     let productos = await (new ProductoDAO()).obtener();
     cargarDato(productos.data);
+    document.getElementById("buscar").addEventListener("keyup", () => buscarProducto(productos.data));
 }
 
 function eventoMenu() {
@@ -53,10 +54,10 @@ function ocultar() {
 }
 
 function cargarDato(productos) {
-    let panchos = productos.filter(producto => producto.tipo === 'panchos');
-    let hamburguesas = productos.filter(producto => producto.tipo === 'hamburguesa');
-    let bebidas = productos.filter(producto => producto.tipo === 'bebidas');
-    let papas = productos.filter(producto => producto.tipo === 'papas');
+    let panchos = productos.filter(producto => producto.tipo === 'Pancho');
+    let hamburguesas = productos.filter(producto => producto.tipo === 'Hamburguesa');
+    let bebidas = productos.filter(producto => producto.tipo === 'Bebida');
+    let papas = productos.filter(producto => producto.tipo === 'Papas');
 
     mostrarDatos(panchos, "sPanchos");
     mostrarDatos(hamburguesas, "sHamburguesas");
@@ -65,12 +66,12 @@ function cargarDato(productos) {
 }
 
 function mostrarDatos(productos,idElemento) {
-    console.log("Mostrar");
     if (productos.length === 0) {
         let elemento = document.getElementById(idElemento);
         elemento.innerHTML = "<p>No hay productos disponibles</p>";
         return;
     }
+    
     let elemento = document.getElementById(idElemento);
     elemento.innerHTML = "";
 
@@ -85,7 +86,6 @@ function mostrarDatos(productos,idElemento) {
         let ext = ["jpg", "png", "jpeg"]
         let tipoImg = producto.extencion;
         let rutaImg;
-        console.log("La extención de " + producto.Nombre + " es " + tipoImg);
         if (!ext.includes(tipoImg)) {
             rutaImg = "../../asset/burga/noImg.jpg";
         }else{
@@ -115,4 +115,11 @@ function selecProd(producto) {
     }else{
         alert("Debes iniciar sesión para ver el producto");
     }
+}
+
+function buscarProducto(productos) {
+    let input = document.getElementById("buscar").value;
+    let resultados = productos.filter(producto => producto.Nombre.toLowerCase().includes(input.toLowerCase()));
+    document.querySelector("#productos").innerHTML = "";
+    mostrarDatos(resultados, "productos");
 }
