@@ -7,6 +7,7 @@ window.onload = async () => {
     let productos = JSON.parse(localStorage.getItem('carrito'));
     let detalle = JSON.parse(localStorage.getItem('detalle'));
     let total = detalle[0];
+    console.log(total);
     mostrarDetalle(productos, total);
 
     document.getElementById('direccion').addEventListener('change', function() {
@@ -44,7 +45,6 @@ async function confirmarPedido(productos, total) {
 
     let formData = new FormData(formElement);
     let lugarRetiro = formData.get('lugarRetiro');
-    console.log(lugarRetiro);
     let calle;
     let numCasa;
     let piso;
