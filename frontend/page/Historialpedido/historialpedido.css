@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -6,22 +5,21 @@ body {
     padding: 0;
 }
 
-
-
-
 h1 {
     margin: 0;
+    text-align: center; /* Centra el título principal */
 }
 
 h2 {
     margin: 5px 0 20px;
+    text-align: center; /* Centra los subtítulos */
 }
 
-
 .purchase-history {
-    width: 80%;
+    width: 90%; /* Ajusta el ancho para pantallas más pequeñas */
+    max-width: 1200px; /* Establece un ancho máximo */
     margin: 10% auto;
-
+    overflow-x: auto; /* Permite el desplazamiento horizontal en pantallas pequeñas */
 }
 
 table {
@@ -46,3 +44,27 @@ tr:hover {
     background-color: #f1f1f1;
 }
 
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5em; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+    }
+
+    th, td {
+        padding: 10px; /* Reduce el padding para celdas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 1.2em; /* Aún más pequeño para pantallas muy pequeñas */
+    }
+
+    th, td {
+        padding: 8px; /* Ajusta el padding aún más para celdas */
+    }
+
+    .purchase-history {
+        width: 95%; /* Ajusta el ancho para pantallas muy pequeñas */
+    }
+}

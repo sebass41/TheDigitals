@@ -21,14 +21,18 @@ main{
   margin-top: 70px;                         
 
 }
-.image-container .ham1 {
+.image-container .ham1 , .ham2 {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.image-container > .ham1 > img{
+.image-container > .ham1> img{
+  height: 400px;
+  width: auto;
+}
+.image-container > .ham2> img{
   height: 400px;
   width: auto;
 }
@@ -76,32 +80,28 @@ footer {
   bottom: 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .image-container .ham1:first-child,
-  .image-container .ham1:last-child {
-      display: none;
-  }
-}
 
 @media (max-width: 480px) {
-  /* Hide the side images on small screens */
-  .image-container .ham1:first-child,
-  .image-container .ham1:last-child {
-      display: none;
+  .ham2{
+    display: none;
   }
-
+  .image-container > .ham1> img{
+    height: 300px;
+    width: auto;
+  }
+  #rotar{
+    width: 350px;
+    height: 350px;
+    z-index: -2;
+  }
   .image-container {
       justify-content: center;
       gap: 0;
-      
-  
   }
-
   .eslogan img {
       max-width: 100%;
   }
   .feroz{
-    width: 100%;
+   display: none;
   }
 }

@@ -9,25 +9,32 @@ body {
 .container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si es necesario */
     padding: 20px;
+    box-sizing: border-box; /* Incluye padding dentro del ancho total */
 }
 
 .productos {
     background-color: #1f1f1f;
     padding: 20px;
     border-radius: 5px;
-    width: 65%;
-
+    width: 100%; /* Que ocupe todo el ancho por defecto */
+    max-width: 100%; /* Limita el ancho máximo */
+    box-sizing: border-box;
 }
 
 .comprar {
     align-self: flex-start;
-    width: 30%;
+    width: 100%; /* Que ocupe todo el ancho por defecto */
+    max-width: 100%; /* Aumenta el ancho máximo al 30% */
     background-color: #1f1f1f;
     padding: 20px;
-    border-radius: 5px; 
+    border-radius: 5px;
+    box-sizing: border-box;
 }
-#cantidad{
+
+
+#cantidad {
     margin-left: 40px;
 }
 
@@ -38,17 +45,17 @@ body {
     background-color: #2f2f2f;
     border-radius: 5px;
     gap: 20px;
-
 }
-div > button{
+
+div > button {
     background-color: #ff5722;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 30px;
-
 }
+
 .producto img {
     width: 15%;
     height: auto;
@@ -84,36 +91,66 @@ input {
     margin-right: 20px;
 }
 
-.precio{
+.precio {
     margin-right: 20px;
 }
 
-
+/* Para pantallas de hasta 768px */
 @media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
     }
 
     .productos, .comprar {
-        width: 100%;
+        width: 100%; /* Que ocupen todo el ancho */
         margin-bottom: 20px;
     }
 
     .producto {
         flex-direction: column;
-        align-items: center; 
+        align-items: center;
     }
 
     .producto img {
-        width: 60%; 
-        margin-right: 0; 
+        width: 60%;
+        margin-right: 0;
         margin-bottom: 10px;
         margin-top: 10px;
     }
 
     input {
         width: 40%;
-        margin-right: 0; 
-        margin-bottom: 10px; 
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Ajustes para pantallas más pequeñas (480px) */
+@media only screen and (max-width: 480px) {
+    .producto img {
+        width: 80%;
+    }
+
+    input {
+        width: 60%;
+    }
+}
+
+/* Ajustes para pantallas grandes (1024px o más) */
+@media only screen and (min-width: 1024px) {
+    .productos {
+        width: 70%;
+    }
+
+    .comprar {
+        width: 25%;
+    }
+
+    .producto img {
+        width: 12%;
+    }
+
+    input {
+        width: 8%;
     }
 }

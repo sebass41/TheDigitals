@@ -914,3 +914,75 @@ Stack trace:
 [18-Oct-2024 05:59:21 Europe/Berlin] PHP Warning:  Undefined array key "idPedido" in C:\xampp\htdocs\TheDigitals\backend\controller\ProductoController.php on line 62
 [18-Oct-2024 05:59:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TheDigitals\backend\model\ProductoDAO.php on line 76
 [18-Oct-2024 05:59:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TheDigitals\backend\model\ProductoDAO.php on line 78
+[19-Oct-2024 01:30:45 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('De Julio', '18', '1', 'en espera', '2024-10-19 01:3...', 'Domicilio del C...', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 01:30:52 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('De Julio', '18', '1', 'en espera', '2024-10-19 01:3...', 'Domicilio del C...', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 01:30:52 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('De Julio', '18', '1', 'en espera', '2024-10-19 01:3...', 'Domicilio del C...', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 01:30:52 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('De Julio', '18', '1', 'en espera', '2024-10-19 01:3...', 'Domicilio del C...', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 01:30:53 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('De Julio', '18', '1', 'en espera', '2024-10-19 01:3...', 'Domicilio del C...', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 01:30:53 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('De Julio', '18', '1', 'en espera', '2024-10-19 01:3...', 'Domicilio del C...', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 06:32:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:200
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(107): Pedido->obtenerHistorial(258)
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(29): obtenerHistorial()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 200
+[19-Oct-2024 01:33:11 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('', '', 'undefined', 'en espera', '2024-10-19 01:3...', 'null', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 01:35:07 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('', '', 'undefined', 'en espera', '2024-10-19 01:3...', 'null', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 01:36:32 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('', '', 'undefined', 'en espera', '2024-10-19 01:3...', 'null', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 01:37:21 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('', '', 'undefined', 'en espera', '2024-10-19 01:3...', 'null', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[19-Oct-2024 01:37:28 America/Montevideo] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on bool in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php:52
+Stack trace:
+#0 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(67): Pedido->hacerPedido('', '', 'undefined', 'en espera', '2024-10-19 01:3...', 'null', '58', 258, '[{"Id_prod":"25...')
+#1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
+#2 {main}
+  thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52

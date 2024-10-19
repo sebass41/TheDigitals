@@ -5,6 +5,12 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Asegurarte de que el header esté al frente */
+header {
+    position: relative; /* O absolute, si es necesario */
+    z-index: 10; /* Asegura que el header esté al frente */
+}
+
 #catalogo {
     width: 35%;
     height: 110px;
@@ -19,14 +25,15 @@ body {
     transition: all .5s;
 }
 
-
-.activado{
+.activado {
     top: 0px;
 }
-.desactivado{
+
+.desactivado {
     top: -200px;
 }
-.sesionDes{
+
+.sesionDes {
     display: none;
 }
 
@@ -34,19 +41,23 @@ body {
     top: 35px;
     cursor: pointer;
     position: absolute;
-    right: 48%;
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición */
     transition: all .5s;
+    z-index: 5; /* Colocar detrás del header pero aún clickeable */
 }
 
-#flechaCatalogo{
+#flechaCatalogo {
     top: 35px;
     cursor: pointer;
     position: absolute;
-    right: 44%;
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición */
     margin-top: 5%;
+    z-index: 5; /* Colocar detrás del header pero aún clickeable */
 }
 
-.categoria{
+.categoria {
     font-size: 24px;
     margin-bottom: 20px;
     font-weight: bold;
@@ -55,10 +66,10 @@ body {
     width: 100%;
     display: flex;
     text-decoration: none;
-    color:#1f1f1f
-    
+    color: #1f1f1f;
+    position: relative;
+    z-index: 5; /* Colocar detrás del header pero aún clickeable */
 }
-
 
 .producto {
     background-color: #1f1f1f;
@@ -101,15 +112,40 @@ body {
     cursor: pointer;
 }
 
+/* Estilo general para el campo de búsqueda */
+#buscar {
+    width: 15%; /* Ancho del campo de búsqueda */
+    max-width: 400px;
+    height:50% ;
+    max-height: 200px; /* Ancho máximo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 30px; /* Esquinas redondeadas */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block; /* Asegura que el elemento ocupe el ancho completo */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+#buscar:focus {
+    border-color:  #ff7522; /* Cambia el color del borde al enfocar */
+    outline: none;
+}
+
+/* Centrar el contenedor del campo de búsqueda */
+.buscar-container {
+    display: flex; /* Utiliza flexbox para el diseño */
+    justify-content: center; /* Centra horizontalmente */
+    margin: 20px 0; /* Espaciado vertical */
+}
+
+
 @media (max-width: 1200px) {
     .producto {
         width: 45%;
         height: auto;
     }
-}
 
-
-@media (max-width: 1200px) {
     #catalogo {
         width: 100%;
         margin-top: 10px;
@@ -125,6 +161,11 @@ body {
     .fila {
         flex-direction: column;
         align-items: center;
+    }
+
+    #buscar {
+        width: 40%;
+        height: 60%;
     }
 }
 
@@ -148,14 +189,14 @@ h2 {
     font-weight: 100px;
     margin-top: 30px;
     text-align: center;
-  }
-  
-  h2.linea {
-    position: relative;
-    z-index: -1;
-  }
+}
 
-  h2.linea:before {
+h2.linea {
+    position: relative;
+    z-index: 5;
+}
+
+h2.linea:before {
     border-top: 2px solid #dbdbdb7a;
     content: "";
     margin: 0 auto;
@@ -165,10 +206,10 @@ h2 {
     right: 0;
     bottom: 0;
     width: 95%;
-    z-index: -1;
-  }
+    z-index: -5;
+}
 
-  h2.linea span {
+h2.linea span {
     background: #f4f4f4;
     padding: 0 15px;
-  }
+}
