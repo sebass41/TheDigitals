@@ -19,7 +19,7 @@ function mostrarProductos(productos) {
 
             if (ext.includes(tipoImg)) {
                 rutaImg = `../../../backend/img/producto/${prod.Id_prod}.${tipoImg}`;   
-            }
+            } 
 
             div.className = 'product';
             div.innerHTML = `

@@ -12,7 +12,7 @@ window.onload = async () => {
     cargarDato(productos.data);
     document.getElementById("buscar").addEventListener("keyup", () => buscarProducto(productos.data));
 }
-
+ 
 function eventoMenu() {
     let btnMenu = document.querySelector("#flecha");
 
