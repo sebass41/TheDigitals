@@ -7,7 +7,7 @@ window.onload = async () => {
     let productos = JSON.parse(localStorage.getItem('carrito'));
     let detalle = JSON.parse(localStorage.getItem('detalle'));
     let total = detalle[0];
-    console.log(total);
+    
     mostrarDetalle(productos, total);
 
     document.getElementById('direccion').addEventListener('change', function() {
@@ -52,10 +52,15 @@ async function confirmarPedido(productos, total) {
         calle = localStorage.getItem('calle');
         numCasa = localStorage.getItem('numCasa');
         piso = localStorage.getItem('piso'); 
-    }else {
+    }else if (lugarRetiro == "Otro"){
         calle = formData.get('calle');
         numCasa = formData.get('numCasa');
+        if(calle === "" || numCasa === ""){
+            alert("Debe ingresar la calle y el número de casa");
+            return;
+        }
     }
+    
     let pedidoDAO = new PedidoDAO();
     let result = await pedidoDAO.realizar(piso, calle, numCasa, lugarRetiro, productos, total);
     if (result.sucess) {

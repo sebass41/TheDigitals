@@ -986,3 +986,6 @@ Stack trace:
 #1 C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php(14): realizar()
 #2 {main}
   thrown in C:\xampp\htdocs\TheDigitals\backend\model\PedidoDAO.php on line 52
+[27-Oct-2024 18:22:42 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[28-Oct-2024 17:45:24 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[29-Oct-2024 00:02:21 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
