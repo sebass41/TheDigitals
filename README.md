@@ -5,7 +5,12 @@ El e-commerce realizado para la hambuerguesería Feroz. El sistema permite tanto
 
 ### Pre-requisitos 📋
 
-Qué cosas necesitas para instalar el software y cómo instalarlas.
+Pra instalar el software basta con instalar el repositorio y la base de datos. La base de datos tiene que llevar el nombre de feroz. 
 
-```bash
-Da un ejemplo
+## Construido con 🛠️
+
+* HTML5
+* JavaScript
+* CSS
+* PHP
+* MySQL
