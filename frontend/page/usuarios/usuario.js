@@ -22,25 +22,16 @@ function cargarDatos(datos) {
 
     detallePerfil.forEach(detalle => {
         let info = detalle.id;
-        detalle.innerHTML += `<span>${datos[info]}</span> <img src="../../asset/icons/lapiz.png">`;
+        detalle.innerHTML += `<span>${datos[info]}</span> <img src="../../asset/icons/lapiz.png" >`;
         detalle.addEventListener("click", () => {
             let input = document.createElement("input");
             input.type = "text";
             input.value = detalle.innerText;
-            console.log("click")
         })
     })
-    // Datos con icono de edición
-    /*detallePerfil.innerHTML = `
-        <h2>Detalles del Perfil</h2>
-        <p><strong>Nombre:</strong> ${datos.Nombre} <span class="edit-icon">✏️</span></p>
-        <p><strong>Correo Electrónico:</strong> ${datos.Mail} <span class="edit-icon">✏️</span></p>
-        <p><strong>Dirección:</strong> ${datos.Calle}, ${datos.Numero} <span class="edit-icon">✏️</span></p>
-        <p><strong>Teléfono:</strong> ${datos.Tel} <span class="edit-icon">✏️</span></p>
-    `;*/
 
     // Añadir funcionalidad de edición
-    document.querySelectorAll(".edit-icon").forEach(icon => {
+    document.querySelectorAll("p img").forEach(icon => {
         icon.addEventListener("click", () => {
             let parent = icon.parentNode;
             let text = parent.innerText.replace("✏️", "").trim();
