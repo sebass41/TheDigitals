@@ -8,7 +8,7 @@ window.onload = async () => {
     // Evento para botón de editar
     
 }
-
+ 
 async function editarUsuario(id) {
     let usuario = await obtenerUsuario(id);
     let inputNombre = document.getElementById('nombre');
@@ -59,7 +59,6 @@ async function editarUsuario(id) {
     document.getElementById('cancelar').addEventListener('click', function () {
         modalEditar.style.display = 'none'; // Cerrar modal
     });
-
 }
 
 async function eliminarUsuario(id) {
