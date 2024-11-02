@@ -24,6 +24,9 @@ switch ($funcion){
     case 'obtenerUsuario':
         obtenerUsuario(); // Llama a la función obtenerUsuario si 'fun' es 'obtenerUsuario'
         break;
+    case 'editarU';
+        editarUsuario(); // Llama a la función editarUsuario si 'fun' es 'editarU'
+        break;
 }
 
 function crear(){
@@ -98,6 +101,17 @@ function obtenerUsuario(){
 
         $idUsuario = $_SESSION['id'];
         $result = (new Usuario())->obtenerUsuario($idUsuario);
+        echo json_encode($result); // Devuelve el resultado en formato JSON
+    }
+}
+
+function editarUsuario(){
+    if (isset($_SESSION['id'])){
+        $columna = $_POST['columna'];
+        $nuevoValor = $_POST['valor'];
+        $idUsuario = $_SESSION['id'];
+
+        $result = (new Usuario())->editarU($idUsuario, $columna, $nuevoValor);
         echo json_encode($result); // Devuelve el resultado en formato JSON
     }
 }

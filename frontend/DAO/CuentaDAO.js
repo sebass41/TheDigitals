@@ -85,4 +85,16 @@ export default class CuentaDAO {
         return await response.json();
     }
 
+    async editarU(columna, valor){
+        let formdata = new FormData();
+        formdata.append('columna', columna);
+        formdata.append('valor', valor);
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=editarU";
+        let config = {
+            method: 'POST',
+            body: formdata
+        }
+        let response = await fetch(url, config);
+        return await response.json();
+    }
 }

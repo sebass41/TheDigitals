@@ -142,7 +142,24 @@ class Usuario{
         }
     }
     
-    
+    function editarU($id, $columna, $valor){
+        try{
+            $connection = conection();
+            $sql = "UPDATE usuario SET $columna =? WHERE Id_usuario =?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("si", $valor, $id);
+            
+            if(!$stmt->execute()){
+                throw new Exception ("Error: ". $stmt->error);
+            }
+
+            $msj = "Se actualizó la información correctamente";
+            return new Respuesta(true, $msj, $stmt);
+        }catch (Exception $e){
+            $msj = "Error: ". $e;
+            return new Respuesta(false, $msj, []);
+        }
+    }
 
 }
 

@@ -35,17 +35,26 @@ function cargarDatos(datos) {
     
 }
 
-function editarDato(element, datos, info){
+async function editarDato(element, datos, info){
     let parent = element.parentNode;
     let text = parent.innerText;
     let input = document.createElement("input");
     input.type = "text";
     input.value = text;
 
-    input.onblur = () => {
-        datos[info] = input.value; // Actualiza el dato en el objeto `datos`
+    input.onblur = async () => {
+        let result = await (new CuentaDAO()).editarU(info, input.value);
+        if (result.sucess){
+            console.log(result.msj);
+        }else{
+            console.log(result.msj);
+            parent.innerHTML = text;
+            parent.querySelector(".edit-icon").onclick = () => editarDato(parent.querySelector(".edit-icon"), datos, info);
+            return;
+        }
+        datos[info] = input.value;
         parent.innerHTML = `${input.value} <img src="../../asset/icons/lapiz.png" class="edit-icon">`;
-        parent.querySelector(".edit-icon").onclick = () => editarDato(parent.querySelector(".edit-icon"), datos, info); // Restaura funcionalidad de edición
+        parent.querySelector(".edit-icon").onclick = () => editarDato(parent.querySelector(".edit-icon"), datos, info);
     };
 
     parent.innerHTML = '';
