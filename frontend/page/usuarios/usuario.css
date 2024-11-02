@@ -75,12 +75,17 @@ input {
 }
 
 
-p img {
+.edit-icon {
+    display: none;
     width: 15px;
     height: auto;
     cursor: pointer;
 }
-p img:hover{
+.edit-icon:hover{
     width: 17px;
     height: auto;
+}
+
+.profile-details p:hover .edit-icon { 
+    display: inline;
 }

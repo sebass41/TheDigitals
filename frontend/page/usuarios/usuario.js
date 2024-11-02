@@ -3,11 +3,8 @@ import CuentaDAO from "../../DAO/CuentaDAO.js";
 window.onload = async () => {
     let id = localStorage.getItem("idSesion")
     let datos = await (new CuentaDAO()).obtenerUsuario(id);
-    let cuenta = datos.data[0]
-    let btnEditar = document.getElementById("btnEditar");
+    let cuenta = datos.data[0];
     cargarDatos(cuenta);
-
-    btnEditar.onclick = () => { editarCuenta(cuenta); };
 };
 
 function cargarDatos(datos) {
@@ -22,31 +19,37 @@ function cargarDatos(datos) {
 
     detallePerfil.forEach(detalle => {
         let info = detalle.id;
-        detalle.innerHTML += `<span>${datos[info]}</span> <img src="../../asset/icons/lapiz.png" >`;
-        detalle.addEventListener("click", () => {
-            let input = document.createElement("input");
-            input.type = "text";
-            input.value = detalle.innerText;
-        })
+        let content = document.createElement("span");
+        let imgEdit = document.createElement("img");
+
+        detalle.innerHTML = `<strong>${info}: </strong>`
+        content.innerText = datos[info];
+
+        imgEdit.src = "../../asset/icons/lapiz.png";
+        imgEdit.classList.add("edit-icon");
+        imgEdit.onclick = () => {editarDato(imgEdit, datos, info);};
+
+        content.appendChild(imgEdit);
+        detalle.appendChild(content);
     })
+    
+}
 
-    // Añadir funcionalidad de edición
-    document.querySelectorAll("p img").forEach(icon => {
-        icon.addEventListener("click", () => {
-            let parent = icon.parentNode;
-            let text = parent.innerText.replace("✏️", "").trim();
-            let input = document.createElement("input");
-            input.type = "text";
-            input.value = text;
+function editarDato(element, datos, info){
+    let parent = element.parentNode;
+    let text = parent.innerText;
+    let input = document.createElement("input");
+    input.type = "text";
+    input.value = text;
 
-            input.onblur = () => {
-                parent.innerHTML = `<strong>${parent.firstChild.innerText}</strong> ${input.value} <span class="edit-icon">✏️</span>`;
-                cargarDatos(datos); // Para restaurar funcionalidad de edición
-            };
+    input.onblur = () => {
+        datos[info] = input.value; // Actualiza el dato en el objeto `datos`
+        parent.innerHTML = `${input.value} <img src="../../asset/icons/lapiz.png" class="edit-icon">`;
+        parent.querySelector(".edit-icon").onclick = () => editarDato(parent.querySelector(".edit-icon"), datos, info); // Restaura funcionalidad de edición
+    };
 
-            parent.innerHTML = '';
-            parent.appendChild(input);
-            input.focus();
-        });
-    });
+    parent.innerHTML = '';
+    parent.appendChild(input);
+    input.focus();
+
 }
