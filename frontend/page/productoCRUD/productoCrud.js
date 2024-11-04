@@ -3,6 +3,7 @@ import ProductoDAO from "../../DAO/ProductoDAO.js";
 window.onload = async () => {
     let productos = await (new ProductoDAO()).obtener();
     mostrarProductos(productos.data);
+    document.getElementById("buscar").addEventListener("keyup", () => {filtrarProducto(productos.data);});
 }
 
 async function editarProducto(id) {
@@ -105,6 +106,8 @@ async function obtenerProducto(id){
     return producto;
 }
 
-function filtrarProducto(filtro){
-    
-}
+function filtrarProducto(productos){
+    let input = document.getElementById("buscar").value;
+    let resultados = productos.filter(producto => producto.Nombre.toLowerCase().includes(input.toLowerCase()));
+    mostrarProductos(resultados);
+} 

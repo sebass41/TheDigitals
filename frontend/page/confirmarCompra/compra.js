@@ -38,7 +38,7 @@ function mostrarDetalle(productos, total) {
     totalElement.innerHTML = `$${total}`;
 
     containerProd.appendChild(listaProducto);
-}
+} 
 
 async function confirmarPedido(productos, total) {
     let formElement = document.getElementById("formPedido");

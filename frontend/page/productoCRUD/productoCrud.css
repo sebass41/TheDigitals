@@ -15,6 +15,7 @@ main {
     width: 100vw;
     height: 100vh;
     background-color: whitesmoke;
+    
 }
 
 h1 {
@@ -217,4 +218,8 @@ input {
 .modificar-btn{
     background-color: #ff5722;
     color: white;
+}
+
+main > input {
+    width: 40%;
 }

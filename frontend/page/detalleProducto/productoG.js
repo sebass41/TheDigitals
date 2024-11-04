@@ -12,7 +12,6 @@ window.onload = () => {
     }
 };
 
-
 function agregar() {
     let producto = JSON.parse(localStorage.getItem('productoSelec'));
 
@@ -23,15 +22,17 @@ function agregar() {
     if (!productoExistente) {
         carrito.push(producto);
         localStorage.setItem('carrito', JSON.stringify(carrito));
-        notification();
+        let msj = "¡Se agregó al carrito correctamente!";
+        notification(msj);
     } else {
-        console.log("El producto ya está en el carrito.");
+        let msj = "El producto ya está en el carrito.";
+        notification(msj);
     }
 }
-function notification() {
-   
-    
+
+function notification(mensaje) {   
     const notification = document.getElementById('notification');
+    notification.textContent = mensaje;
     notification.style.display = 'block';
     notification.style.opacity = 1;
 
@@ -40,7 +41,7 @@ function notification() {
         notification.style.opacity = 0;
         setTimeout(() => {
             notification.style.display = 'none';
-        }, 500); 
+        }, 450); 
     }, 3000);
    
 }

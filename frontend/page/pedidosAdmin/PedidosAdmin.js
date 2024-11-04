@@ -50,9 +50,9 @@ async function mostrarDetallePedido(id){
     detalle.forEach(pedido => {
         let tr = document.createElement("tr");
         tr.innerHTML = `
-            <td>${pedido.Producto}</td>
             <td>${pedido.Cliente}</td>
             <td>${pedido.Direccion_Entrega}</td>
+            <td>${pedido.Producto}</td>
             <td>${pedido.Detalle}</td>
             <td>${pedido.Cantidad}</td>
         `;

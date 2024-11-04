@@ -5,6 +5,7 @@ window.onload = async () => {
     console.log(usuarios.data);
     mostrarUsuarios(usuarios.data);
 
+    document.getElementById("buscar").addEventListener("keyup", () => {filtrarUsuarios(usuarios.data);});
     // Evento para botón de editar
     
 }
@@ -113,6 +114,12 @@ async function obtenerUsuario(id){
     let usuario = await (new CuentaDAO()).obtenerUsuario(id);
     return usuario;
 }
+
+function filtrarUsuarios(usuarios){
+    let input = document.getElementById("buscar").value;
+    let resultados = usuarios.filter(usuario => usuario.Nombre.toLowerCase().includes(input.toLowerCase()));
+    mostrarUsuarios(resultados);
+} 
 /*
     let listaClientes = document.getElementById('lista-clientes');
     let modalEditar = document.getElementById('modal-editar');
