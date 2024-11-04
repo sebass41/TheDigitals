@@ -132,7 +132,9 @@ nav a:hover {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
-
+.menu{
+  z-index: 99;
+}
 @media (max-width: 700px) {
   .menu-button-container {
     display: flex;
@@ -149,6 +151,7 @@ nav a:hover {
     width: 100%;
     justify-content: center;
     align-items: center;
+    z-index: 99;
   }
 
   #menu-toggle ~ .menu li {

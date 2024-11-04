@@ -1029,3 +1029,4 @@ Stack trace:
 [31-Oct-2024 18:52:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 92
 [31-Oct-2024 18:52:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 92
 [31-Oct-2024 18:52:08 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 92
+[04-Nov-2024 18:18:54 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 95
