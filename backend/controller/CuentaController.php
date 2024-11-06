@@ -27,6 +27,12 @@ switch ($funcion){
     case 'editarU';
         editarUsuario(); // Llama a la función editarUsuario si 'fun' es 'editarU'
         break;
+    case 'resetPassword':
+        resetPassword(); // Llama a la función resetPassword si 'fun' es'resetPassword'
+        break;
+    case 'enviarMail':
+        enviarMail(); // Llama a la función enviarCorreo si 'fun' es 'enviarCorreo'
+        break;
 }
 
 function crear(){
@@ -115,4 +121,19 @@ function editarUsuario(){
         echo json_encode($result); // Devuelve el resultado en formato JSON
     }
 }
+
+function resetPassword(){
+    if (isset($_SESSION['id'])){
+        $nuevaPass = $_POST['nuevaPass'];
+        $idUsuario = $_SESSION['id'];
+    }
+}
+
+function enviarMail(){
+    $mail = $_POST['mail'];
+
+    $result = (new Usuario())->enviarCorreoRestablecerPassword($mail);
+    echo json_encode($result); // Devuelve el resultado en formato JSON
+}
+
 ?>

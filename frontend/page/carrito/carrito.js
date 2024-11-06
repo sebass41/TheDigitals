@@ -46,10 +46,9 @@ function actualizarCantidad(prodId) {
     productos = productos.map(prod => {
         if (prod.Id_prod == prodId) {
             prod.Cantidad = parseInt(cantidadInput);
-            if (cantidadInput > 10) {
-                alert('No puedes agregar más de 10 productos');
-                alert('Si quiere más de 10 productos, contactá con nosotros personalemnte');
-                document.getElementById(`cantidad-${prodId}`).value = 10;
+            if (cantidadInput > 10 || cantidadInput < 1) {
+                
+                document.getElementById(`cantidad-${prodId}`).value = 1;
             }
         }
         return prod;

@@ -161,6 +161,84 @@ class Usuario{
         }
     }
 
+    function enviarCorreoRestablecerPassword($mail) {
+        try {
+            $connection = conection();
+            
+            // Generar token de restablecimiento de contraseña
+            $token = bin2hex(random_bytes(16));
+            
+            // Obtener datos del usuario
+            $sql = "SELECT * FROM usuario WHERE Mail = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("s", $mail);
+            $stmt->execute();
+            $respuesta = $stmt->get_result();
+            $usuario = $respuesta->fetch_assoc();
+            $idUsuario = $usuario['Id_usuario'];
+            
+            if (!$usuario) {
+                return new Respuesta(false, "Usuario no encontrado", []);
+            }
+    
+            // Guardar el token en la base de datos
+            if (!$this->guardarToken($token, $idUsuario)) {
+                return new Respuesta(false, "Error al generar el token para restablecer la contraseña", []);
+            }
+            
+            // Configurar el correo
+            $host = "localhost/TheDigitals/frontend/page/resetPassword/resetPass.html";
+            $url = "$host?get=resetPassword&token=$token";
+            $correo = $usuario['Mail'];
+            $asunto = "Cambio de contraseña";
+            $mensaje = "Hola {$usuario['Nombre']} {$usuario['Apellido']}, para cambiar tu contraseña haz clic en el siguiente enlace: $url";
+            
+            // Enviar el correo
+            $request = mail($usuario['Mail'], $asunto, $mensaje, $correo);
+            
+            if ($request) {
+                return new Respuesta(true, "Se envió un correo para restablecer la contraseña", null);
+            } else {
+                return new Respuesta(false, "Error al enviar el correo para restablecer la contraseña", null);
+            }
+        } catch (Exception $e) {
+            return new Respuesta(false, "Error: " . $e->getMessage(), []);
+        }
+    }
+    function guardarToken($token, $idUsuario) {
+        try {
+            $connection = conection();
+            $sql = "UPDATE usuario SET token = ? WHERE Id_usuario = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("si", $token, $idUsuario);
+            $stmt->execute();
+    
+            return new Respuesta(true, "Token guardado correctamente", null);
+        } catch (Exception $e) {
+            return new Respuesta(false, "Error al guardar el token: " . $e->getMessage(), []);
+        }
+    }
+    
+    public function validarToken($token) {
+        try {
+            $connection = conection();
+            $sql = "SELECT Id_usuario FROM usuario WHERE codigoValidacion = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("s", $token);
+            $stmt->execute();
+            $stmt->bind_result($idUsuario);
+    
+            if ($stmt->fetch()) {
+                return new Respuesta(true, "Token válido", null);
+            } else {
+                return new Respuesta(false, "Token inválido", null);
+            }
+        } catch (Exception $e) {
+            return new Respuesta(false, "Error al validar el token: " . $e->getMessage(), []);
+        }
+    }
+    
+    
 }
 
 ?>

@@ -97,4 +97,17 @@ export default class CuentaDAO {
         let response = await fetch(url, config);
         return await response.json();
     }
+
+    async enviarMail(mail){
+        let formdata = new FormData();
+        formdata.append('mail', mail);
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=enviarMail";
+        let config = {
+            method: 'POST',
+            body: formdata
+        }
+        let response = await fetch(url, config);
+        
+        return await response.json();
+    }
 }

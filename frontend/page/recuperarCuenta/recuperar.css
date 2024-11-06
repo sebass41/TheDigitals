@@ -7,6 +7,7 @@ body {
     height: 100vh;
     margin: 0;
     color: white;
+    background-image: url("../../asset/feroz\ fondo\ bueno.png");
 }
 .contenedor-recuperacion {
     background-color: #1f1f1f;
