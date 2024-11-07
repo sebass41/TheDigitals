@@ -34,7 +34,7 @@
       <h2>Agregar producto</h2>
       
       <label for="nombre">Nombre</label>
-      <input type="text" name="nombre">
+      <input type="text" name="nombre" required>
 
       <label for="tipo">Categoria</label>
       <select name="tipo" id="tipo">
@@ -44,15 +44,15 @@
       <option value="Bebidas">Bebidas</option></select>
 
       <label for="precio">Precio</label>
-      <input type="text" name="precio">
+      <input type="number" name="precio" required>
       
       <div class="file">
       <label for="foto">Foto del producto</label>
-      <input type="file" value="foto producto" name="img"> 
+      <input type="file" value="foto producto" name="img" required> 
     </div>   
 
       <label for="descripcion">Descripcion</label>
-      <input type="text" name="descripcion">
+      <input type="text" name="descripcion" required>
       
       <input type="submit" value="Agregar">         
     </form> 

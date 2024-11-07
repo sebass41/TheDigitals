@@ -17,13 +17,18 @@ async function insertar(){
         let result = await new ProductoDAO().insertar(tipo, nombre, descripcion, img, precio);
         let jsonResult = await result.json();
 
-        if(jsonResult.sucess){
+        console.log(precio)
+
+        if(jsonResult.sucess && precio > 0){
             alert(jsonResult.msj);
             formElement.reset();
         }
         else{
-            alert(jsonResult.msj);
+            alert("El precio debe ser mayor a 1");
         }
         console.log(jsonResult);
     }
 }
+
+
+

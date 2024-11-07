@@ -38,10 +38,11 @@ async function editarProducto(id) {
 
         let result = await (new ProductoDAO()).editar(id, tipo, nombre, descripcion, precio);
         console.log(result);
-        if (result.sucess) {
+        if (result.sucess && inputPrecio.value > 0) {
             modalEditar.style.display = 'none'; // Cerrar modal
         }else {
-            console.log(result.msj);
+            alert("Algo ha salido mal :(");
+            console.log(inputPrecio)
         }
     });
 

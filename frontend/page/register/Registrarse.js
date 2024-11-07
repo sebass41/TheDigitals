@@ -24,6 +24,8 @@ async function crearCuenta() {
 
                 if (result.sucess) {
                     window.location.href = "../login/login.html";
+                }else{
+                    alert("Ese correo ya está registrado")
                 }
                 console.log(result.msj);
             }
@@ -56,6 +58,10 @@ function validarDatos(nombre, apellido, tel, email, pass, passRepeat, calle, num
         valido = false;
     }
 
+    if(tel.length !== 9){
+        mensajes.push("Ingrese un teléfono válido");
+        valido = false;
+    }
     // Validar contraseñas
     if (!validarPass(pass)) {
         mensajes.push("La contraseña debe tener al menos 8 caracteres. Además contener al menos una mayúscula y un número");
@@ -72,6 +78,10 @@ function validarDatos(nombre, apellido, tel, email, pass, passRepeat, calle, num
         valido = false;
     }
 
+    if(num < 0){
+        mensajes.push("Ingrese una dirección válida");
+        valido = false;
+    }
     // Mostrar mensajes de error
     if (!valido) {
         mostrarErrores(mensajes);
