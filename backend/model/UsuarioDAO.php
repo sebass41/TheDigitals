@@ -219,25 +219,24 @@ class Usuario{
         }
     }
     
-    public function validarToken($token) {
+    
+    function restablecerPassword($pass, $token){
         try {
             $connection = conection();
-            $sql = "SELECT Id_usuario FROM usuario WHERE codigoValidacion = ?";
+            $sql = "UPDATE usuario SET contraseña = ? WHERE token = ?";
             $stmt = $connection->prepare($sql);
-            $stmt->bind_param("s", $token);
+            $stmt->bind_param("ss", $pass, $token);
             $stmt->execute();
-            $stmt->bind_result($idUsuario);
-    
-            if ($stmt->fetch()) {
-                return new Respuesta(true, "Token válido", null);
+
+            if ($stmt->affected_rows > 0) {
+                return new Respuesta(true, "Contraseña restablecida correctamente", null);
             } else {
-                return new Respuesta(false, "Token inválido", null);
+                return new Respuesta(false, "Token inválido o contraseña ya restablecida", null);
             }
-        } catch (Exception $e) {
-            return new Respuesta(false, "Error al validar el token: " . $e->getMessage(), []);
+        }catch (Exception $e) {
+            return new Respuesta(false, "Error: ". $e->getMessage(), []);   
         }
     }
-    
     
 }
 

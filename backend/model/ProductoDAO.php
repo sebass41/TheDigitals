@@ -67,54 +67,82 @@ class Producto{
     }
     
 
-function editar($idProducto, $tipo, $nombre, $descripcion, $precio) {
-    try {
-        // Establecer una conexión a la base de datos
-        $connection = conection();
+    function editar($idProducto, $tipo, $nombre, $descripcion, $precio) {
+        try {
+            // Establecer una conexión a la base de datos
+            $connection = conection();
 
-        // Consulta SQL para actualizar un producto existente
-        $sql = "UPDATE producto SET tipo = ?, Nombre = ?, Descripcion = ?, precio = ? WHERE Id_prod = ?";
-        $stmt = $connection->prepare($sql);
-        $stmt->bind_param("sssii", $tipo, $nombre, $descripcion, $precio, $idProducto);
-        
-        // Ejecutar la consulta y verificar si hay errores
-        if (!$stmt->execute()) {
-            // Manejar el error de ejecución
-            $msj = "Error al actualizar los datos";
+            // Consulta SQL para actualizar un producto existente
+            $sql = "UPDATE producto SET tipo = ?, Nombre = ?, Descripcion = ?, precio = ? WHERE Id_prod = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("sssii", $tipo, $nombre, $descripcion, $precio, $idProducto);
+            
+            // Ejecutar la consulta y verificar si hay errores
+            if (!$stmt->execute()) {
+                // Manejar el error de ejecución
+                $msj = "Error al actualizar los datos";
+                return new Respuesta(false, $msj, []);
+            }
+
+            // Mensaje de éxito al actualizar los datos
+            $msj = "Se actualizaron los datos correctamente";
+            return new Respuesta(true, $msj, $stmt);
+        } catch (Exception $e) {
+            // Manejar excepciones y registrar errores
+            $msj = "Error: " . $e->getMessage();
+            return new Respuesta(false, $msj, []);
+        }    
+    }
+
+
+    function eliminar($idProducto) {
+        try {
+            // Establecer una conexión a la base de datos
+            $connection = conection();
+
+            // Obtener la extensión de la imagen
+            $sql = "SELECT extencion FROM `producto` WHERE Id_prod = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param('i', $idProducto);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+            $extension = $row['extencion'];
+
+            // Consulta SQL para eliminar un producto
+            $sql = "DELETE FROM `producto` WHERE Id_prod = ?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param('i', $idProducto);
+            
+            if ($stmt->execute()) {
+                // Ruta de la imagen asociada al producto
+                $rutaImg = "../img/producto/$idProducto.$extension";
+
+                // Verificar si la imagen existe y eliminarla
+                if (file_exists($rutaImg)) {
+                    if (unlink($rutaImg)) {
+                        $msj = "Se eliminó el producto y su imagen correctamente";
+                    } else {
+                        $msj = "Se eliminó el producto, pero hubo un error al eliminar la imagen";
+                    }
+                } else {
+                    $msj = "Se eliminó el producto, pero la imagen no existe";
+                }
+
+                return new Respuesta(true, $msj, $stmt);
+            } else {
+                $msj = "Error al eliminar el producto";
+                return new Respuesta(false, $msj, []);
+            }
+            
+        } catch (Exception $e) {
+            // Manejar excepciones y registrar errores
+            $msj = "Error: " . $e->getMessage();
             return new Respuesta(false, $msj, []);
         }
-
-        // Mensaje de éxito al actualizar los datos
-        $msj = "Se actualizaron los datos correctamente";
-        return new Respuesta(true, $msj, $stmt);
-    } catch (Exception $e) {
-        // Manejar excepciones y registrar errores
-        $msj = "Error: " . $e->getMessage();
-        return new Respuesta(false, $msj, []);
-    }    
-}
-
-
-function eliminar($idProducto) {
-    try {
-        // Establecer una conexión a la base de datos
-        $connection = conection();
-
-        // Consulta SQL para eliminar un producto
-        $sql = "DELETE FROM `producto` WHERE Id_prod = ?";
-        $stmt = $connection->prepare($sql);
-        $stmt->bind_param('i', $idProducto);
-        $stmt->execute();
-
-        // Mensaje de éxito al eliminar el producto
-        $msj = "Se eliminó el producto correctamente";
-        return new Respuesta(true, $msj, $stmt);
-    } catch (Exception $e) {
-        // Manejar excepciones y registrar errores
-        $msj = "Error: " . $e->getMessage();
-        return new Respuesta(false, $msj, []);
     }
-}
+
+
     function obtenerMasVendido(){
         try{
             $connection = conection();

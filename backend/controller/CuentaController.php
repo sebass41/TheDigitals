@@ -33,6 +33,9 @@ switch ($funcion){
     case 'enviarMail':
         enviarMail(); // Llama a la función enviarCorreo si 'fun' es 'enviarCorreo'
         break;
+    case 'cambiarPassword':
+        cambiarPassword(); // Llama a la función validarToken si 'fun' es 'validarToken'
+        break;
 }
 
 function crear(){
@@ -136,4 +139,13 @@ function enviarMail(){
     echo json_encode($result); // Devuelve el resultado en formato JSON
 }
 
+function cambiarPassword(){
+    $token = $_POST['token'];
+    $pass = $_POST['pass'];
+
+    $pass = password_hash($pass, PASSWORD_DEFAULT); // Encripta la contraseña
+    
+    $result = (new Usuario())->restablecerPassword($pass, $token);
+    echo json_encode($result); // Devuelve el resultado en formato JSON
+}
 ?>
