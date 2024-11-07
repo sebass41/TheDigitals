@@ -3,6 +3,7 @@ import CuentaDAO from "../../DAO/CuentaDAO.js";
 window.onload = async () => {
     let id = localStorage.getItem("idSesion")
     let datos = await (new CuentaDAO()).obtenerUsuario(id);
+    console.log(datos);
     let cuenta = datos.data[0];
     cargarDatos(cuenta);
 };

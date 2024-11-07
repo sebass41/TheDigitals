@@ -19,7 +19,7 @@ function iniciarSesion(){
     $pass = $_POST['pass']; // Obtiene la contraseña del formulario
 
     // Llama al método iniciarSesion de la clase Sesion
-    $result = (new Sesion())->iniciarSesion($email, $pass);
+    $result = (new Sesion())->iniciarSesion($email, $pass); 
     if($result->sucess){ // Si el inicio de sesión es exitoso
         session_start(); // Inicia una nueva sesión
         $_SESSION['id'] = $result->data['Id_usuario']; // Guarda el ID del usuario en la sesión

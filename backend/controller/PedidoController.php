@@ -49,7 +49,6 @@ function obtenerDetalle(){
 
 // Función para realizar un nuevo pedido
 function realizar(){
-    $_SESSION['id'] = 258; 
     if (isset($_SESSION['id'])){ // Verifica si el usuario ha iniciado sesión
         $calle = $_POST['calle'];
         $num = $_POST['numCasa'];
