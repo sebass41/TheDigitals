@@ -33,7 +33,7 @@ class Sesion {
                     return new Respuesta(false, $msj, []);
                 }
             } else {
-                $msj = "El formato del email es incorrecto. Asegúrate de que esté bien escrito.";
+                $msj = "Asegurate de que el mail esté bien escrito y que esté registrado.";
                 return new Respuesta(false, $msj, []);
             }
     
