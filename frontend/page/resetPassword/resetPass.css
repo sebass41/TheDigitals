@@ -1,0 +1,72 @@
+/* Estilos básicos para el body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    background-image: url("../../asset/feroz\ fondo\ bueno.png");  /* Ruta relativa a la imagen */
+    background-size: cover; /* Para que la imagen cubra toda la pantalla */
+    background-position: center; /* Centrado de la imagen */
+}
+
+/* Estilos para el contenedor de recuperación */
+.contenedor-recuperacion {
+    background-color: rgba(31, 31, 31, 0.8); /* Fondo oscuro semitransparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.contenedor-recuperacion h2 {
+    margin-bottom: 20px;
+}
+
+/* Estilos para los campos de entrada */
+.campo {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el botón */
+.boton {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.boton:hover {
+    background-color: chocolate;
+}
+
+/* Estilos para el ícono del ojo (ahora una imagen local) */
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px; /* Tamaño del ícono, ajusta según lo necesites */
+    height: 20px; /* Tamaño del ícono */
+}

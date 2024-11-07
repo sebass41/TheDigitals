@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../../asset/isotipo/feroz-cara.png" type="image/x-icon">
+    <title>Recuperar Contraseña</title>
+    <link rel="stylesheet" href="resetPass.css"> <!-- Vinculación con el archivo CSS -->
+    
+    <script src="a.js"></script> <!-- Para los íconos del ojo -->
 </head>
 <body>
-    <h1>Restablecer Contraseña</h1>
+    <div class="contenedor-recuperacion">
+        <h2>Recuperar Contraseña</h2>
+        <form id="form-recuperacion">
+            <div class="campo">
+                <label for="pass">Contraseña</label>
+                <input type="password" id="pass" required>
+                <!-- Usamos una imagen local para el ícono del ojo -->
+                <img id="eye1" class="eye-icon" src="../../asset/icons/ojoabierto.png" alt="Mostrar/Ocultar contraseña">
+            </div>
+            <div class="campo">
+                <label for="passconfirm">Confirmar contraseña</label>
+                <input type="password" id="passconfirm" required>
+                <!-- Usamos una imagen local para el ícono del ojo -->
+                <img id="eye2" class="eye-icon" src="../../asset/icons/ojocerrado.png" alt="Mostrar/Ocultar contraseña">
+            </div>
+            <button type="submit" class="boton">Enviar</button>
+        </form>
+    </div>
 </body>
 </html>
