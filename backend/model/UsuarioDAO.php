@@ -191,7 +191,7 @@ class Usuario{
             $url = "$host?get=resetPassword&token=$token";
             $correo = $usuario['Mail'];
             $asunto = "Cambio de contraseña";
-            $mensaje = "Hola {$usuario['Nombre']} {$usuario['Apellido']}, para cambiar tu contraseña haz clic en el siguiente enlace: $url";
+            $mensaje = "Hola {$usuario['Nombre']} {$usuario['Apellido']}. El token:$token para cambiar tu contraseña haz clic en el siguiente enlace: $url";
             
             // Enviar el correo
             $request = mail($usuario['Mail'], $asunto, $mensaje, $correo);
@@ -229,12 +229,44 @@ class Usuario{
             $stmt->execute();
 
             if ($stmt->affected_rows > 0) {
+                $this->eliminarToken($token);
                 return new Respuesta(true, "Contraseña restablecida correctamente", null);
             } else {
                 return new Respuesta(false, "Token inválido o contraseña ya restablecida", null);
             }
         }catch (Exception $e) {
             return new Respuesta(false, "Error: ". $e->getMessage(), []);   
+        }
+    }
+
+    function buscarPorToken($token){
+        try{
+            $connection = conection();
+            $sql = "SELECT * FROM usuario WHERE token =?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("s", $token);
+            $stmt->execute();
+            $respuesta = $stmt->get_result();
+            $usuario = $respuesta->fetch_assoc();
+
+            if (!$usuario) {
+                return new Respuesta(false, "Token inválido", null);
+            }
+            return new Respuesta(true, "Token válido", $token);
+        }catch (Exception $e){
+            return new Respuesta(false, "Error: ". $e->getMessage(), []);
+        }
+    }
+
+    function eliminarToken($token){
+        try{
+            $connection = conection();
+            $sql = "UPDATE usuario SET token = NULL WHERE token =?";
+            $stmt = $connection->prepare($sql);
+            $stmt->bind_param("s", $token);
+            $stmt->execute();
+        }catch (Exception $e){
+            return new Respuesta(false, "Error: ". $e->getMessage(), []);
         }
     }
     

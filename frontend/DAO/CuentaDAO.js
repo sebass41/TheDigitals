@@ -110,4 +110,30 @@ export default class CuentaDAO {
         
         return await response.json();
     }
+
+    async resetPassword(token, password){
+        let formdata = new FormData();
+        formdata.append('pass', password);
+        formdata.append('token', token);
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=resetPassword";
+        let config = {
+            method: 'POST',
+            body: formdata
+        }
+        let response = await fetch(url, config);
+
+        return await response.json();
+    }
+
+    async buscarToken(token){
+        let formdata = new FormData();
+        formdata.append('token', token);
+        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=buscarToken";
+        let config = {
+            method: 'POST',
+            body: formdata
+        }
+        let response = await fetch(url, config);
+        return await response.json();
+    }
 }

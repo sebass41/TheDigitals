@@ -12,8 +12,8 @@ switch ($funcion){
     case 'eliminar':
         eliminar(); // Llama a la función eliminar si 'fun' es 'eliminar'
         break;
-    case 'recuperar':
-        recuperar(); // Llama a la función recuperar si 'fun' es 'recuperar'
+    case 'buscarToken':
+        buscarToken(); // Llama a la función recuperar si 'fun' es 'recuperar'
         break;
     case 'editar':
         editar(); // Llama a la función editar si 'fun' es 'editar'
@@ -60,9 +60,7 @@ function eliminar(){
     }
 }
 
-function recuperar(){
-    // Función recuperar aún no implementada
-}
+
 
 function editar(){
     if ($_SESSION['admin'] == 1){
@@ -127,7 +125,7 @@ function resetPassword(){
     $pass = $_POST['pass'];
 
     $passHashed = password_hash($pass, PASSWORD_DEFAULT); // Encripta la contraseña
-
+ 
     $result = (new Usuario())->restablecerPassword($passHashed, $token);
     echo json_encode($result); // Devuelve el resultado en formato JSON
 }
@@ -139,5 +137,11 @@ function enviarMail(){
     echo json_encode($result); // Devuelve el resultado en formato JSON
 }
 
+function buscarToken(){
+    $token = $_POST['token'];
+
+    $result = (new Usuario())->buscarPorToken($token);
+    echo json_encode($result); // Devuelve el resultado en formato JSON
+}
 
 ?>
