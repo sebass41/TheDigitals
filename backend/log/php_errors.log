@@ -1033,3 +1033,6 @@ Stack trace:
 [06-Nov-2024 20:56:37 Europe/Berlin] PHP Warning:  Undefined array key "fun" in C:\xampp\htdocs\TheDigitals\backend\controller\CuentaController.php on line 6
 [06-Nov-2024 21:21:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 178
 [06-Nov-2024 21:22:15 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TheDigitals\backend\model\UsuarioDAO.php on line 178
+[09-Nov-2024 05:52:38 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[09-Nov-2024 05:52:49 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35
+[11-Nov-2024 18:14:32 Europe/Berlin] PHP Warning:  Undefined array key "admin" in C:\xampp\htdocs\TheDigitals\backend\controller\PedidoController.php on line 35

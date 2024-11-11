@@ -50,7 +50,7 @@ async function confirmarPedido(productos, total) {
     let piso;
     if (lugarRetiro == "Domicilio del Cliente"){
         calle = localStorage.getItem('calle');
-        numCasa = localStorage.getItem('numCasa');
+        numCasa = localStorage.getItem('numCasa'); 
         piso = localStorage.getItem('piso'); 
     }else if (lugarRetiro == "Otro"){
         calle = formData.get('calle');
@@ -59,6 +59,12 @@ async function confirmarPedido(productos, total) {
             alert("Debe ingresar la calle y el número de casa");
             return;
         }
+    }else if(lugarRetiro === "Local"){
+        calle = "Se retira en el Local";
+        numCasa = "";
+    }else {
+        alert("Debe seleccionar un lugar de retiro");
+        return;
     }
     
     let pedidoDAO = new PedidoDAO();
