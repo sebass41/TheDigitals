@@ -3,9 +3,8 @@ import CuentaDAO from "../../DAO/CuentaDAO.js";
 window.onload = async () => {
     let id = localStorage.getItem("idSesion")
     let datos = await (new CuentaDAO()).obtenerUsuario(id);
-    console.log(datos);
     let cuenta = datos.data[0];
-    cargarDatos(cuenta);
+    cargarDatos(cuenta); 
 };
 
 function cargarDatos(datos) {
@@ -46,7 +45,10 @@ async function editarDato(element, datos, info){
     input.onblur = async () => {
         let result = await (new CuentaDAO()).editarU(info, input.value);
         if (result.sucess){
-            console.log(result.msj);
+            let id = localStorage.getItem("idSesion")
+            let datos = await (new CuentaDAO()).obtenerUsuario(id);
+            let cuenta = datos.data[0];
+            cargarDatos(cuenta);
         }else{
             console.log(result.msj);
             parent.innerHTML = text;
