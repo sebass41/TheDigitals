@@ -10,7 +10,9 @@ Pra instalar el software basta con instalar el repositorio y la base de datos. L
 
 **Para Clonar el Repositorio:**
 
-`https://github.com/sebass41/TheDigitals.git`
+```
+https://github.com/sebass41/TheDigitals.git
+```
 
 ## Construido con 🛠️
 
