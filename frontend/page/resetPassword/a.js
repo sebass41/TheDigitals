@@ -1,6 +1,11 @@
 import CuentaDAO from "../../DAO/CuentaDAO.js";
 
 window.onload= async ()=>{
+    let tokenExiste = await buscarToken();
+    console.log(tokenExiste)
+    if(!tokenExiste[0]){
+        window.location.href = "../login/login.html";
+    }
     await resetPassword();
     eyeAnimation();
 }
@@ -39,10 +44,10 @@ async function buscarToken(){
     let url = new URL(window.location.href);
     let parametros = url.searchParams;
     let token = parametros.get("token");
-    console.log(token);
+    
     if(token){
         let existe = await (new CuentaDAO()).buscarToken(token);
-        if(existe){
+        if(existe.sucess){
             return [true, token];
         }else{
             alert("El token no es válido o ha expirado");
@@ -56,25 +61,22 @@ async function resetPassword(){
     let formElement = document.getElementById("form-recuperacion");
     formElement.onsubmit = async (e) =>{
         e.preventDefault();
+
         let token = await buscarToken();
-        if (!token[0]){
-            //window.location.href = "../login/login.html";
-            console.log(token)
-        } else{
-            let formData = new FormData(formElement);
-            let pass = formData.get("password");
-            let passConfirm = formData.get("passconfirm");
+        let formData = new FormData(formElement);
+        let pass = formData.get("password");
+        let passConfirm = formData.get("passconfirm");
 
-            if (pass === passConfirm){
-                let result = await (new CuentaDAO()).resetPassword(token[1], pass);
+        if (pass === passConfirm){
+            let result = await (new CuentaDAO()).resetPassword(token[1], pass);
 
-                if(result.sucess){
-                    alert("Contraseña cambiada correctamente");
-                    //window.location.href = "../login/login.html";
-                }else{
-                    alert(result.msj);
-                }
+            if(result.sucess){
+                alert("Contraseña cambiada correctamente");
+                window.location.href = "../login/login.html";
+            }else{
+                alert(result.msj);
             }
         }
+        
     }
 }
