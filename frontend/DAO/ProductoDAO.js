@@ -1,7 +1,9 @@
+import origin from "../config/origin.js";
+
 export default class ProductoDAO{
 
     async obtener(){
-        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=obtener";
+        let url = origin + "/backend/controller/ProductoController.php?fun=obtener";
         let response = await fetch(url);
         return response.json();
     }
@@ -13,7 +15,7 @@ export default class ProductoDAO{
         formdata.append('descripcion', descripcion);
         formdata.append('img', img);
         formdata.append('precio', precio);
-        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=insertar";
+        let url = origin + "/backend/controller/ProductoController.php?fun=insertar";
         let config = {
             method: 'POST',
             body: formdata
@@ -30,7 +32,7 @@ export default class ProductoDAO{
         formdata.append('nombre', nombre);
         formdata.append('descripcion', descripcion);
         formdata.append('precio', precio);
-        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=editar";
+        let url = origin + "/backend/controller/ProductoController.php?fun=editar";
         let config ={
             method: 'POST',
             body: formdata
@@ -43,7 +45,7 @@ export default class ProductoDAO{
      async eliminar(id){
         let formdata = new FormData();
         formdata.append('id', id);
-        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=eliminar";
+        let url = origin + "/backend/controller/ProductoController.php?fun=eliminar";
         let config ={
             method: 'POST',
             body: formdata
@@ -53,7 +55,7 @@ export default class ProductoDAO{
     }
 
     async obtenerMasVendido(){
-        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=masVendidos";
+        let url = origin + "/backend/controller/ProductoController.php?fun=masVendidos";
         let response = await fetch(url);
 
         return response.json();
@@ -62,7 +64,7 @@ export default class ProductoDAO{
     async obtenerProducto(id){
         let formdata = new FormData();
         formdata.append('id', id);
-        let url = "http://localhost/TheDigitals/backend/controller/ProductoController.php?fun=obtenerProducto"
+        let url = origin + "/backend/controller/ProductoController.php?fun=obtenerProducto"
         let config = {
             method: 'POST',
             body: formdata

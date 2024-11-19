@@ -1,7 +1,9 @@
+import origin from "../config/origin.js";
+
 export default class PedidoDAO{
 
     async obtenerInfoPedido(){
-        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=obtenerInfoPedido";
+        let url = origin + "/backend/controller/PedidoController.php?fun=obtenerInfoPedido";
         let response = await fetch(url);
         
         return response.json();
@@ -15,7 +17,7 @@ export default class PedidoDAO{
         formdata.append('lugarRetiro', lugarRetiro);
         formdata.append('total', total);
         formdata.append('productos', JSON.stringify(productos));
-        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=realizar";
+        let url = origin + "/backend/controller/PedidoController.php?fun=realizar";
         let config ={
             method: 'POST',
             body: formdata
@@ -28,7 +30,7 @@ export default class PedidoDAO{
         let formdata = new FormData();
         formdata.append('idPedido', idPedido);
         formdata.append('estado', estado);
-        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=modEstado";
+        let url = origin + "/backend/controller/PedidoController.php?fun=modEstado";
         let config = {
             method: 'POST',
             body: formdata
@@ -39,7 +41,7 @@ export default class PedidoDAO{
     }
     
     async obtenerPedidos(){
-        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=obtenerPedidos";
+        let url = origin + "/backend/controller/PedidoController.php?fun=obtenerPedidos";
         let response = await fetch(url);
         
         return response.json();
@@ -48,7 +50,7 @@ export default class PedidoDAO{
     async obtenerDetallePedido(idPedido){
         let formdata = new FormData();
         formdata.append('idPedido', idPedido);
-        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=obtenerDetalle";
+        let url = origin + "/backend/controller/PedidoController.php?fun=obtenerDetalle";
         let config = {
             method: 'POST',
             body: formdata
@@ -59,7 +61,7 @@ export default class PedidoDAO{
     }
 
     async historialPedidos(){
-        let url = "http://localhost/TheDigitals/backend/controller/PedidoController.php?fun=obtenerHistorial";
+        let url = origin + "/backend/controller/PedidoController.php?fun=obtenerHistorial";
         let response = await fetch(url);
 
         return response.json();

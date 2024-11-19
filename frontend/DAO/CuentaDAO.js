@@ -1,7 +1,9 @@
+import origin from "../config/origin.js";
+
 export default class CuentaDAO {
 
     async obtener(){
-        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=obtener";
+        let url = origin + "/backend/controller/CuentaController.php?fun=obtener";
         let response = await fetch(url);
 
         return await response.json();
@@ -11,7 +13,7 @@ export default class CuentaDAO {
         let formdata  = new FormData();
         formdata.append('idUsuario', id);
 
-        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=obtenerUsuario";
+        let url = origin + "/backend/controller/CuentaController.php?fun=obtenerUsuario";
         let config = {
             method: 'POST',
             body: formdata
@@ -32,7 +34,7 @@ export default class CuentaDAO {
         formdata.append('pass', pass);
         formdata.append('email', email);
     
-        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=crear";
+        let url = origin + "/backend/controller/CuentaController.php?fun=crear";
         let config = {
             method: 'POST',
             body: formdata
@@ -47,7 +49,7 @@ export default class CuentaDAO {
     async eliminar(id){
         let formdata = new FormData();
         formdata.append('idUsuario', id);
-        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=eliminar";
+        let url = origin + "/backend/controller/CuentaController.php?fun=eliminar";
         let config ={
             method: 'POST',
             body: formdata
@@ -59,7 +61,7 @@ export default class CuentaDAO {
     async recuperar(email){
         let formdata = new FormData();
         formdata.append('email', email);
-        let url = "http://localhost/TheDigitals/TheDigitals/backend/controller/CuentaController.php?fun=recuperar";
+        let url = origin + "/TheDigitals/backend/controller/CuentaController.php?fun=recuperar";
         let config ={
             method: 'POST',
             body: formdata
@@ -76,7 +78,7 @@ export default class CuentaDAO {
         formdata.append('calle', calle);
         formdata.append('num', num);
         formdata.append('piso', piso);
-        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=editar";
+        let url = origin + "/backend/controller/CuentaController.php?fun=editar";
         let config = {
             method: 'POST',
             body: formdata
@@ -89,7 +91,7 @@ export default class CuentaDAO {
         let formdata = new FormData();
         formdata.append('columna', columna);
         formdata.append('valor', valor);
-        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=editarU";
+        let url = origin + "/backend/controller/CuentaController.php?fun=editarU";
         let config = {
             method: 'POST',
             body: formdata
@@ -101,7 +103,7 @@ export default class CuentaDAO {
     async enviarMail(mail){
         let formdata = new FormData();
         formdata.append('mail', mail);
-        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=enviarMail";
+        let url = origin + "/backend/controller/CuentaController.php?fun=enviarMail";
         let config = {
             method: 'POST',
             body: formdata
@@ -115,7 +117,7 @@ export default class CuentaDAO {
         let formdata = new FormData();
         formdata.append('pass', password);
         formdata.append('token', token);
-        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=resetPassword";
+        let url = origin + "/backend/controller/CuentaController.php?fun=resetPassword";
         let config = {
             method: 'POST',
             body: formdata
@@ -128,7 +130,7 @@ export default class CuentaDAO {
     async buscarToken(token){
         let formdata = new FormData();
         formdata.append('token', token);
-        let url = "http://localhost/TheDigitals/backend/controller/CuentaController.php?fun=buscarToken";
+        let url = origin + "/backend/controller/CuentaController.php?fun=buscarToken";
         let config = {
             method: 'POST',
             body: formdata
