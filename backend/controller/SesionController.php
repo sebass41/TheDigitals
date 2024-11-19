@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 require_once "../model/SesionDAO.php"; // Incluye el archivo SesionDAO.php, que contiene la clase Sesion
 
 $funcion = $_GET['fun']; // Obtiene el parámetro 'fun' de la URL

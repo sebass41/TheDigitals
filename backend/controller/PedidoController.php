@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 session_start(); // Inicia una nueva sesión o reanuda la existente
 
 require_once "../model/PedidoDAO.php"; // Incluye el archivo PedidoDAO.php, que contiene la clase Pedido

@@ -1,4 +1,4 @@
-import origin from "../config/origin";
+import origin from "../config/origin.js";
 
 export default class SesionDAO{
 

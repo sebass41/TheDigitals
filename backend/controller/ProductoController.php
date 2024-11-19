@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 session_start(); // Inicia una nueva sesión o reanuda la existente
 
 require_once "../model/ProductoDAO.php"; // Incluye el archivo ProductoDAO.php, que contiene la clase Producto

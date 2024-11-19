@@ -1,4 +1,5 @@
 <?php
+header('Access-Control-Allow-Origin: *');
 session_start(); // Inicia una sesión
 
 require_once "../model/UsuarioDAO.php"; // Incluye el archivo que contiene la clase UsuarioDAO
